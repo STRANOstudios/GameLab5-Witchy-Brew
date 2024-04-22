@@ -62,25 +62,25 @@ These steps should allow you to copy a Unity project from GitHub, set it up in U
 ## Contributors classmates
 
 ### Designers:
-Consiglieri
-Forloni
-Monfredoni
-Vailati
+- Consiglieri
+- Forloni
+- Monfredoni
+- Vailati
 
 ### Concepts:
-Nidasi
-Salvatore
-Pernas
-Dimaculangan
-Consoli
-Lopez
-Domanico
+- Nidasi
+- Salvatore
+- Pernas
+- Dimaculangan
+- Consoli
+- Lopez
+- Domanico
 
 ### 3D Artists:
-Cinilitani
-Borsi
-Bigatel
+- Cinilitani
+- Borsi
+- Bigatel
 
 ### Programmers:
-Frigerio
-Tarabella
+- Frigerio
+- Tarabella
