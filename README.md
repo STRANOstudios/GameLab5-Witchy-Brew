@@ -54,9 +54,8 @@ After building, you can run the project by executing the generated executable or
 These steps should allow you to copy a Unity project from GitHub, set it up in Unity Hub, and build it without needing to install additional files beyond Unity Hub and the required Unity version. Note that specific projects may have unique requirements, so always check the project documentation for any additional instructions.
 
 ## Or take the last Build
- 
 
-## Release
+### Release
 
 [Download](coming soon)
 
