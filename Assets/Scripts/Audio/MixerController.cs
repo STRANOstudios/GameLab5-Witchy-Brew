@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using static PlayerPrefsUtils;
 
 public class MixerController : MonoBehaviour
 {
@@ -54,11 +55,5 @@ public class MixerController : MonoBehaviour
 
         PlayerPrefs.SetFloat($"{slider.name}", slider.value);
         PlayerPrefs.Save();
-    }
-
-    float GetSavedFloat(string key)
-    {
-        if (PlayerPrefs.HasKey(key)) return PlayerPrefs.GetFloat(key);
-        return 0f;
     }
 }
