@@ -13,13 +13,19 @@ public class GraphicsSettings : MonoBehaviour
     [SerializeField] Slider brightnessSlider = null;
     [SerializeField] TMP_Dropdown resolutionDropdown;
     [SerializeField] Toggle fullScreenToggle = null;
-    [SerializeField] Volume volume = null;
+    [SerializeField] TMP_Dropdown colorBlindnessDropdown;
 
     private Resolution[] resolutions;
 
     private bool _isFullScreen;
     private int _brightnessLevel;
     private ColorAdjustments colorAdjustments;
+    private Volume volume = null;
+
+    private void Awake()
+    {
+        volume = GameObject.Find("Post Processing").GetComponent<Volume>();
+    }
 
     private void Start()
     {
@@ -126,5 +132,6 @@ public class GraphicsSettings : MonoBehaviour
 
         fullScreenToggle.isOn = !_isFullScreen;
         Screen.SetResolution((int)GetSavedFloat("Resolution_width"), (int)GetSavedFloat("Resolution_height"), _isFullScreen);
+        Screen.fullScreen = _isFullScreen;
     }
 }

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b295d7fb272554d928bcf7ffb8812d, type: 3}
+  m_Name: protonomaly
+  m_EditorClassIdentifier: 
+  redChannel:
+    red: 81.667
+    green: 18.333
+    blue: 0
+  greenChannel:
+    red: 33.333
+    green: 66.667
+    blue: 0
+  blueChannel:
+    red: 0
+    green: 12.5
+    blue: 87.5

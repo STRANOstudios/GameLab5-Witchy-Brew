@@ -12,6 +12,7 @@ public class GameplaySettings : MonoBehaviour
     [SerializeField] Slider mouseSensitivitySlider;
     [SerializeField] Toggle invertMouseYToggle;
     [SerializeField] TMP_Dropdown languageDropdown;
+    [SerializeField] Toggle nightModeToggle; //to be implemented
 
     // for setting static variables of mouse
     public delegate void GameplaySet(float sensitivity, bool invertY);
