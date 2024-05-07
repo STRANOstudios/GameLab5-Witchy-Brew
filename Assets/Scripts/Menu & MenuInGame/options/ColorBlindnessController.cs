@@ -61,7 +61,8 @@ public class ColorBlindnessController : MonoBehaviour
 
         colorBlindnessDropdown.ClearOptions();
         colorBlindnessDropdown.AddOptions(options);
-        colorBlindnessDropdown.value = index;
         colorBlindnessDropdown.RefreshShownValue();
+
+        SetColorBlindness(index);
     }
 }

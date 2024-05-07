@@ -54,18 +54,18 @@ public class GraphicsSettingsEditor : Editor
             {
                 if (!addedComponents.Contains(componentType))
                 {
-                    menu.AddItem(new GUIContent(componentType.Name), false, () => { AddComponent(componentType, target); });
+                    menu.AddItem(new GUIContent(componentType.Name), false, () => { AddComponent(componentType); });
                 }
             }
             menu.ShowAsContext();
         }
     }
 
-    private void AddComponent(System.Type componentType, Object targetObject)
+    private void AddComponent(System.Type componentType)
     {
-        var settings = (GraphicsSettings)targetObject;
+        var settings = (GraphicsSettings)target;
 
-        // Add the selected component to the GameObject
+        // Add the selected component to the script
         var newComponent = settings.gameObject.AddComponent(componentType);
 
         // If the component was added successfully, remove it from the options list
