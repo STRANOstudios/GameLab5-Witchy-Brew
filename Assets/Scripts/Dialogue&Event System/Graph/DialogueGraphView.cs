@@ -132,8 +132,7 @@ namespace Dialogue_Event_System
             tempDialogueNode.inputContainer.Add(inputPort);
             tempDialogueNode.RefreshExpandedState();
             tempDialogueNode.RefreshPorts();
-            tempDialogueNode.SetPosition(new Rect(position,
-                DefaultNodeSize)); //To-Do: implement screen center instantiation positioning
+            tempDialogueNode.SetPosition(new Rect(position, DefaultNodeSize));
 
             var textField = new TextField("");
             textField.RegisterValueChangedCallback(evt =>
@@ -152,33 +151,32 @@ namespace Dialogue_Event_System
             return tempDialogueNode;
         }
 
-
         public void AddChoicePort(DialogueNode nodeCache, string overriddenPortName = "")
         {
             var generatedPort = GetPortInstance(nodeCache, Direction.Output);
-            var portLabel = generatedPort.contentContainer.Q<Label>("type");
-            generatedPort.contentContainer.Remove(portLabel);
 
             var outputPortCount = nodeCache.outputContainer.Query("connector").ToList().Count();
-            var outputPortName = string.IsNullOrEmpty(overriddenPortName)
-                ? $"Option {outputPortCount + 1}"
-                : overriddenPortName;
-
+            var outputPortName = string.IsNullOrEmpty(overriddenPortName) ? $"Option {outputPortCount + 1}" : overriddenPortName;
 
             var textField = new TextField()
             {
                 name = string.Empty,
-                value = outputPortName
+                value = outputPortName,
+                style = { maxWidth = 80 }
             };
             textField.RegisterValueChangedCallback(evt => generatedPort.portName = evt.newValue);
-            generatedPort.contentContainer.Add(new Label("  "));
-            generatedPort.contentContainer.Add(textField);
+
             var deleteButton = new Button(() => RemovePort(nodeCache, generatedPort))
             {
                 text = "X"
             };
+
+            generatedPort.contentContainer.Add(textField);
             generatedPort.contentContainer.Add(deleteButton);
+
             generatedPort.portName = outputPortName;
+            generatedPort.Q("type").style.display = DisplayStyle.None;
+
             nodeCache.outputContainer.Add(generatedPort);
             nodeCache.RefreshPorts();
             nodeCache.RefreshExpandedState();
@@ -200,8 +198,7 @@ namespace Dialogue_Event_System
             node.RefreshExpandedState();
         }
 
-        private Port GetPortInstance(DialogueNode node, Direction nodeDirection,
-            Port.Capacity capacity = Port.Capacity.Single)
+        private Port GetPortInstance(DialogueNode node, Direction nodeDirection, Port.Capacity capacity = Port.Capacity.Single)
         {
             return node.InstantiatePort(Orientation.Horizontal, nodeDirection, capacity, typeof(float));
         }

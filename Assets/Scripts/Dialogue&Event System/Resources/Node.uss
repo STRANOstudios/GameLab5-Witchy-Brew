@@ -1,3 +1,7 @@
 DialogueNode #title{
-	background-color: lightgreen;
+	background-color: darkmagenta;
 }
+
+/* .port {
+   visibility: hidden;
+} */

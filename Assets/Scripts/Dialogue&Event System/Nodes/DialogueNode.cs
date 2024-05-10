@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 
 namespace Dialogue_Event_System
@@ -7,6 +8,8 @@ namespace Dialogue_Event_System
         public string DialogueText;
         public string GUID;
         public bool EntryPoint = false;
+
+        public IEnumerable<object> OutputSockets { get; internal set; }
     }
 }
 

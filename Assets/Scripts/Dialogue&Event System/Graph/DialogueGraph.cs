@@ -12,7 +12,6 @@ namespace Dialogue_Event_System
         private string _fileName = "New Narrative";
 
         private DialogueGraphView _graphView;
-        private DialogueContainer _dialogueContainer;
 
         [MenuItem("Graph/Narrative Graph")]
         public static void CreateGraphViewWindow()
@@ -42,9 +41,8 @@ namespace Dialogue_Event_System
             toolbar.Add(fileNameTextField);
 
             toolbar.Add(new Button(() => RequestDataOperation(true)) { text = "Save Data" });
-
             toolbar.Add(new Button(() => RequestDataOperation(false)) { text = "Load Data" });
-            // toolbar.Add(new Button(() => _graphView.CreateNewDialogueNode("Dialogue Node")) {text = "New Node",});
+
             rootVisualElement.Add(toolbar);
         }
 
@@ -72,12 +70,18 @@ namespace Dialogue_Event_System
             GenerateBlackBoard();
         }
 
-        private void GenerateMiniMap()
+        private void GenerateMiniMap() //To do fixed
         {
             var miniMap = new MiniMap { anchored = true };
-            var cords = _graphView.contentViewContainer.WorldToLocal(new Vector2(this.maxSize.x - 10, 30));
-            miniMap.SetPosition(new Rect(cords.x, cords.y, 200, 140));
-            _graphView.Add(miniMap);
+            _graphView.RegisterCallback<GeometryChangedEvent>(evt =>
+            {
+                var graphViewSize = _graphView.layout.size;
+                var cords = new Vector2(graphViewSize.x - 210, graphViewSize.y);
+
+                miniMap.SetPosition(new Rect(cords.x, cords.y, 200, 140));
+
+                _graphView.Add(miniMap);
+            });
         }
 
         private void GenerateBlackBoard()

@@ -2,14 +2,17 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static UnityEngine.EventSystems.StandaloneInputModule;
 
 namespace Dialogue_Event_System
 {
     public class GraphSaveUtility
     {
         private List<Edge> Edges => _graphView.edges.ToList();
+
         private List<DialogueNode> Nodes => _graphView.nodes.ToList().Cast<DialogueNode>().ToList();
 
         private List<Group> CommentBlocks =>
@@ -29,18 +32,18 @@ namespace Dialogue_Event_System
         public void SaveGraph(string fileName)
         {
             var dialogueContainerObject = ScriptableObject.CreateInstance<DialogueContainer>();
-            if (!SaveNodes(fileName, dialogueContainerObject)) return;
+            if (!SaveNodes(dialogueContainerObject)) return;
             SaveExposedProperties(dialogueContainerObject);
             SaveCommentBlocks(dialogueContainerObject);
 
-            if (!AssetDatabase.IsValidFolder("Assets/Resources"))
+            if (!AssetDatabase.IsValidFolder("Assets/Resources/Graphs"))
                 AssetDatabase.CreateFolder("Assets", "Resources");
 
-            UnityEngine.Object loadedAsset = AssetDatabase.LoadAssetAtPath($"Assets/Resources/{fileName}.asset", typeof(DialogueContainer));
+            Object loadedAsset = AssetDatabase.LoadAssetAtPath($"Assets/Resources/Graphs/{fileName}.asset", typeof(DialogueContainer));
 
             if (loadedAsset == null || !AssetDatabase.Contains(loadedAsset))
             {
-                AssetDatabase.CreateAsset(dialogueContainerObject, $"Assets/Resources/{fileName}.asset");
+                AssetDatabase.CreateAsset(dialogueContainerObject, $"Assets/Resources/Graphs/{fileName}.asset");
             }
             else
             {
@@ -55,27 +58,47 @@ namespace Dialogue_Event_System
             AssetDatabase.SaveAssets();
         }
 
-        private bool SaveNodes(string fileName, DialogueContainer dialogueContainerObject)
+        private bool SaveNodes(DialogueContainer dialogueContainerObject)
         {
             if (!Edges.Any()) return false;
-            var connectedSockets = Edges.Where(x => x.input.node != null).ToArray();
-            for (var i = 0; i < connectedSockets.Count(); i++)
+            var sockets = Edges/*.Where(x => x.input.node != null)*/.ToArray();
+            for (var i = 0; i < sockets.Count(); i++)
             {
-                var outputNode = (connectedSockets[i].output.node as DialogueNode);
-                var inputNode = (connectedSockets[i].input.node as DialogueNode);
+                var outputNode = sockets[i].output.node as DialogueNode;
+                var inputNode = sockets[i].input.node as DialogueNode;
                 dialogueContainerObject.NodeLinks.Add(new NodeLinkData
                 {
                     BaseNodeGUID = outputNode.GUID,
-                    PortName = connectedSockets[i].output.portName,
-                    TargetNodeGUID = inputNode.GUID
+                    PortName = sockets[i].output.portName,
+                    TargetNodeGUID = inputNode.GUID ?? ""
                 });
+            }
+
+            for (var i = 0; i < Nodes.Count; i++)
+            {
+                List<Port> outputPorts = Nodes[i].outputContainer.Query<Port>().ToList();
+
+                foreach (var outputPort in outputPorts)
+                {
+                    if (dialogueContainerObject.NodeLinks.Any(link => link.BaseNodeGUID == Nodes[i].GUID && link.PortName == outputPort.portName))
+                    {
+                        continue;
+                    }
+
+                    dialogueContainerObject.NodeLinks.Add(new NodeLinkData
+                    {
+                        BaseNodeGUID = Nodes[i].GUID,
+                        PortName = outputPort.portName,
+                        TargetNodeGUID = ""
+                    });
+                }                
             }
 
             foreach (var node in Nodes.Where(node => !node.EntryPoint))
             {
                 dialogueContainerObject.DialogueNodeData.Add(new DialogueNodeData
                 {
-                    NodeGUID = node.GUID,
+                    Guid = node.GUID,
                     DialogueText = node.DialogueText,
                     Position = node.GetPosition().position
                 });
@@ -94,8 +117,7 @@ namespace Dialogue_Event_System
         {
             foreach (var block in CommentBlocks)
             {
-                var nodes = block.containedElements.Where(x => x is DialogueNode).Cast<DialogueNode>().Select(x => x.GUID)
-                    .ToList();
+                var nodes = block.containedElements.Where(x => x is DialogueNode).Cast<DialogueNode>().Select(x => x.GUID).ToList();
 
                 dialogueContainer.CommentBlockData.Add(new CommentBlockData
                 {
@@ -108,7 +130,7 @@ namespace Dialogue_Event_System
 
         public void LoadNarrative(string fileName)
         {
-            _dialogueContainer = Resources.Load<DialogueContainer>(fileName);
+            _dialogueContainer = Resources.Load<DialogueContainer>($"Graphs/{fileName}");
             if (_dialogueContainer == null)
             {
                 EditorUtility.DisplayDialog("File Not Found", "Target Narrative Data does not exist!", "OK");
@@ -144,11 +166,11 @@ namespace Dialogue_Event_System
         {
             foreach (var perNode in _dialogueContainer.DialogueNodeData)
             {
-                var tempNode = _graphView.CreateNode(perNode.DialogueText, Vector2.zero);
-                tempNode.GUID = perNode.NodeGUID;
+                var tempNode = _graphView.CreateNode(perNode.DialogueText, perNode.Position);
+                tempNode.GUID = perNode.Guid;
                 _graphView.AddElement(tempNode);
 
-                var nodePorts = _dialogueContainer.NodeLinks.Where(x => x.BaseNodeGUID == perNode.NodeGUID).ToList();
+                var nodePorts = _dialogueContainer.NodeLinks.Where(x => x.BaseNodeGUID == perNode.Guid).ToList();
                 nodePorts.ForEach(x => _graphView.AddChoicePort(tempNode, x.PortName));
             }
         }
@@ -162,17 +184,18 @@ namespace Dialogue_Event_System
                 for (var j = 0; j < connections.Count(); j++)
                 {
                     var targetNodeGUID = connections[j].TargetNodeGUID;
-                    var targetNode = Nodes.First(x => x.GUID == targetNodeGUID);
+                    var targetNode = Nodes.FirstOrDefault(x => x.GUID == targetNodeGUID);
+                    if (targetNode == null) continue;
                     LinkNodesTogether(Nodes[i].outputContainer[j].Q<Port>(), (Port)targetNode.inputContainer[0]);
 
                     targetNode.SetPosition(new Rect(
-                        _dialogueContainer.DialogueNodeData.First(x => x.NodeGUID == targetNodeGUID).Position,
+                        _dialogueContainer.DialogueNodeData.First(x => x.Guid == targetNodeGUID).Position,
                         _graphView.DefaultNodeSize));
                 }
             }
         }
 
-        private void LinkNodesTogether(Port outputSocket, Port inputSocket)
+        private void LinkNodesTogether(Port outputSocket, Port inputSocket = null)
         {
             var tempEdge = new Edge()
             {
