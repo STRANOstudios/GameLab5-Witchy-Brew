@@ -212,6 +212,8 @@ namespace Dialogue_Event_System
                 DialogueText = "ENTRYPOINT",
                 EntryPoint = true
             };
+            nodeCache.styleSheets.Add(Resources.Load<StyleSheet>("Node"));
+            nodeCache.AddToClassList("StartNode");
 
             var generatedPort = GetPortInstance(nodeCache, Direction.Output);
             generatedPort.portName = "Next";

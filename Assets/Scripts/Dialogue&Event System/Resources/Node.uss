@@ -1,5 +1,13 @@
 DialogueNode #title{
-	background-color: darkmagenta;
+	background-color: rgb(104, 104, 172);
+}
+
+.EventNode #title{
+	background-color: rgb(133, 160, 148);
+}
+
+.StartNode #title{
+	background-color: rgb(137, 75, 93);
 }
 
 /* .port {
