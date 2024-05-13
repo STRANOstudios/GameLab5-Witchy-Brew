@@ -1,25 +1,45 @@
+using System;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CaldronManager : MonoBehaviour
 {
-    Image thisimage;
-    [SerializeField]Image saveImage;
-    Button button;
-    private void Awake()
-    {
-        button = GetComponent<Button>();
-        thisimage = GetComponent<Image>();
-    }
+    [SerializeField]Image image;
+    ItemData selectedItem;
+    [SerializeField] static int cauldronSize;
+    ItemData[] item=new ItemData[cauldronSize];
+    [SerializeField]Button[] button=new Button[cauldronSize];
 
     private void OnEnable()
     {
-        button.onClick.AddListener(OnButtonClick);
+        Ingredient.OnClicked += ChangeSprite;
     }
-    void OnButtonClick()
+    private void OnDisable()
     {
-        thisimage.color = saveImage.color;
+        Ingredient.OnClicked -= ChangeSprite;
+    }
+    private void ChangeSprite(ItemData item)
+    {
+        selectedItem=item;
+        image.sprite = item.image;
+    }
+    public void AddItem()
+    {
+        for (int i = 0; i < button.Length; i++)
+        {
+            if (button[i] ==selectedItem)
+            {
+
+            }
+        }
     }
 
+    }
+    
 
-}
+
+
+
+

@@ -8,9 +8,9 @@ using UnityEngine.UIElements;
 public class ItemData : ScriptableObject
 {
 
-    [SerializeField] Sprite image;
-    [SerializeField] string name;
-    [SerializeField] int id;
+    public Sprite image;
+    public string nome;
+    public int id;
 
 
 
