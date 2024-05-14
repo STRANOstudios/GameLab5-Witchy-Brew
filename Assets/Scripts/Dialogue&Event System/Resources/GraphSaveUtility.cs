@@ -2,10 +2,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
-using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 using UnityEngine.UIElements;
-using static UnityEngine.EventSystems.StandaloneInputModule;
 
 namespace Dialogue_Event_System
 {

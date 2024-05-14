@@ -13,14 +13,17 @@ MonoBehaviour:
   m_Name: New Narrative
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGUID: 44b9f331-16a0-4bfd-ae78-e75d34f29593
-    PortName: Next
-    TargetNodeGUID: 95a5d4cd-0d31-483f-bdf8-39858d3aceaf
   - BaseNodeGUID: 95a5d4cd-0d31-483f-bdf8-39858d3aceaf
     PortName: fuck off
     TargetNodeGUID: be5dd36d-05b9-400d-acef-9d78136f906e
   - BaseNodeGUID: be5dd36d-05b9-400d-acef-9d78136f906e
     PortName: cios
+    TargetNodeGUID: 70f13246-b6de-472f-b5f6-590dac44d654
+  - BaseNodeGUID: 44b9f331-16a0-4bfd-ae78-e75d34f29593
+    PortName: Next
+    TargetNodeGUID: 95a5d4cd-0d31-483f-bdf8-39858d3aceaf
+  - BaseNodeGUID: 4b4be1d1-5a0e-49f6-89d8-191f1e6cbfdc
+    PortName: Option 1
     TargetNodeGUID: 70f13246-b6de-472f-b5f6-590dac44d654
   - BaseNodeGUID: 95a5d4cd-0d31-483f-bdf8-39858d3aceaf
     PortName: sesso
@@ -34,9 +37,16 @@ MonoBehaviour:
     Position: {x: 285, y: 132}
   - Guid: be5dd36d-05b9-400d-acef-9d78136f906e
     DialogueText: dio porco
-    Position: {x: 593, y: 277}
+    Position: {x: 538, y: 132}
   - Guid: 70f13246-b6de-472f-b5f6-590dac44d654
     DialogueText: Dialogue Node
-    Position: {x: 841, y: 231}
+    Position: {x: 769, y: 132}
+  - Guid: 4b4be1d1-5a0e-49f6-89d8-191f1e6cbfdc
+    DialogueText: Dialogue Node
+    Position: {x: 513, y: 349}
   ExposedProperties: []
-  CommentBlockData: []
+  CommentBlockData:
+  - ChildNodes:
+    - 4b4be1d1-5a0e-49f6-89d8-191f1e6cbfdc
+    Position: {x: 487.99997, y: 290}
+    Title: dio cane

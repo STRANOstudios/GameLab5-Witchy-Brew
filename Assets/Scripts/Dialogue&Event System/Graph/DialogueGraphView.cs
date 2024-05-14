@@ -9,10 +9,10 @@ namespace Dialogue_Event_System
 {
     public class DialogueGraphView : GraphView
     {
-        public readonly Vector2 DefaultNodeSize = new Vector2(200, 150);
-        public readonly Vector2 DefaultCommentBlockSize = new Vector2(300, 200);
+        public readonly Vector2 DefaultNodeSize = new(200, 150);
+        public readonly Vector2 DefaultCommentBlockSize = new(300, 200);
         public DialogueNode EntryPointNode;
-        public Blackboard Blackboard = new Blackboard();
+        public Blackboard Blackboard = new();
         public List<ExposedProperty> ExposedProperties { get; private set; } = new List<ExposedProperty>();
         private NodeSearchWindow _searchWindow;
 
@@ -134,6 +134,12 @@ namespace Dialogue_Event_System
             tempDialogueNode.RefreshPorts();
             tempDialogueNode.SetPosition(new Rect(position, DefaultNodeSize));
 
+            var button = new Button(() => { AddChoicePort(tempDialogueNode); })
+            {
+                text = "Add Choice"
+            };
+            tempDialogueNode.titleButtonContainer.Add(button);
+
             var textField = new TextField("");
             textField.RegisterValueChangedCallback(evt =>
             {
@@ -143,11 +149,8 @@ namespace Dialogue_Event_System
             textField.SetValueWithoutNotify(tempDialogueNode.title);
             tempDialogueNode.mainContainer.Add(textField);
 
-            var button = new Button(() => { AddChoicePort(tempDialogueNode); })
-            {
-                text = "Add Choice"
-            };
-            tempDialogueNode.titleButtonContainer.Add(button);
+            //dropdown
+
             return tempDialogueNode;
         }
 

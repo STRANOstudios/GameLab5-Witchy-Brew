@@ -70,7 +70,7 @@ namespace Dialogue_Event_System
             GenerateBlackBoard();
         }
 
-        private void GenerateMiniMap() //To do fixed
+        private void GenerateMiniMap()
         {
             var miniMap = new MiniMap { anchored = true };
             _graphView.RegisterCallback<GeometryChangedEvent>(evt =>

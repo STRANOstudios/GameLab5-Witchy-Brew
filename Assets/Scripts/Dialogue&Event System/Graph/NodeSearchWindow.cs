@@ -30,11 +30,11 @@ namespace Dialogue_Event_System
             {
                 new SearchTreeGroupEntry(new GUIContent("Create Node"), 0),
                 new SearchTreeGroupEntry(new GUIContent("Dialogue"), 1),
-                new SearchTreeEntry(new GUIContent("Dialogue Node", _indentationIcon))
+                new(new GUIContent("Dialogue Node", _indentationIcon))
                 {
                     level = 2, userData = new DialogueNode()
                 },
-                new SearchTreeEntry(new GUIContent("Comment Block",_indentationIcon))
+                new(new GUIContent("Comment Block",_indentationIcon))
                 {
                     level = 1,
                     userData = new Group()
