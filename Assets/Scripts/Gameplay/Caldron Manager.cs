@@ -25,18 +25,12 @@ public class CaldronManager : MonoBehaviour
         selectedItem=item;
         image.sprite = item.image;
     }
-    public void AddItem()
+    public void AddItem(int i)
     {
-        for (int i = 0; i < button.Length; i++)
-        {
-            if (button[i] ==selectedItem)
-            {
-
-            }
-        }
+        button[i].image.sprite = selectedItem.image;
     }
 
-    }
+}
     
 
 
