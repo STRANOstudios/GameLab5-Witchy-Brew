@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cb317f9656ad34438ba989b97fa220b, type: 3}
-  m_Name: Ingredient 1
+  m_Name: Null Ingrredient
   m_EditorClassIdentifier: 
-  image: {fileID: 7482667652216324306, guid: c045ec88964e44d449e89c447c172dd4, type: 3}
-  nome: Ingredient 1
-  id: 1
+  image: {fileID: 2747690628134850419, guid: fa30d3f149eaeda45be9063844dbc2c5, type: 3}
+  nome: NullIngredient
+  id: 0
