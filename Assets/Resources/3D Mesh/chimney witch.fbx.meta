@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 46cf61226b058a746bf2359641f3a912
+guid: 957b7e458cc078e4cbfba7acf91ca99f
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: standardSurface1
-    second: {fileID: 2100000, guid: a6d7b4010f3eee94695c1d240686bdac, type: 2}
+    second: {fileID: 2100000, guid: de62736fcae4f45409c6bb7e9e847a66, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -72,7 +72,7 @@ ModelImporter:
     secondaryUVMinLightmapResolution: 40
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
     strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
