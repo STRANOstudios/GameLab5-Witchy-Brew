@@ -7,7 +7,7 @@ public class CaldronManager : MonoBehaviour
 
     [SerializeField]Image image;
     public ItemData selectedItem=null;
-    public static int cauldronSize=3;
+    public static int cauldronSize=5;
     [SerializeField]GameObject slot;
     [SerializeField]Canvas canvas;
     public static CaldronManager instance;
@@ -38,21 +38,6 @@ public class CaldronManager : MonoBehaviour
             instance.name=i.ToString();
         }
     }
-    public ItemData CheckObject()
-    {
-        CauldronSlot[] slot = canvas.GetComponentsInChildren<CauldronSlot>();
-        for (int i = 0; i <cauldronSize ; i++)
-        {
-            Debug.Log(slot[i].name);
-            if (slot[i].item==selectedItem)
-            {
-                return slot[i].item;
-            }
-        }
-        return null;
-    }
-
-
 }
     
 
