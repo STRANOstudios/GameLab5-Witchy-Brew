@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static Ingredient;
 
 public class Ingredient : MonoBehaviour
 {
@@ -27,6 +28,4 @@ public class Ingredient : MonoBehaviour
     {
         text.gameObject.SetActive(false);
     }
-
-
 }

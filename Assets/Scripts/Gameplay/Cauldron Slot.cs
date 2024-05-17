@@ -7,7 +7,8 @@ public class CauldronSlot : MonoBehaviour
 {
     public ItemData item;
     private string id;
-    [SerializeField]Image image;
+    [SerializeField]public Image image;
+    public Sprite NullImage;
 
     private void Start()
     {
@@ -18,12 +19,13 @@ public class CauldronSlot : MonoBehaviour
     public void SetItem()
     {
         CaldronManager instance=CaldronManager.instance;
-        if (!instance.CheckObject())
+        if (instance.CheckObject()!=instance.selectedItem)
         {
             item = instance.selectedItem;
             image.sprite = item.image;
-        }else if(instance.CheckObject()&&this.item!=instance.selectedItem){
-
+        }else if (instance.CheckObject() == instance.selectedItem)
+        {
+            image.sprite = NullImage;
         }
     }
 

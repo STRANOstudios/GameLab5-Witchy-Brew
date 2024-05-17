@@ -117,6 +117,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 0}
   image: {fileID: 0}
+  NullImage: {fileID: 2747690628134850419, guid: fa30d3f149eaeda45be9063844dbc2c5,
+    type: 3}
 --- !u!114 &-8872881332500787035
 MonoBehaviour:
   m_ObjectHideFlags: 0

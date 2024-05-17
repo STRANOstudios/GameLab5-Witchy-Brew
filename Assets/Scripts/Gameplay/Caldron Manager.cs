@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +11,6 @@ public class CaldronManager : MonoBehaviour
     [SerializeField]GameObject slot;
     [SerializeField]Canvas canvas;
     public static CaldronManager instance;
-
     
     private void OnEnable()
     {
@@ -38,7 +38,7 @@ public class CaldronManager : MonoBehaviour
             instance.name=i.ToString();
         }
     }
-    public bool CheckObject()
+    public ItemData CheckObject()
     {
         CauldronSlot[] slot = canvas.GetComponentsInChildren<CauldronSlot>();
         for (int i = 0; i <cauldronSize ; i++)
@@ -46,10 +46,10 @@ public class CaldronManager : MonoBehaviour
             Debug.Log(slot[i].name);
             if (slot[i].item==selectedItem)
             {
-                return true;
+                return slot[i].item;
             }
         }
-        return false;
+        return null;
     }
 
 
