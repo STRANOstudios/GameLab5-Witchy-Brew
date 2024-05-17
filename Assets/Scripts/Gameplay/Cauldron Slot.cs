@@ -5,29 +5,42 @@ using UnityEngine.UI;
 
 public class CauldronSlot : MonoBehaviour
 {
+    [SerializeField]ItemData NullItem;
     public ItemData item;
     private string id;
-    [SerializeField]public Image image;
-    public Sprite NullImage;
-
+    public Image image;
     private void Start()
     {
+        item = NullItem;
         image = GetComponent<Image>();
+        image.sprite = NullItem.image;
         id=name;
     }
 
     public void SetItem()
     {
         CaldronManager instance=CaldronManager.instance;
-        if (instance.CheckObject()!=instance.selectedItem)
+
+        ItemData temp = instance.selectedItem;
+        instance.ChangeSprite(this.item);
+        item = temp;
+        image.sprite = temp.image;
+    }
+    private void OnEnable()
+    {
+        Ingredient.OnClicked += RemoveItem;
+    }
+    private void OnDisable()
+    {
+        Ingredient.OnClicked -= RemoveItem;
+    }
+    void RemoveItem(ItemData item)
+    {
+        if (item.id == this.item.id)
         {
-            item = instance.selectedItem;
-            image.sprite = item.image;
-        }else if (instance.CheckObject() == instance.selectedItem)
-        {
-            image.sprite = NullImage;
+            this.item=NullItem;
+            this.image.sprite = NullItem.image;
         }
     }
-
 
 }

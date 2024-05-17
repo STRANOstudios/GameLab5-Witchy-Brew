@@ -6,7 +6,7 @@ public class CaldronManager : MonoBehaviour
 {
 
     [SerializeField]Image image;
-    public ItemData selectedItem;
+    public ItemData selectedItem=null;
     public static int cauldronSize=3;
     [SerializeField]GameObject slot;
     [SerializeField]Canvas canvas;
@@ -20,7 +20,7 @@ public class CaldronManager : MonoBehaviour
     {
         Ingredient.OnClicked -= ChangeSprite;
     }
-    private void ChangeSprite(ItemData item)
+    public void ChangeSprite(ItemData item)
     {
         selectedItem=item;
         image.sprite = item.image;
