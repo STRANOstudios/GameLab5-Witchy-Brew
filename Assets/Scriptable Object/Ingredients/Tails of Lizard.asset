@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cb317f9656ad34438ba989b97fa220b, type: 3}
-  m_Name: Ingredient 3
+  m_Name: Tails of Lizard
   m_EditorClassIdentifier: 
-  image: {fileID: 7482667652216324306, guid: 14a71db4953c43c4cba94aa4d6f1709d, type: 3}
-  nome: Ingredient 3
-  id: 3
+  image: {fileID: -2413806693520163455, guid: 06b875981928cba4aa91e4a660a14ea1, type: 3}
+  nome: Tails of Lizard
+  id: 2
