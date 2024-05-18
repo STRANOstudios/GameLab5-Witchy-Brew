@@ -11,7 +11,7 @@ public class CauldronSlot : MonoBehaviour
     public Image image;
     private void Start()
     {
-        item = NullItem;
+        item= NullItem;
         image = GetComponent<Image>();
         image.sprite = NullItem.itemData.image;
         id=name;
@@ -36,10 +36,10 @@ public class CauldronSlot : MonoBehaviour
     }
     void RemoveItem(CraftedIngredient item)
     {
-        if (item.id == this.item.id)
+        if (item.itemData.id == this.item.itemData.id)
         {
-            this.item=NullItem;
-            this.image.sprite = NullItem.image;
+            this.item =NullItem;
+            this.image.sprite = NullItem.itemData.image;
         }
     }
 

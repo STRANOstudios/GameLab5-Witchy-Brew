@@ -7,7 +7,7 @@ public class CaldronManager : MonoBehaviour
 
     [SerializeField]Image image;
     public CraftedIngredient selectedItem=null;
-    public static int cauldronSize=5;
+    public static int cauldronSize=3;
     [SerializeField]GameObject slot;
     [SerializeField]Canvas canvas;
     public static CaldronManager instance;
