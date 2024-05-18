@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Preparation : MonoBehaviour
+[CreateAssetMenu]
+public class Preparation : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Sprite image;
+    public string nome;
+    public int id;
+
 }

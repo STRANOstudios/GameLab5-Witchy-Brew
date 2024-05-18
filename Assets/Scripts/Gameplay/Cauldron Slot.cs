@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class CauldronSlot : MonoBehaviour
 {
-    [SerializeField]ItemData NullItem;
-    public ItemData item;
+    [SerializeField]CraftedIngredient NullItem;
+    public CraftedIngredient item;
     private string id;
     public Image image;
     private void Start()
     {
         item = NullItem;
         image = GetComponent<Image>();
-        image.sprite = NullItem.image;
+        image.sprite = NullItem.itemData.image;
         id=name;
     }
 
@@ -21,10 +21,10 @@ public class CauldronSlot : MonoBehaviour
     {
         CaldronManager instance=CaldronManager.instance;
 
-        ItemData temp = instance.selectedItem;
+        CraftedIngredient temp = instance.selectedItem;
         instance.ChangeSprite(this.item);
         item = temp;
-        image.sprite = temp.image;
+        image.sprite = temp.itemData.image;
     }
     private void OnEnable()
     {
@@ -34,7 +34,7 @@ public class CauldronSlot : MonoBehaviour
     {
         Ingredient.OnClicked -= RemoveItem;
     }
-    void RemoveItem(ItemData item)
+    void RemoveItem(CraftedIngredient item)
     {
         if (item.id == this.item.id)
         {
