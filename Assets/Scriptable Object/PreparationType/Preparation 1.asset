@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 964fd7870e5ed764babfc720910e0285, type: 3}
   m_Name: Preparation 1
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  image: {fileID: 689556792, guid: af179b6d814575a4cb1acee6ea3f5e77, type: 3}
   nome: 
   id: 0

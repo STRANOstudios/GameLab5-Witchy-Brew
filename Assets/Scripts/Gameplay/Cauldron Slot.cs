@@ -8,23 +8,30 @@ public class CauldronSlot : MonoBehaviour
     [SerializeField]CraftedIngredient NullItem;
     public CraftedIngredient item;
     private string id;
-    public Image image;
+    [SerializeField]Image itemImage;
+    [SerializeField] Image preparationImage;
+
     private void Start()
     {
         item= NullItem;
-        image = GetComponent<Image>();
-        image.sprite = NullItem.itemData.image;
-        id=name;
+        //itemImage = GetComponent<Image>();
+        itemImage.sprite = NullItem.itemData.image;
+        //preparationImage = GetComponentInChildren<Image>();
+        preparationImage.sprite = NullItem.preparation.image;
+        id =name;
     }
+
+
 
     public void SetItem()
     {
         CaldronManager instance=CaldronManager.instance;
 
         CraftedIngredient temp = instance.selectedItem;
-        instance.ChangeSprite(this.item);
+        instance.ChangeItem(this.item);
         item = temp;
-        image.sprite = temp.itemData.image;
+        itemImage.sprite = temp.itemData.image;
+        preparationImage.sprite=temp.preparation.image;
     }
     private void OnEnable()
     {
@@ -38,8 +45,9 @@ public class CauldronSlot : MonoBehaviour
     {
         if (item.itemData.id == this.item.itemData.id)
         {
-            this.item =NullItem;
-            this.image.sprite = NullItem.itemData.image;
+            this.item = NullItem;
+            this.preparationImage.sprite=NullItem.preparation.image;
+            this.itemImage.sprite = NullItem.itemData.image;
         }
     }
 

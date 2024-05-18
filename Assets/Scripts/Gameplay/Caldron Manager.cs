@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class CaldronManager : MonoBehaviour
 {
 
-    [SerializeField]Image image;
+    [SerializeField]Image itemImage;
+    [SerializeField] Image preparationImage;
     public CraftedIngredient selectedItem=null;
     public static int cauldronSize=3;
     [SerializeField]GameObject slot;
@@ -14,16 +15,22 @@ public class CaldronManager : MonoBehaviour
     
     private void OnEnable()
     {
-        Ingredient.OnClicked += ChangeSprite;
+        Ingredient.OnClicked += ChangeItem;
     }
     private void OnDisable()
     {
-        Ingredient.OnClicked -= ChangeSprite;
+        Ingredient.OnClicked -= ChangeItem;
     }
-    public void ChangeSprite(CraftedIngredient item)
+    public void SetPreparation(Preparation item)
+    {
+        selectedItem.preparation=item;
+        preparationImage.sprite = item.image;
+    }
+    public void ChangeItem(CraftedIngredient item)
     {
         selectedItem=item;
-        image.sprite = item.itemData.image;
+        preparationImage.sprite=item.preparation.image;
+        itemImage.sprite = item.itemData.image;
     }
     private void Awake()
     {
