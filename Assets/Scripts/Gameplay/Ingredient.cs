@@ -7,7 +7,7 @@ public class Ingredient : MonoBehaviour
 {
 
     [SerializeField] CraftedIngredient item;
-
+    [SerializeField] Preparation preparation;
     [SerializeField]TMP_Text text;
     public delegate void Click(CraftedIngredient item);
     public static event Click OnClicked;
@@ -19,6 +19,7 @@ public class Ingredient : MonoBehaviour
 
     private void OnMouseDown()
     {
+        item.preparation = preparation;
         OnClicked(this.item);
     }
     public void OnMouseEnter()
