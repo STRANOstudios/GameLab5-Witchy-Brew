@@ -5,67 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="384d2998-266d-440f-b2f7-1c8470461945" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/3D Mesh/pillow/pilloe_initialShadingGroup_Normal.1001.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/3D Mesh/pillow/pilloe_initialShadingGroup_Normal.1001.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/3D_Materials/window_material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Material/3D_Materials/window_material.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_01_Back.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_01_Back.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_01_Down.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_01_Down.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_01_Front.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_01_Front.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_01_Left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_01_Left.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_01_Right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_01_Right.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_01_Up.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_01_Up.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_02_Back.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_02_Back.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_02_Down.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_02_Down.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_02_Front.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_02_Front.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_02_Left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_02_Left.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_02_Right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_02_Right.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_02_Up.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_02_Up.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_03_Back.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_03_Back.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_03_Down.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_03_Down.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_03_Front.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_03_Front.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_03_Left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_03_Left.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_03_Right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_03_Right.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_03_Up.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_03_Up.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_04_Back.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_04_Back.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_04_Down.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_04_Down.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_04_Front.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_04_Front.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_04_Left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_04_Left.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_04_Right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_04_Right.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_04_Up.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonSciFiSpace_Skybox_04_Up.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonScifiSpace_Skybox_01.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonScifiSpace_Skybox_01.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonScifiSpace_Skybox_02.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonScifiSpace_Skybox_02.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonScifiSpace_Skybox_03.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonScifiSpace_Skybox_03.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonScifiSpace_Skybox_04.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Material/Skybox/PolygonScifiSpace_Skybox_04.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameLab5-Witchy-Brew/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameLab5-Witchy-Brew/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Build.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Build.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/SampleSceneProfile.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +91,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1716136485966</updated>
-      <workItem from="1716136488933" duration="683000" />
+      <workItem from="1716136488933" duration="1652000" />
     </task>
     <servers />
   </component>
