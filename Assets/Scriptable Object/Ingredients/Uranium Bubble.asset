@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cb317f9656ad34438ba989b97fa220b, type: 3}
   m_Name: Uranium Bubble
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 7a9ee0f6d9e7d4f41b9e1605225d789c, type: 3}
   nome: Uranium Bubble
   id: 8
