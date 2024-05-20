@@ -1161,7 +1161,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5.9
+      scalar: 15
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -6158,7 +6158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca89c1944bcb58e4fb04838643d75f7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: b28352076d1f6d141ab9885861e02073, type: 2}
+  item: {fileID: 0}
+  preparation: {fileID: 0}
   text: {fileID: 1904421030}
 --- !u!4 &503315230 stripped
 Transform:
@@ -11850,7 +11851,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca89c1944bcb58e4fb04838643d75f7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 73d19197c590ebe469233d9287522509, type: 2}
+  item: {fileID: 0}
+  preparation: {fileID: 0}
   text: {fileID: 2132186952}
 --- !u!4 &787025092 stripped
 Transform:
@@ -12492,6 +12494,16 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1387791827072986437, guid: 00beb4f1c51cefd4087f2a1d68f34e2f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f6793290aa7dc4d438c495b5d23b71aa, type: 2}
+    - target: {fileID: 6950223276748788195, guid: 00beb4f1c51cefd4087f2a1d68f34e2f,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ec40a41c5347e346afa6857eeebb580, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -20906,7 +20918,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.6117647, g: 0.16470587, b: 0.5137255, a: 1}
+      maxColor: {r: 0.67058825, g: 0.2901961, b: 0.5882353, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
