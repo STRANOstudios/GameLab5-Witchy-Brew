@@ -41,7 +41,7 @@ public class BrightnessController : MonoBehaviour
 
     public void Initialize()
     {
-        brightnessSlider.value = PlayerPrefs.GetInt("Brightness") == 0 ? 211 : PlayerPrefs.GetInt("Brightness");
+        brightnessSlider.value = PlayerPrefs.GetInt("Brightness") == 1 ? 211 : PlayerPrefs.GetInt("Brightness");
         SetBrightness(brightnessSlider.value);
     }
 }

@@ -1,11 +1,19 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static PlayerPrefsUtils;
 
 public class MenuController : MonoBehaviour
 {
     [Header("Levels To Load")]
     [SerializeField, Tooltip("The name of the scene to be loaded")] private string sceneToBeLoad;
+
+    [Header("Reference")]
+    [SerializeField] private Transform menuButtons;
+
+    [Header("Settings")]
+    [SerializeField, Range(0.1f, 10f)] private float secMenuAnim = 10f;
+
+    private float elapsedTime = 0f;
 
     public delegate void MenuControllerDelegate();
     public static event MenuControllerDelegate Resume;
@@ -28,6 +36,31 @@ public class MenuController : MonoBehaviour
 #else
         Application.Quit();
 #endif
+    }
+
+    public void OptionsButton(float angle)
+    {
+        if (menuButtons)
+        {
+              StartCoroutine(AnimRotation(angle));
+        }
+    }
+
+    private IEnumerator AnimRotation(float targetAngle = 180f)
+    {
+        float startAngle = menuButtons.rotation.eulerAngles.y;
+
+        while (elapsedTime < secMenuAnim)
+        {
+            float t = elapsedTime / secMenuAnim;
+            float angle = Mathf.Lerp(startAngle, targetAngle, t);
+            menuButtons.rotation = Quaternion.Euler(0, angle, 0);
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        menuButtons.rotation = Quaternion.Euler(0, targetAngle, 0);
     }
 
     public void ReturnButton()
