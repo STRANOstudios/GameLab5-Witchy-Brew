@@ -5,26 +5,33 @@ using UnityEngine.UI;
 
 public class CauldronSlot : MonoBehaviour
 {
-    [SerializeField]ItemData NullItem;
-    public ItemData item;
+    [SerializeField]CraftedIngredient NullItem;
+    public CraftedIngredient item;
     private string id;
-    public Image image;
+    [SerializeField]Image itemImage;
+    [SerializeField] Image preparationImage;
+
     private void Start()
     {
-        item = NullItem;
-        image = GetComponent<Image>();
-        image.sprite = NullItem.image;
-        id=name;
+        item= NullItem;
+        //itemImage = GetComponent<Image>();
+        itemImage.sprite = NullItem.itemData.image;
+        //preparationImage = GetComponentInChildren<Image>();
+        preparationImage.sprite = NullItem.preparation.image;
+        id =name;
     }
+
+
 
     public void SetItem()
     {
         CaldronManager instance=CaldronManager.instance;
 
-        ItemData temp = instance.selectedItem;
-        instance.ChangeSprite(this.item);
+        CraftedIngredient temp = instance.selectedItem;
+        instance.ChangeItem(this.item);
         item = temp;
-        image.sprite = temp.image;
+        itemImage.sprite = temp.itemData.image;
+        preparationImage.sprite=temp.preparation.image;
     }
     private void OnEnable()
     {
@@ -34,12 +41,13 @@ public class CauldronSlot : MonoBehaviour
     {
         Ingredient.OnClicked -= RemoveItem;
     }
-    void RemoveItem(ItemData item)
+    void RemoveItem(CraftedIngredient item)
     {
-        if (item.id == this.item.id)
+        if (item.itemData.id == this.item.itemData.id)
         {
-            this.item=NullItem;
-            this.image.sprite = NullItem.image;
+            this.item = NullItem;
+            this.preparationImage.sprite=NullItem.preparation.image;
+            this.itemImage.sprite = NullItem.itemData.image;
         }
     }
 
