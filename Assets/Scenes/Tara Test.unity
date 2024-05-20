@@ -2181,7 +2181,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 674943dd4283c204ca4df77d552ab8d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemDatas: []
+  itemDatas:
+  - {fileID: 11400000, guid: bd441fe7f3a4f584ca7e20d846621b2b, type: 2}
+  - {fileID: 11400000, guid: a8b37c585dc3001469d573d30bed8679, type: 2}
+  - {fileID: 11400000, guid: 73d19197c590ebe469233d9287522509, type: 2}
+  - {fileID: 11400000, guid: b28352076d1f6d141ab9885861e02073, type: 2}
+  - {fileID: 11400000, guid: 9452aa4c3053cc649902fe4bb93f3da7, type: 2}
+  - {fileID: 11400000, guid: 719d97e629bcf79429198ad278b338a4, type: 2}
+  - {fileID: 11400000, guid: 11b6bc5203f56c2438b58446e6954044, type: 2}
+  - {fileID: 11400000, guid: 8a895a0b47488f1498a7dcbe636137f9, type: 2}
+  - {fileID: 11400000, guid: 0888d2ad6e9695f4b8623dee95055b80, type: 2}
+  - {fileID: 11400000, guid: 04f9b2c74fb4ca542afa2c98fe143c0f, type: 2}
+  - {fileID: 11400000, guid: 52cae8d4111a00c4084b21cdc60c4073, type: 2}
+  - {fileID: 11400000, guid: 2aeb84046ae20744ba429f407d12032c, type: 2}
+  preparations:
+  - {fileID: 11400000, guid: b62886627d531ca4e888899d3124c44e, type: 2}
+  - {fileID: 11400000, guid: f43e983566a74e84fb4a33ab91ad555f, type: 2}
+  - {fileID: 11400000, guid: c3fe38d37cd60c24d96135919de77bc7, type: 2}
+  - {fileID: 11400000, guid: 1a66124496aa35841bd832869552e8a6, type: 2}
 --- !u!1 &695868661
 GameObject:
   m_ObjectHideFlags: 0
