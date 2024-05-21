@@ -21,13 +21,13 @@ public class UIController : MonoBehaviour
     private void OnEnable()
     {
         UIDialogueManager.OnDialogueFinished += ResetUIDialogue;
-        GameManager.Instance.Pause += OnPause;
+        if (GameManager.Instance) GameManager.Instance.Pause += OnPause;
     }
 
     private void OnDisable()
     {
         UIDialogueManager.OnDialogueFinished -= ResetUIDialogue;
-        GameManager.Instance.Pause -= OnPause;
+        if (GameManager.Instance) GameManager.Instance.Pause -= OnPause;
     }
 
     public void Button()

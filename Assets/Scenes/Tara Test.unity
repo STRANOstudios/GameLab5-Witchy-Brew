@@ -3117,6 +3117,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient
       objectReference: {fileID: 0}
+    - target: {fileID: 4451513108517233282, guid: 966b03e7a94fd054a96524868ebd5a82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9138597658525770254, guid: 966b03e7a94fd054a96524868ebd5a82,
         type: 3}
       propertyPath: m_LocalPosition.x

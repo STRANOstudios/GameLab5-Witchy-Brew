@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventName: 0
   dialogueList:
-  - dialogueText: ciao, mi chiamo strega, mi vuoi fottere?
+  - dialogueText: chi sei?
     animationName: 0
-  - dialogueText: lo so che ti piacerebbe
-    animationName: 0
-  - dialogueText: il mio fantastico culetto mulatto
-    animationName: 0
+  - dialogueText: cosa vuoi da me
+    animationName: 3
+  - dialogueText: chi ti conosce
+    animationName: 1
