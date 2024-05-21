@@ -25,13 +25,13 @@ public class CauldronSlot : MonoBehaviour
 
     public void SetItem()
     {
-        CaldronManager instance=CaldronManager.instance;
-
-        CraftedIngredient temp = instance.selectedItem;
-        instance.ChangeItem(this.item);
-        item = temp;
-        itemImage.sprite = temp.itemData.image;
-        preparationImage.sprite=temp.preparation.image;
+            CaldronManager instance = CaldronManager.instance;
+            CraftedIngredient temp = instance.selectedItem;
+            instance.ChangeItem(this.item);
+            item = temp;
+            itemImage.sprite = temp.itemData.image;
+            preparationImage.sprite = temp.preparation.image;
+            instance.CheckSlots();
     }
     private void OnEnable()
     {
@@ -48,6 +48,7 @@ public class CauldronSlot : MonoBehaviour
             this.item = NullItem;
             this.preparationImage.sprite=NullItem.preparation.image;
             this.itemImage.sprite = NullItem.itemData.image;
+            CaldronManager.instance.CheckSlots();
         }
     }
 

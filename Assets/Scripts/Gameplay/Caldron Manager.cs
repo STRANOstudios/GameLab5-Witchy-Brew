@@ -8,8 +8,10 @@ public class CaldronManager : MonoBehaviour
     [SerializeField]Image itemImage;
     [SerializeField] Image preparationImage;
     public CraftedIngredient selectedItem=null;
-    public static int cauldronSize=5;
-    [SerializeField]GameObject slot;
+    public List<CauldronSlot> slotList;
+    public Button button;
+
+
     [SerializeField]Canvas canvas;
     public static CaldronManager instance;
     
@@ -34,17 +36,24 @@ public class CaldronManager : MonoBehaviour
     }
     private void Awake()
     {
-        CreateSlot(cauldronSize);
         if (instance == null) instance = this;
     }
-    public void CreateSlot(int index)
+
+    public void CheckSlots()
     {
-        for (int i = 0; i < index; i++) {
-            GameObject instance=Instantiate(slot,canvas.transform);
-            instance.transform.position += Vector3.right * i;
-            instance.name=i.ToString();
+        foreach (var slot in slotList)
+        {
+           if(slot.item.itemData.id == 0)
+            {
+                button.interactable = false;
+                return;
+            }
         }
+        button.interactable = true;
     }
+
+
+
 }
     
 

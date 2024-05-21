@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class PotionGenerator : MonoBehaviour
 {
-    CraftedIngredient[] ingredients=new CraftedIngredient[5];
-    [SerializeField]List<ItemData> itemDatas = new List<ItemData>();
-    [SerializeField] List<Preparation> preparations = new List<Preparation>();
-    List<ItemData> ingredientList;
+    [SerializeField]int[,] ingredients=new int[5,2];
+    List<int> ingredientList=new List<int>();   
+
 
     private void GeneratePotion()
     {
-        ingredientList = itemDatas;
-        for(int i = 0; i < ingredients.Length; i++)
+        ingredientList.Clear();
+        for(int i=1; i<13;i++)
         {
-            CraftedIngredient slot=new CraftedIngredient();
-            int random = Random.Range(0, 12);
-            slot.itemData = ingredientList[Random.Range(0,12)];
-
-            slot.preparation = preparations[Random.Range(0,4)];
-            ingredients[i] = slot;
+            ingredientList.Add(i);
+        }
+        for(int i = 0; i < ingredients.GetLength(0); i++)
+        {
+            int index=Random.Range(0,ingredientList.Count);
+            ingredients[i,0] = ingredientList[index];
+            ingredientList.RemoveAt(index);
+            ingredients[i, 1] = Random.Range(0,4);
+            Debug.Log(ingredients[i, 0]+ " + "+ ingredients[i,1]);
         }
 
     }
