@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cb317f9656ad34438ba989b97fa220b, type: 3}
   m_Name: Troll Dandruff
   m_EditorClassIdentifier: 
-  image: {fileID: 21300000, guid: 9bd10d1941078034eb408682cffe0ad6, type: 3}
+  image: {fileID: 21300000, guid: aeacf237ce792dc4b9ed3915d074d8fb, type: 3}
   nome: Troll Dandruff
   id: 10

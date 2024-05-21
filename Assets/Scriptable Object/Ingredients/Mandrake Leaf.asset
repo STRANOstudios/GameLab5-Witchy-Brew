@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cb317f9656ad34438ba989b97fa220b, type: 3}
   m_Name: Mandrake Leaf
   m_EditorClassIdentifier: 
-  image: {fileID: 21300000, guid: 2995f845683f21342bfc5814c2f73d8f, type: 3}
+  image: {fileID: 21300000, guid: 90c9e19d079abab4f907dd8b0de5e603, type: 3}
   nome: Mandrake Leaf
   id: 3

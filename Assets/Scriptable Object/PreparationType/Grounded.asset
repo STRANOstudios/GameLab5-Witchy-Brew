@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 964fd7870e5ed764babfc720910e0285, type: 3}
   m_Name: Grounded
   m_EditorClassIdentifier: 
-  image: {fileID: 21300000, guid: ff94f673ffab1b54687bf965e19a303a, type: 3}
+  image: {fileID: 21300000, guid: 0dec95d5d57de514c8451ae13bdbb68d, type: 3}
   nome: Grounded
   id: 3

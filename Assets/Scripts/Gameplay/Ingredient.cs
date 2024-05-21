@@ -7,6 +7,7 @@ public class Ingredient : MonoBehaviour
     [SerializeField] CraftedIngredient item;
     [SerializeField] Preparation preparation;
     [SerializeField] TMP_Text text;
+    [SerializeField] Canvas canvas;
 
     public delegate void Click(CraftedIngredient item);
     public static event Click OnClicked;
@@ -24,11 +25,13 @@ public class Ingredient : MonoBehaviour
 
     public void OnMouseEnter()
     {
-        text.gameObject.SetActive(true);
+        canvas.gameObject.SetActive(true);
+//        text.gameObject.SetActive(true);
     }
 
     public void OnMouseExit()
     {
-        text.gameObject.SetActive(false);
+        canvas.gameObject.SetActive(false);
+//        text.gameObject.SetActive(false);
     }
 }

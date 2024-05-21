@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cb317f9656ad34438ba989b97fa220b, type: 3}
   m_Name: Tails of Lizard
   m_EditorClassIdentifier: 
-  image: {fileID: 21300000, guid: 64b494533e650b1498ea1af0f5f9ec3a, type: 3}
-  nome: Tails of Lizard
+  image: {fileID: 21300000, guid: 396983f9c17bd9848823cf13418eccac, type: 3}
+  nome: Lizard Tails
   id: 2

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cb317f9656ad34438ba989b97fa220b, type: 3}
   m_Name: Sea Cucumber
   m_EditorClassIdentifier: 
-  image: {fileID: 21300000, guid: 09051ef13199f5a4790de0ed491e9a1c, type: 3}
+  image: {fileID: 21300000, guid: 1ee7b6239f1eeab46b4026a3cf890433, type: 3}
   nome: Sea Cucumber
   id: 9
