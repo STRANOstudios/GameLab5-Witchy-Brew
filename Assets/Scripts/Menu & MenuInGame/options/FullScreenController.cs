@@ -24,12 +24,12 @@ public class FullScreenController : MonoBehaviour
     private void SetFullScreen(bool value)
     {
         Screen.fullScreen = value;
-        PlayerPrefs.SetInt("FullScreen", value ? 1 : 0);
+        PlayerPrefs.SetInt("FullScreen", value ? 0 : 1);
     }
 
     public void Initialize()
     {
-        fullScreenToggle.isOn = PlayerPrefs.GetInt("FullScreen") == 0 ? false : true;
+        fullScreenToggle.isOn = PlayerPrefs.GetInt("FullScreen") == 0;
         Screen.fullScreen = fullScreenToggle.isOn;
     }
 }
