@@ -1,62 +1,32 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 [DisallowMultipleComponent]
 public class UIResult : MonoBehaviour
 {
+    public static UIResult Instance { get; internal set; }
+
     [Header("UI Elements")]
     [SerializeField] private GameObject _resultPanel;
     [SerializeField] private GameObject _resultPrefab;
 
-    [Header("References")]
-    [SerializeField] private Sprite _red;
-    [SerializeField] private Sprite _green;
-    [SerializeField] private Sprite _yellow;
-    [SerializeField] private Sprite _orange;
-
-    private void OnEnable()
+    private void Awake()
     {
-
-    }
-
-    private void OnDisable()
-    {
-
+        Instance = this;
     }
 
     public void ShowResult(Result result)
     {
         GameObject resultObject = Instantiate(_resultPrefab, _resultPanel.transform);
 
-        for (int i = 0; i < result.sprites.Count; i++)
+        ResultComponent resultComponent = resultObject.GetComponent<ResultComponent>();
+
+        for (int i = 0; i < result.items.Count; i++)
         {
-            resultObject.transform.GetChild(i).GetComponent<Image>().sprite = result.sprites[i];
-
-            Sprite color = null;
-            switch (result.colorCodes[i])
-            {
-                case ColorCode.RED:
-
-                    color = _red;
-                    break;
-
-                case ColorCode.GREEN:
-
-                    color = _green;
-                    break;
-
-                case ColorCode.YELLOW:
-
-                    color = _yellow;
-                    break;
-
-                case ColorCode.ORANGE:
-
-                    color = _orange;
-                    break;
-            }
-            resultObject.transform.GetChild(i).GetComponent<Image>().sprite = color;
+            resultComponent.ingredients[i].sprite = result.items[i].itemData.image;
+            resultComponent.preparetions[i].sprite = result.items[i].preparation.image;
+            resultComponent.backgrounds[i].color = result.color[i];
+            resultComponent.text.text = result.text;
         }
     }
 }
@@ -64,20 +34,14 @@ public class UIResult : MonoBehaviour
 [System.Serializable]
 public class Result
 {
-    public List<Sprite> sprites = new();
-    public List<ColorCode> colorCodes = new();
+    public List<CraftedIngredient> items = new();
+    public List<Color> color = new();
+    public string text;
 
-    public Result(List<Sprite> sprites, List<ColorCode> colorCodes)
+    public Result(List<CraftedIngredient> item, List<Color> color, string text)
     {
-        this.sprites = sprites;
-        this.colorCodes = colorCodes;
+        this.items = item;
+        this.color = color;
+        this.text = text;
     }
-}
-
-public enum ColorCode
-{
-    RED,
-    GREEN,
-    YELLOW,
-    ORANGE
 }
