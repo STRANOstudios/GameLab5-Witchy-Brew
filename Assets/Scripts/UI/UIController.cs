@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class UIController : MonoBehaviour
@@ -13,14 +12,22 @@ public class UIController : MonoBehaviour
 
     [SerializeField] private UIEventDialogue EventDialogue;
 
+    [Header("Menu Elements")]
+    [SerializeField] private GameObject _menuInGame;
+    [SerializeField] private GameObject _menuOptions;
+    [SerializeField] private GameObject _menuOptionAudio;
+    [SerializeField] private GameObject _menuOptionGraphics;
+
     private void OnEnable()
     {
         UIDialogueManager.OnDialogueFinished += ResetUIDialogue;
+        GameManager.Instance.Pause += OnPause;
     }
 
     private void OnDisable()
     {
         UIDialogueManager.OnDialogueFinished -= ResetUIDialogue;
+        GameManager.Instance.Pause -= OnPause;
     }
 
     public void Button()
@@ -37,5 +44,18 @@ public class UIController : MonoBehaviour
     {
         _dialogueBalloon.SetActive(false);
         _characterPortrait.SetActive(false);
+    }
+
+    private void OnPause(bool value)
+    {
+        _pauseMenu.SetActive(value);
+
+        if (!value)
+        {
+            if (_menuInGame) _menuInGame.SetActive(true);
+            if (_menuOptions) _menuOptions.SetActive(false);
+            if (_menuOptionAudio) _menuOptionAudio.SetActive(false);
+            if (_menuOptionGraphics) _menuOptionGraphics.SetActive(false);
+        }
     }
 }
