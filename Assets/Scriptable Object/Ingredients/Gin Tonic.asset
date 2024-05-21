@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cb317f9656ad34438ba989b97fa220b, type: 3}
   m_Name: Gin Tonic
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 2d8b377a263993c44abe8383ca59b66a, type: 3}
   nome: Gin Tonic
   id: 11

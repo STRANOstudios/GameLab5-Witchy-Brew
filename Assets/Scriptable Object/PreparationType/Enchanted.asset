@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 964fd7870e5ed764babfc720910e0285, type: 3}
   m_Name: Enchanted
   m_EditorClassIdentifier: 
-  image: {fileID: 1556245720, guid: af179b6d814575a4cb1acee6ea3f5e77, type: 3}
+  image: {fileID: 21300000, guid: d91cc4420a463e84fb48727b0e8e2fc2, type: 3}
   nome: Enchated
   id: 1

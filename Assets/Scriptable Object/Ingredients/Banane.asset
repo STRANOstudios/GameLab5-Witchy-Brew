@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cb317f9656ad34438ba989b97fa220b, type: 3}
   m_Name: Banane
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 8ba8fcf48b004aa40a2490cb8785eed1, type: 3}
   nome: Banane
   id: 6
