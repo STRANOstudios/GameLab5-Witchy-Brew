@@ -14,6 +14,8 @@ public class UIDialogueManager : MonoBehaviour
     [Header("Animation Reference")]
     [SerializeField] private Transform meshTransform;
     [SerializeField] private Transform targetPosition;
+    [Space]
+    [SerializeField] private ResultComponent UIitem;
 
     [Header("UI Settings")]
     [SerializeField, Min(0)] private float timePerCharacter = 0.05f;
@@ -34,7 +36,9 @@ public class UIDialogueManager : MonoBehaviour
     public static UIDialogueManager Instance { get; internal set; }
 
     public delegate void UIDialogueManagerState();
+    public static event UIDialogueManagerState OnDialogueStarted;
     public static event UIDialogueManagerState OnDialogueFinished;
+    public static event UIDialogueManagerState OnDialogueHolding;
 
     private void Awake()
     {
@@ -55,12 +59,40 @@ public class UIDialogueManager : MonoBehaviour
     /// <param name="eventDialogue"></param>
     public void StartDialogue(UIEventDialogue eventDialogue)
     {
+        OnDialogueStarted?.Invoke();
+
+        UIitem.gameObject.SetActive(false);
+
         StopAllCoroutines();
         currentDialogue = 0;
         currentEventDialogue = eventDialogue;
         StartCoroutine(WriteText(currentEventDialogue));
         if (!meshTransform) return;
         MoveToTarget(meshTransform, targetPosition.position, animationDuration, true);
+    }
+
+    /// <summary>
+    /// Holding an obejct in the inventory
+    /// </summary>
+    /// <param name="eventDialogue"></param>
+    /// <param name="item"></param>
+    public void HoldingObject(UIEventDialogue eventDialogue, CraftedIngredient item)
+    {
+        OnDialogueHolding?.Invoke();
+
+        StopAllCoroutines();
+        currentDialogue = 0;
+        currentEventDialogue = eventDialogue;
+
+        if (!meshTransform) return;
+        MoveToTarget(meshTransform, targetPosition.position, animationDuration, true);
+
+        Animation();
+
+        UIitem.gameObject.SetActive(true);
+
+        UIitem.ingredients[0].sprite = item.itemData.image;
+        UIitem.preparetions[0].sprite = item.preparation.image;
     }
 
     private IEnumerator WriteText(UIEventDialogue eventDialogue)

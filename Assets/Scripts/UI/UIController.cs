@@ -19,15 +19,22 @@ public class UIController : MonoBehaviour
     private void OnEnable()
     {
         UIDialogueManager.OnDialogueFinished += ResetUIDialogue;
+        UIDialogueManager.OnDialogueStarted += SetUIDialogue;
+        UIDialogueManager.OnDialogueHolding += HoldingUIDialogue;
+
         if (GameManager.Instance) GameManager.Instance.Pause += OnPause;
     }
 
     private void OnDisable()
     {
         UIDialogueManager.OnDialogueFinished -= ResetUIDialogue;
+        UIDialogueManager.OnDialogueStarted -= SetUIDialogue;
+        UIDialogueManager.OnDialogueHolding -= HoldingUIDialogue;
+
         if (GameManager.Instance) GameManager.Instance.Pause -= OnPause;
     }
 
+    //example and debug purposes
     public void Button()
     {
         if (!_dialogueBalloon || !_characterPortrait) return;
@@ -38,7 +45,19 @@ public class UIController : MonoBehaviour
         UIDialogueManager.Instance.StartDialogue(EventDialogue);
     }
 
-    public void ResetUIDialogue()
+    private void SetUIDialogue()
+    {
+        _dialogueBalloon.SetActive(true);
+        _characterPortrait.SetActive(true);
+    }
+
+    private void HoldingUIDialogue()
+    {
+        _dialogueBalloon.SetActive(false);
+        _characterPortrait.SetActive(true);
+    }
+
+    private void ResetUIDialogue()
     {
         _dialogueBalloon.SetActive(false);
         _characterPortrait.SetActive(false);
