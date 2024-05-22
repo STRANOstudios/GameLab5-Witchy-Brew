@@ -1,18 +1,19 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PotionGenerator : MonoBehaviour
 {
-    [SerializeField]int[,] ingredients=new int[5,2];
-    List<int> ingredientList=new List<int>();   
+    int[,] ingredients=new int[5,2];
+    Color[] check=new Color[5];
 
-
+    List<int> ingredientList=new List<int>();
+    List<CauldronSlot> list = new List<CauldronSlot>();
     private void GeneratePotion()
     {
         ingredientList.Clear();
         for(int i=1; i<13;i++)
         {
+
             ingredientList.Add(i);
         }
         for(int i = 0; i < ingredients.GetLength(0); i++)
@@ -23,13 +24,47 @@ public class PotionGenerator : MonoBehaviour
             ingredients[i, 1] = Random.Range(0,4);
             Debug.Log(ingredients[i, 0]+ " + "+ ingredients[i,1]);
         }
-
     }
     private void Start()
     {
         GeneratePotion();
+        list=CaldronManager.instance.slotList;
+    }
+    public void Confirm()
+    {
+        for (int i=0;i<ingredients.GetLength(0);i++)
+        {          
+            if (ingredients[i, 0] == list[i].item.itemData.id && ingredients[i, 1] == list[i].item.preparation.id)
+            {
+                check[i]=Color.green;
+            }else if (ingredients[i, 0] == list[i].item.itemData.id)
+            {
+                check[i] = Color.yellow;
+            }
+            else if (CheckItem(ingredients[i,0])){
+                check[i] = Color.blue;
+            }
+            else
+            {
+                check[i]=Color.red;
+            }
+        }
+        for (int i=0;i<check.Length;i++)
+            Debug.Log(check[i]);
     }
 
+
+    private bool CheckItem(int index)
+    {
+        for(int i = 0; i < ingredients.GetLength(0); i++)
+        {
+            if (index == list[i].item.itemData.id)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 
 
 }
