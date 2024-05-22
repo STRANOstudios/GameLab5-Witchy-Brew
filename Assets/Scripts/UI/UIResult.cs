@@ -69,6 +69,12 @@ public class Result
     public List<Color> Colors { get; private set; }
     public string Text { get; private set; }
 
+    /// <summary>
+    /// Creates a new instance of Result
+    /// </summary>
+    /// <param name="items"></param>
+    /// <param name="colors"></param>
+    /// <param name="text"></param>
     public Result(List<CraftedIngredient> items, List<Color> colors, string text)
     {
         Items = items ?? new List<CraftedIngredient>(); // Ensure items is not null

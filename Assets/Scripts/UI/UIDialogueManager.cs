@@ -40,13 +40,12 @@ public class UIDialogueManager : MonoBehaviour
     {
         Instance = this;
 
-        audioSource = GetComponent<AudioSource>();        
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Start()
     {
-        animator = meshTransform.gameObject.GetComponent<Animator>();
-        Debug.Log(animator);
+        animator = meshTransform.gameObject.GetComponentInChildren<Animator>();
     }
 
     /// <summary>
@@ -83,11 +82,8 @@ public class UIDialogueManager : MonoBehaviour
             dialogueState = UIDialogueState.Finished;
 
             currentDialogue++;
+            yield return new WaitForSeconds(dialogueDelay);
             if (currentDialogue < eventDialogue.dialogueList.Count)
-            {
-                yield return new WaitForSeconds(dialogueDelay);
-            }
-            else
             {
                 // Reset to the beginning or handle end of dialogue logic
                 dialogueState = UIDialogueState.None;
@@ -116,10 +112,8 @@ public class UIDialogueManager : MonoBehaviour
 
     private void Animation()
     {
-        Debug.Log("1");
         if (!animator) return;
 
-        Debug.Log("2");
         if (currentAnimationName == currentEventDialogue.dialogueList[currentDialogue].animationName.name) return;
 
         currentAnimationName = currentEventDialogue.dialogueList[currentDialogue].animationName.name;
@@ -138,7 +132,7 @@ public class UIDialogueManager : MonoBehaviour
             text.text = currentEventDialogue.dialogueList[currentDialogue].dialogueText;  // Complete the current dialogue instantly
             dialogueState = UIDialogueState.Finished;
         }
-        else if(dialogueState != UIDialogueState.None)
+        else if (dialogueState != UIDialogueState.None)
         {
             NextDialogue();
         }

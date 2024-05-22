@@ -608,8 +608,8 @@ MonoBehaviour:
   audioClip: {fileID: 0}
   meshTransform: {fileID: 1305672555}
   targetPosition: {fileID: 1234258418}
-  timePerCharacter: 1
-  dialogueDelay: 15
+  timePerCharacter: 0.1
+  dialogueDelay: 3
   fadeDelay: 0.5
   fadeDuration: 0.5
   animationDuration: 0.5
@@ -22793,7 +22793,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 50, y: -150}
+  m_AnchoredPosition: {x: 50, y: -150.00003}
   m_SizeDelta: {x: -100, y: -300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1317260355
@@ -22844,7 +22844,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pauseMenu: {fileID: 518923205}
   _dialogueBalloon: {fileID: 1293030529}
-  _characterPortrait: {fileID: 547303290}
+  _characterPortrait: {fileID: 1305672553}
   EventDialogue: {fileID: 11400000, guid: 9d37924fdf1d7d84aaed5499fa5a0bb8, type: 2}
   _menuInGame: {fileID: 1490325783}
   _menuOptions: {fileID: 138271706}
