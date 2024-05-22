@@ -3,60 +3,72 @@ using UnityEngine;
 
 public class PotionGenerator : MonoBehaviour
 {
-    int[,] ingredients=new int[5,2];
-    Color[] check=new Color[5];
+    int[,] ingredients = new int[5, 2];
+    Color[] check = new Color[5];
 
-    List<int> ingredientList=new List<int>();
+    int attemptIndex;
+    List<int> ingredientList = new List<int>();
     List<CauldronSlot> list = new List<CauldronSlot>();
     private void GeneratePotion()
     {
         ingredientList.Clear();
-        for(int i=1; i<13;i++)
+        for (int i = 1; i < 13; i++)
         {
 
             ingredientList.Add(i);
         }
-        for(int i = 0; i < ingredients.GetLength(0); i++)
+        for (int i = 0; i < ingredients.GetLength(0); i++)
         {
-            int index=Random.Range(0,ingredientList.Count);
-            ingredients[i,0] = ingredientList[index];
+            int index = Random.Range(0, ingredientList.Count);
+            ingredients[i, 0] = ingredientList[index];
             ingredientList.RemoveAt(index);
-            ingredients[i, 1] = Random.Range(0,4);
-            Debug.Log(ingredients[i, 0]+ " + "+ ingredients[i,1]);
+            ingredients[i, 1] = Random.Range(0, 4);
+            Debug.Log(ingredients[i, 0] + " + " + ingredients[i, 1]);
         }
     }
     private void Start()
     {
         GeneratePotion();
-        list=CaldronManager.instance.slotList;
+        list = CaldronManager.instance.slotList;
     }
     public void Confirm()
     {
-        for (int i=0;i<ingredients.GetLength(0);i++)
-        {          
+        for (int i = 0; i < ingredients.GetLength(0); i++)
+        {
             if (ingredients[i, 0] == list[i].item.itemData.id && ingredients[i, 1] == list[i].item.preparation.id)
             {
-                check[i]=Color.green;
-            }else if (ingredients[i, 0] == list[i].item.itemData.id)
+                check[i] = Color.green;
+            }
+            else if (ingredients[i, 0] == list[i].item.itemData.id)
             {
                 check[i] = Color.yellow;
             }
-            else if (CheckItem(ingredients[i,0])){
+            else if (CheckItem(ingredients[i, 0]))
+            {
                 check[i] = Color.blue;
             }
             else
             {
-                check[i]=Color.red;
+                check[i] = Color.red;
             }
+            attemptIndex++;
         }
-        for (int i=0;i<check.Length;i++)
-            Debug.Log(check[i]);
+
+        List<Color> colorList = new List<Color>();
+        List<CraftedIngredient> craftedIngredientList = new List<CraftedIngredient>();
+        for (int i = 0; i < check.Length; i++)
+        {
+            colorList.Add(check[i]);
+            craftedIngredientList.Add(list[i].item);
+        }
+        UIResult.Instance.ShowResult(new Result(craftedIngredientList, colorList, "Attempt " + attemptIndex + " of 5"));
+
     }
 
 
     private bool CheckItem(int index)
     {
-        for(int i = 0; i < ingredients.GetLength(0); i++)
+        for (int i = 0; i < ingredients.GetLength(0); i++)
         {
             if (index == list[i].item.itemData.id)
             {
