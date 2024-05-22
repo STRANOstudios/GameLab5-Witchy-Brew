@@ -4,11 +4,13 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class UIResult : MonoBehaviour
 {
-    public static UIResult Instance { get; internal set; }
+    public static UIResult Instance { get; private set; }
 
     [Header("UI Elements")]
     [SerializeField] private GameObject _resultPanel;
     [SerializeField] private GameObject _resultPrefab;
+
+    private readonly List<GameObject> resultObjects = new();
 
     private void Awake()
     {
@@ -17,31 +19,50 @@ public class UIResult : MonoBehaviour
 
     public void ShowResult(Result result)
     {
+        // Instantiate the prefab and add it to the list
         GameObject resultObject = Instantiate(_resultPrefab, _resultPanel.transform);
+        resultObjects.Add(resultObject);
 
         ResultComponent resultComponent = resultObject.GetComponent<ResultComponent>();
+        int itemCount = result.Items.Count;
 
-        for (int i = 0; i < result.items.Count; i++)
+        // Cache the references to the lists only once
+        var ingredients = resultComponent.ingredients;
+        var preparations = resultComponent.preparetions;
+        var backgrounds = resultComponent.backgrounds;
+
+        // Iterate through the items and set the corresponding properties
+        for (int i = 0; i < itemCount; i++)
         {
-            resultComponent.ingredients[i].sprite = result.items[i].itemData.image;
-            resultComponent.preparetions[i].sprite = result.items[i].preparation.image;
-            resultComponent.backgrounds[i].color = result.color[i];
-            resultComponent.text.text = result.text;
+            ingredients[i].sprite = result.Items[i].itemData.image;
+            preparations[i].sprite = result.Items[i].preparation.image;
+            backgrounds[i].color = result.Colors[i];
         }
+
+        resultComponent.text.text = result.Text;
+    }
+
+    public void RemoveResult()
+    {
+        for (int i = 0; i < resultObjects.Count; i++)
+        {
+            Destroy(resultObjects[i]);
+        }
+        resultObjects.Clear();
     }
 }
 
 [System.Serializable]
 public class Result
 {
-    public List<CraftedIngredient> items = new();
-    public List<Color> color = new();
-    public string text;
+    public List<CraftedIngredient> Items { get; private set; }
+    public List<Color> Colors { get; private set; }
+    public string Text { get; private set; }
 
-    public Result(List<CraftedIngredient> item, List<Color> color, string text)
+    public Result(List<CraftedIngredient> items, List<Color> colors, string text)
     {
-        this.items = item;
-        this.color = color;
-        this.text = text;
+        Items = items ?? new List<CraftedIngredient>(); // Ensure items is not null
+        Colors = colors ?? new List<Color>(); // Ensure colors is not null
+        Text = text ?? string.Empty; // Ensure text is not null
     }
 }
