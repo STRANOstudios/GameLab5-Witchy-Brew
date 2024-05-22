@@ -8,15 +8,6 @@ public class UIEventDialogue : ScriptableObject
     public List<UIDialogue> dialogueList;
 }
 
-public enum UIAnimationName
-{
-    Happy,
-    Sad,
-    Neutral,
-    Explosion,
-    None
-}
-
 public enum UIEventName
 {
     Tutorial
@@ -26,5 +17,5 @@ public enum UIEventName
 public class UIDialogue
 {
     public string dialogueText;
-    public UIAnimationName animationName;
+    public AnimationClip animationName;
 }

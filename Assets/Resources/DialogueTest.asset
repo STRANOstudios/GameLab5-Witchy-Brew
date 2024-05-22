@@ -15,8 +15,10 @@ MonoBehaviour:
   eventName: 0
   dialogueList:
   - dialogueText: chi sei?
-    animationName: 0
+    animationName: {fileID: 7400000, guid: ba23642b614bd4f40bdaa16e107e1fbe, type: 2}
   - dialogueText: cosa vuoi da me
-    animationName: 3
+    animationName: {fileID: 7400000, guid: 04c4ffe46d531c5418e6d0632468068e, type: 2}
   - dialogueText: chi ti conosce
-    animationName: 1
+    animationName: {fileID: 7400000, guid: 1a8a4c43d333b2047b41ea4bef58d3bd, type: 2}
+  - dialogueText: 
+    animationName: {fileID: 7400000, guid: 02e81e2ee31c6344889c06bc030015ec, type: 2}

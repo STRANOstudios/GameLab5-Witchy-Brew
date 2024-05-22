@@ -8,8 +8,6 @@ public class UIController : MonoBehaviour
     [SerializeField] private GameObject _dialogueBalloon;
     [SerializeField] private GameObject _characterPortrait;
 
-    [SerializeField] private GameObject _attemptBoard;
-
     [SerializeField] private UIEventDialogue EventDialogue;
 
     [Header("Menu Elements")]

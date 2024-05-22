@@ -27,7 +27,7 @@ public class UIDialogueManager : MonoBehaviour
 
     private int currentDialogue = 0;
     private UIEventDialogue currentEventDialogue;
-    private UIAnimationName currentAnimationName;
+    private string currentAnimationName;
 
     private UIDialogueState dialogueState = UIDialogueState.None;
 
@@ -46,8 +46,14 @@ public class UIDialogueManager : MonoBehaviour
     private void Start()
     {
         animator = meshTransform.gameObject.GetComponent<Animator>();
+        Debug.Log(animator);
     }
 
+    /// <summary>
+    /// Starts the dialogue
+    /// Prepares the text and starts the animation
+    /// </summary>
+    /// <param name="eventDialogue"></param>
     public void StartDialogue(UIEventDialogue eventDialogue)
     {
         StopAllCoroutines();
@@ -83,7 +89,7 @@ public class UIDialogueManager : MonoBehaviour
             }
             else
             {
-                // Fine del dialogo, reset stato
+                // Reset to the beginning or handle end of dialogue logic
                 dialogueState = UIDialogueState.None;
                 OnDialogueEnd();
             }
@@ -110,15 +116,20 @@ public class UIDialogueManager : MonoBehaviour
 
     private void Animation()
     {
+        Debug.Log("1");
         if (!animator) return;
 
-        if (currentAnimationName == currentEventDialogue.dialogueList[currentDialogue].animationName) return;
+        Debug.Log("2");
+        if (currentAnimationName == currentEventDialogue.dialogueList[currentDialogue].animationName.name) return;
 
-        currentAnimationName = currentEventDialogue.dialogueList[currentDialogue].animationName;
+        currentAnimationName = currentEventDialogue.dialogueList[currentDialogue].animationName.name;
 
-        animator.CrossFade(currentAnimationName.ToString(), fadeDelay);
+        animator.CrossFade(currentAnimationName, fadeDelay);
     }
 
+    /// <summary>
+    /// When the button is pressed and the dialogue is playing, write all the text, else play the next dialogue
+    /// </summary>
     public void ButtonPressed()
     {
         if (dialogueState == UIDialogueState.Playing)

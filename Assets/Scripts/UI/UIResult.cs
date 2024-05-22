@@ -17,6 +17,12 @@ public class UIResult : MonoBehaviour
         Instance = this;
     }
 
+    /// <summary>
+    /// Shows the result in the UI
+    /// Instantiates the prefab and adds it to the list
+    /// Sets the properties of the prefab
+    /// </summary>
+    /// <param name="result"></param>
     public void ShowResult(Result result)
     {
         // Instantiate the prefab and add it to the list
@@ -42,6 +48,10 @@ public class UIResult : MonoBehaviour
         resultComponent.text.text = result.Text;
     }
 
+    /// <summary>
+    /// Removes all result objects
+    /// Prepares the list for the next use
+    /// </summary>
     public void RemoveResult()
     {
         for (int i = 0; i < resultObjects.Count; i++)
