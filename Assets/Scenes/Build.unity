@@ -608,6 +608,7 @@ MonoBehaviour:
   audioClip: {fileID: 0}
   meshTransform: {fileID: 1305672555}
   targetPosition: {fileID: 1234258418}
+  UIitem: {fileID: 0}
   timePerCharacter: 0.1
   dialogueDelay: 3
   fadeDelay: 0.5
@@ -1002,7 +1003,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.00030438, y: -56.05008}
+  m_AnchoredPosition: {x: -0.00030438, y: -56.05005}
   m_SizeDelta: {x: 665.78, y: 281.97}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &62777338
@@ -22636,7 +22637,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4262afa00343f8548b46e35b64cb5cd3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fdd477d92621c0b4a95e4378c8ec6f73, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -23550,7 +23551,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 50, y: -150.00003}
+  m_AnchoredPosition: {x: 50, y: -150}
   m_SizeDelta: {x: -100, y: -300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1317260355
@@ -25952,7 +25953,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 769dd606ad71fdf4c9cab3a73f352048, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7dc108ec661a03243bf1557ca53fb4b2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

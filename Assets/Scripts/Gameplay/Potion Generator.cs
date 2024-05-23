@@ -64,8 +64,8 @@ public class PotionGenerator : MonoBehaviour
             colorList.Add(check[i]);
             craftedIngredientList.Add(list[i].item);
         }
+        attemptIndex++;
         UIResult.Instance.ShowResult(new Result(craftedIngredientList, colorList, "Attempt " + attemptIndex + " of 5"));
-                    attemptIndex++;
     }
 
     private bool CheckPreparation(int ingredient,int index)
