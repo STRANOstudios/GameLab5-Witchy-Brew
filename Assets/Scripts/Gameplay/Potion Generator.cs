@@ -39,13 +39,17 @@ public class PotionGenerator : MonoBehaviour
             {
                 check[i] = Color.green;
             }
-            else if (ingredients[i, 0] == list[i].item.itemData.id)
+            else if (ingredients[i, 0] == list[i].item.itemData.id && ingredients[i, 1] != list[i].item.preparation.id)
             {
                 check[i] = Color.yellow;
             }
-            else if (CheckItem(ingredients[i, 0]))
+            else if (CheckItem(list[i].item.itemData.id) && ingredients[i, 1] != list[i].item.preparation.id)
             {
                 check[i] = Color.blue;
+            }
+            else if (CheckItem(list[i].item.itemData.id) && ingredients[i, 1] == list[i].item.preparation.id)
+            {
+                check[i] = Color.cyan;
             }
             else
             {
@@ -70,7 +74,7 @@ public class PotionGenerator : MonoBehaviour
     {
         for (int i = 0; i < ingredients.GetLength(0); i++)
         {
-            if (index == list[i].item.itemData.id)
+            if (index == ingredients[i, 0])
             {
                 return true;
             }
