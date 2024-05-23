@@ -43,11 +43,11 @@ public class PotionGenerator : MonoBehaviour
             {
                 check[i] = Color.yellow;
             }
-            else if (CheckItem(list[i].item.itemData.id) && ingredients[i, 1] != list[i].item.preparation.id)
+            else if (CheckItem(list[i].item.itemData.id, i))
             {
                 check[i] = Color.blue;
             }
-            else if (CheckItem(list[i].item.itemData.id) && ingredients[i, 1] == list[i].item.preparation.id)
+            else if (CheckPreparation(list[i].item.itemData.id, i))
             {
                 check[i] = Color.cyan;
             }
@@ -55,7 +55,6 @@ public class PotionGenerator : MonoBehaviour
             {
                 check[i] = Color.red;
             }
-            attemptIndex++;
         }
 
         List<Color> colorList = new List<Color>();
@@ -66,16 +65,29 @@ public class PotionGenerator : MonoBehaviour
             craftedIngredientList.Add(list[i].item);
         }
         UIResult.Instance.ShowResult(new Result(craftedIngredientList, colorList, "Attempt " + attemptIndex + " of 5"));
-
+                    attemptIndex++;
     }
 
-
-    private bool CheckItem(int index)
+    private bool CheckPreparation(int ingredient,int index)
     {
         for (int i = 0; i < ingredients.GetLength(0); i++)
         {
-            if (index == ingredients[i, 0])
+            if (ingredient == ingredients[i, 0] && ingredients[i, 1] == list[index].item.preparation.id)
             {
+
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private bool CheckItem(int ingredient, int index)
+    {
+        for (int i = 0; i < ingredients.GetLength(0); i++)
+        {
+            if (ingredient == ingredients[i, 0] && ingredients[i, 1] != list[index].item.preparation.id)
+            {
+
                 return true;
             }
         }
