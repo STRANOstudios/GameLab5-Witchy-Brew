@@ -3863,7 +3863,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 1485450940}
   preparationImage: {fileID: 1652333654}
-  selectedItem: {fileID: 0}
+  selectedItem: {fileID: 7572013446331082151, guid: d2b8b9f4daa3e2c4db5cb67cd643e8e2,
+    type: 3}
   slotList:
   - {fileID: 122651583}
   - {fileID: 1870323034}
@@ -4211,7 +4212,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.01, y: 9.3}
+  m_AnchoredPosition: {x: 0.01, y: 7.24}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &400058268
@@ -30127,7 +30128,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1977254374}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.08}
+  m_LocalPosition: {x: 0, y: 0, z: -0.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -30205,7 +30206,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!4 &1987850370 stripped
 Transform:
