@@ -5,35 +5,42 @@ using UnityEngine.UI;
 public class CaldronManager : MonoBehaviour
 {
 
-    [SerializeField]Image itemImage;
+    [SerializeField] Image itemImage;
     [SerializeField] Image preparationImage;
-    public CraftedIngredient selectedItem=null;
+    public CraftedIngredient selectedItem = null;
     public List<CauldronSlot> slotList;
     public Button button;
 
 
-    [SerializeField]Canvas canvas;
+    [SerializeField] Canvas canvas;
     public static CaldronManager instance;
-    
+
     private void OnEnable()
     {
         Ingredient.OnClicked += ChangeItem;
     }
+
     private void OnDisable()
     {
         Ingredient.OnClicked -= ChangeItem;
     }
+
     public void SetPreparation(Preparation item)
     {
-        selectedItem.preparation=item;
+        selectedItem.preparation = item;
         preparationImage.sprite = item.image;
     }
+
     public void ChangeItem(CraftedIngredient item)
     {
-        selectedItem=item;
-        preparationImage.sprite=item.preparation.image;
-        itemImage.sprite = item.itemData.image;
+        selectedItem = item;
+        //preparationImage.sprite = item.preparation.image;
+        //itemImage.sprite = item.itemData.image;
+
+        if (item.itemData.id == 0) return;
+        DialogueManager.Instance.ShowEvent(DialogueType.TakingIngredient, item);
     }
+
     private void Awake()
     {
         if (instance == null) instance = this;
@@ -43,7 +50,7 @@ public class CaldronManager : MonoBehaviour
     {
         foreach (var slot in slotList)
         {
-           if(slot.item.itemData.id == 0)
+            if (slot.item.itemData.id == 0)
             {
                 button.interactable = false;
                 return;
@@ -55,7 +62,7 @@ public class CaldronManager : MonoBehaviour
 
 
 }
-    
+
 
 
 
