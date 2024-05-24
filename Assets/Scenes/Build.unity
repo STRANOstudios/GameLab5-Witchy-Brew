@@ -1003,7 +1003,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.00030438, y: -56.05008}
+  m_AnchoredPosition: {x: -0.00030438, y: -56.05005}
   m_SizeDelta: {x: 665.78, y: 281.97}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &62777338
@@ -23581,7 +23581,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 50, y: -150.00003}
+  m_AnchoredPosition: {x: 50, y: -150}
   m_SizeDelta: {x: -100, y: -300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1317260355
@@ -24845,6 +24845,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1451191280}
   - component: {fileID: 1451191281}
+  - component: {fileID: 1451191282}
   m_Layer: 0
   m_Name: Potion Generator
   m_TagString: Untagged
@@ -24879,6 +24880,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 674943dd4283c204ca4df77d552ab8d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1451191282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451191279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a36e71b8b87620341863408fa39b9868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color:
+  - Red
+  - Pink
+  - Blue
+  - Orange
+  type:
+  - 'potion of '
+  - brew of
+  - elixir of
+  - remedy for
+  adjective:
+  - creepy
+  - awful
+  - smelly
+  - fake
+  goal:
+  - happiness
+  - death
+  - luck
+  - pain
 --- !u!1 &1461083142
 GameObject:
   m_ObjectHideFlags: 0

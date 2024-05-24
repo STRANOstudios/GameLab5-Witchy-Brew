@@ -29,6 +29,7 @@ public class PotionGenerator : MonoBehaviour
     private void Start()
     {
         GeneratePotion();
+        Debug.Log(NameGenerator.instance.GenerateName());
         list = CaldronManager.instance.slotList;
     }
     public void Confirm()
@@ -49,7 +50,7 @@ public class PotionGenerator : MonoBehaviour
             }
             else if (CheckPreparation(list[i].item.itemData.id, i))
             {
-                check[i] = Color.cyan;
+                check[i] = new Color(1f, 127 / 255f, 39 / 255f);
             }
             else
             {
