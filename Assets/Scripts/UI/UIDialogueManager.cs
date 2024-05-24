@@ -146,7 +146,8 @@ public class UIDialogueManager : MonoBehaviour
         dialogueState = UIDialogueState.Playing;
 
         if (audioClip) audioSource.PlayOneShot(audioClip);
-        Animation();
+
+        animator.CrossFade(clip.name, fadeDelay);
 
         text.text = "";
         foreach (char c in dialogue)
