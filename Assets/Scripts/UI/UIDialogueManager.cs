@@ -15,7 +15,7 @@ public class UIDialogueManager : MonoBehaviour
     [SerializeField] private Transform meshTransform;
     [SerializeField] private Transform targetPosition;
     [Space]
-    [SerializeField] private ResultComponent UIitem;
+    [SerializeField] private ResultComponent UIItem;
 
     [Header("UI Settings")]
     [SerializeField, Min(0)] private float timePerCharacter = 0.05f;
@@ -61,7 +61,7 @@ public class UIDialogueManager : MonoBehaviour
     {
         OnDialogueStarted?.Invoke();
 
-        UIitem.gameObject.SetActive(false);
+        UIItem.gameObject.SetActive(false);
 
         StopAllCoroutines();
         currentDialogue = 0;
@@ -89,10 +89,10 @@ public class UIDialogueManager : MonoBehaviour
 
         Animation();
 
-        UIitem.gameObject.SetActive(true);
+        UIItem.gameObject.SetActive(true);
 
-        UIitem.ingredients[0].sprite = item.itemData.image;
-        UIitem.preparetions[0].sprite = item.preparation.image;
+        UIItem.ingredients[0].sprite = item.itemData.image;
+        UIItem.preparetions[0].sprite = item.preparation.image;
     }
 
     private IEnumerator WriteText(UIEventDialogue eventDialogue)
