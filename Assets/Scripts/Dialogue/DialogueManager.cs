@@ -10,6 +10,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] List<UIEventDialogue> ChoosingIngredients = new();
     [SerializeField] UIEventDialogue TakingIngredient;
     [SerializeField] UIEventDialogue ProcessingIngredients;
+    [SerializeField] UIEventDialogue PotionFiled;
+    [SerializeField] UIEventDialogue PotionReady;
 
     public static DialogueManager Instance { get; private set; }
 
