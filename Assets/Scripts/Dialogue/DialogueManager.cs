@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] UIEventDialogue ProcessingIngredients;
     [SerializeField] UIEventDialogue PotionFiled;
     [SerializeField] UIEventDialogue PotionReady;
+    [SerializeField] AnimationClip ClientAsk;
 
     public static DialogueManager Instance { get; private set; }
 
@@ -25,7 +26,7 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     /// <param name="type"></param>
     /// <param name="item"></param>
-    public void ShowEvent(DialogueType type, CraftedIngredient item = null)
+    public virtual void ShowEvent(DialogueType type, CraftedIngredient item = null)
     {
         if (item != null)
         {
@@ -55,6 +56,11 @@ public class DialogueManager : MonoBehaviour
         }
 
         UIDialogueManager.Instance.StartDialogue(eventDialogue);
+    }
+
+    public virtual void ShowEvent(string dialogue)
+    {
+        UIDialogueManager.Instance.StartDialogue(dialogue, ClientAsk);
     }
 }
 

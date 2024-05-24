@@ -57,7 +57,7 @@ public class UIDialogueManager : MonoBehaviour
     /// Prepares the text and starts the animation
     /// </summary>
     /// <param name="eventDialogue"></param>
-    public void StartDialogue(UIEventDialogue eventDialogue)
+    public virtual void StartDialogue(UIEventDialogue eventDialogue)
     {
         OnDialogueStarted?.Invoke();
 
@@ -66,6 +66,23 @@ public class UIDialogueManager : MonoBehaviour
         StopAllCoroutines();
         currentDialogue = 0;
         currentEventDialogue = eventDialogue;
+        StartCoroutine(WriteText(currentEventDialogue));
+        if (!meshTransform) return;
+        MoveToTarget(meshTransform, targetPosition.position, animationDuration, true);
+    }
+
+    /// <summary>
+    /// Starts the dialogue with an animation clip
+    /// </summary>
+    /// <param name="dialogue"></param>
+    /// <param name="clip"></param>
+    public virtual void StartDialogue(string dialogue, AnimationClip clip)
+    {
+        OnDialogueStarted?.Invoke();
+
+        UIItem.gameObject.SetActive(false);
+
+        StopAllCoroutines();
         StartCoroutine(WriteText(currentEventDialogue));
         if (!meshTransform) return;
         MoveToTarget(meshTransform, targetPosition.position, animationDuration, true);
@@ -95,7 +112,7 @@ public class UIDialogueManager : MonoBehaviour
         UIItem.preparetions[0].sprite = item.preparation.image;
     }
 
-    private IEnumerator WriteText(UIEventDialogue eventDialogue)
+    private IEnumerator WriteText(UIEventDialogue eventDialogue, bool delay = true)
     {
         dialogueState = UIDialogueState.Playing;
 
@@ -114,7 +131,7 @@ public class UIDialogueManager : MonoBehaviour
             dialogueState = UIDialogueState.Finished;
 
             currentDialogue++;
-            yield return new WaitForSeconds(dialogueDelay);
+            if (delay) yield return new WaitForSeconds(dialogueDelay);
             if (currentDialogue < eventDialogue.dialogueList.Count)
             {
                 // Reset to the beginning or handle end of dialogue logic
