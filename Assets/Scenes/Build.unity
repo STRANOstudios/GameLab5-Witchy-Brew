@@ -811,7 +811,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.00030438, y: -56.05008}
+  m_AnchoredPosition: {x: -0.00030438, y: -56.050064}
   m_SizeDelta: {x: 665.78, y: 281.97}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &62777338
@@ -3352,7 +3352,7 @@ MonoBehaviour:
   - {fileID: 1654265496}
   - {fileID: 1015668185}
   - {fileID: 894635305}
-  button: {fileID: 400058268}
+  button: {fileID: 1799938108}
   canvas: {fileID: 0}
 --- !u!1001 &387077093
 PrefabInstance:
@@ -3622,18 +3622,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &400058268 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4905024556187239767, guid: 3819d1a71a030a142b5a79e556c9c18a,
-    type: 3}
-  m_PrefabInstance: {fileID: 470593788071027636}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &407518185
 GameObject:
   m_ObjectHideFlags: 0
@@ -22718,7 +22706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 50, y: -150.00003}
+  m_AnchoredPosition: {x: 50, y: -150.00002}
   m_SizeDelta: {x: -100, y: -300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1317260355
@@ -27301,6 +27289,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1799938108 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4426535710757381851, guid: 3819d1a71a030a142b5a79e556c9c18a,
+    type: 3}
+  m_PrefabInstance: {fileID: 470593788071027636}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1800977009
 GameObject:
   m_ObjectHideFlags: 0
@@ -30182,6 +30182,7 @@ MonoBehaviour:
   ProcessingIngredients: {fileID: 0}
   PotionFiled: {fileID: 11400000, guid: e20cdf4f8981fae44ab797c2748c4417, type: 2}
   PotionReady: {fileID: 11400000, guid: 6c529e3f16363ee468d5376e19c36202, type: 2}
+  ClientAsk: {fileID: 0}
 --- !u!1 &2116422318
 GameObject:
   m_ObjectHideFlags: 0
@@ -40055,6 +40056,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426535710757381851, guid: 3819d1a71a030a142b5a79e556c9c18a,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426535710757381851, guid: 3819d1a71a030a142b5a79e556c9c18a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1451191281}
+    - target: {fileID: 4426535710757381851, guid: 3819d1a71a030a142b5a79e556c9c18a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Confirm
       objectReference: {fileID: 0}
     - target: {fileID: 4905024556187239767, guid: 3819d1a71a030a142b5a79e556c9c18a,
         type: 3}
