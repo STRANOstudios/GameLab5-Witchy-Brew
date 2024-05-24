@@ -83,7 +83,7 @@ public class UIDialogueManager : MonoBehaviour
         UIItem.gameObject.SetActive(false);
 
         StopAllCoroutines();
-        StartCoroutine(WriteText(currentEventDialogue));
+        StartCoroutine(WriteText2(dialogue, clip));
         if (!meshTransform) return;
         MoveToTarget(meshTransform, targetPosition.position, animationDuration, true);
     }
@@ -139,6 +139,26 @@ public class UIDialogueManager : MonoBehaviour
                 OnDialogueEnd();
             }
         }
+    }
+
+    private IEnumerator WriteText2(string dialogue, AnimationClip clip, bool delay = true)
+    {
+        dialogueState = UIDialogueState.Playing;
+
+        if (audioClip) audioSource.PlayOneShot(audioClip);
+        Animation();
+
+        text.text = "";
+        foreach (char c in dialogue)
+        {
+            text.text += c;
+            yield return new WaitForSeconds(timePerCharacter);
+        }
+
+        if (delay) yield return new WaitForSeconds(dialogueDelay);
+
+        dialogueState = UIDialogueState.None;
+        OnDialogueEnd();
     }
 
     private void NextDialogue()
