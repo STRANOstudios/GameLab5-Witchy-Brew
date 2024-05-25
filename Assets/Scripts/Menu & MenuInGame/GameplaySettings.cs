@@ -83,7 +83,7 @@ public class GameplaySettings : MonoBehaviour
         invertMouseYToggle.isOn = GetSavedInt("InvertY") == 1;
 
         //languageDropdown.ClearOptions();
-        ////languageDropdown.AddOptions(LocalizationSettings.AvailableLocales.Locales.Select(text => text.LocaleName).ToList());
+        ////languageDropdown.AddOptions(LocalizationSettings.AvailableLocales.Locales.Select(_text => _text.LocaleName).ToList());
         //languageDropdown.value = GetSavedInt("Language");
         //StartCoroutine(SetLocale(GetSavedInt("Language")));
         //languageDropdown.RefreshShownValue();

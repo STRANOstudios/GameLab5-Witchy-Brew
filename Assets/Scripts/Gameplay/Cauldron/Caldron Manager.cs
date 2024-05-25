@@ -34,11 +34,10 @@ public class CaldronManager : MonoBehaviour
     public void ChangeItem(CraftedIngredient item)
     {
         selectedItem = item;
-        //preparationImage.sprite = item.preparation.image;
-        //itemImage.sprite = item.itemData.image;
+        //preparationImage.sprite = _item.preparation.image;
+        //itemImage.sprite = _item.itemData.image;
 
-        if (item.itemData.id == 0) return;
-        DialogueManager.Instance.ShowEvent(DialogueType.TakingIngredient, item);
+        DialogueManager.Instance.ShowEvent(item);
     }
 
     private void Awake()
