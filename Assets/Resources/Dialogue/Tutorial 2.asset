@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: Tutorial 2
   m_EditorClassIdentifier: 
   eventName: 0
-  dialogueList: []
+  dialogueList:
+  - dialogueText: 'Select one of the slot of the cauldron to put the ingredient inside
+      the cauldron '
+    animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}

@@ -10,11 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 074eb19b71fe8c8419cce4138ae9dc31, type: 3}
-  m_Name: Tutorial 3
+  m_Name: Tutorial 7
   m_EditorClassIdentifier: 
   eventName: 0
   dialogueList:
-  - dialogueText: Good you are not that useless as i thought
+  - dialogueText: look, now your ingredients are magical!
     animationName: {fileID: 7400000, guid: f6e1be7ca7dd9e04e8188c3b260f8a33, type: 2}
-  - dialogueText: ' Now select a different ingredient '
-    animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
+  - dialogueText: " I mean, I wouldn\u2019t call it magical,there's just a little
+      star on top"
+    animationName: {fileID: 7400000, guid: 195252b8e2411b24a808e996de26b814, type: 2}
+  - dialogueText: "You must have fun at parties! Now, let\u2019s put the ingredients
+      inside the cauldron."
+    animationName: {fileID: 7400000, guid: 04c4ffe46d531c5418e6d0632468068e, type: 2}

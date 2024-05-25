@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 074eb19b71fe8c8419cce4138ae9dc31, type: 3}
+  m_Name: Tutorial 8
+  m_EditorClassIdentifier: 
+  eventName: 0
+  dialogueList:
+  - dialogueText: Aurora, are you as strong as your abuela? We need to grind this
+      stuff to paste!
+    animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
+  - dialogueText: "I mean, people tell me my biceps look like noodles, but I guess
+      I\u2019ll give it a try..? "
+    animationName: {fileID: 7400000, guid: 5f94cac549fbe3243bddfc4417328e0c, type: 2}
+  - dialogueText: "I mean, people tell me my biceps look like noodles, but I guess
+      I\u2019ll give it a try..? "
+    animationName: {fileID: 7400000, guid: 5f94cac549fbe3243bddfc4417328e0c, type: 2}
+  - dialogueText: "That\u2019s the spirit! Now, click on the mortar and pestle to
+      show me what you\u2019ve got"
+    animationName: {fileID: 7400000, guid: f6e1be7ca7dd9e04e8188c3b260f8a33, type: 2}
