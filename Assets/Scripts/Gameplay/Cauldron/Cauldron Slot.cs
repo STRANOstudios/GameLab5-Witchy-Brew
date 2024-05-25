@@ -31,15 +31,17 @@ public class CauldronSlot : MonoBehaviour
         CaldronManager instance = CaldronManager.instance;
         CraftedIngredient temp = instance.selectedItem;
         instance.ChangeItem(this.item);
+
+        Debug.Log(item.itemData.id);
+
+        if (item.itemData.id == 0) DialogueManager.Instance.ShowEvent(DialogueManager.STATE.IDLE);
+        else DialogueManager.Instance.ShowEvent(item);
+
         item = temp;
         itemImage.sprite = temp.itemData.image;
         preparationImage.sprite = temp.preparation.image;
         instance.CheckSlots();
 
-
-        // da bug fixare
-        if (item.itemData.image.name == "Base Preparation") DialogueManager.Instance.ShowEvent(DialogueManager.STATE.IDLE);
-        else DialogueManager.Instance.ShowEvent(item);
     }
 
     private void OnEnable()

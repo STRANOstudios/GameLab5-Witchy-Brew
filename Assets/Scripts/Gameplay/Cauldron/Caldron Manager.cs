@@ -37,7 +37,7 @@ public class CaldronManager : MonoBehaviour
         //preparationImage.sprite = _item.preparation.image;
         //itemImage.sprite = _item.itemData.image;
 
-        DialogueManager.Instance.ShowEvent(item);
+        if (item.itemData.id != 0) DialogueManager.Instance.ShowEvent(item);
     }
 
     private void Awake()
