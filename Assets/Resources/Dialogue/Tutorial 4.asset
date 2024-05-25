@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Tutorial 4
   m_EditorClassIdentifier: 
   eventName: 0
-  dialogueList: []
+  dialogueList:
+  - dialogueText: " It\u2019s cooking time! Left click on the oven to bake your ingredient"
+    animationName: {fileID: 7400000, guid: f6e1be7ca7dd9e04e8188c3b260f8a33, type: 2}
