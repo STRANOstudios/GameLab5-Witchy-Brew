@@ -14,7 +14,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventName: 0
   dialogueList:
-  - dialogueText: Good, all the ingredients are inside the pot. What now?
+  - dialogueText: 'Hey, you actually did it! '
+    animationName: {fileID: 7400000, guid: f6e1be7ca7dd9e04e8188c3b260f8a33, type: 2}
+  - dialogueText: "Guess I\u2019m not a wimp after all uh? "
+    animationName: {fileID: 7400000, guid: 1a8a4c43d333b2047b41ea4bef58d3bd, type: 2}
+  - dialogueText: "Yeah sure, we\u2019ll see about that tiger. "
+    animationName: {fileID: 7400000, guid: f6e1be7ca7dd9e04e8188c3b260f8a33, type: 2}
+  - dialogueText: "Well, now that you\u2019ve learned how to use the crafting station,it\u2019s
+      time to show you one last trick of the job."
+    animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
+  - dialogueText: What trick?
     animationName: {fileID: 7400000, guid: 14c539e9f1270f24ea481c0980793b1b, type: 2}
-  - dialogueText: Now just click the button in the middle and see what happens
-    animationName: {fileID: 7400000, guid: 14c539e9f1270f24ea481c0980793b1b, type: 2}
+  - dialogueText: " Well, if you select a different crafting station from the one
+      you\u2019re using right now on your ingredient, you can change the preparation
+      whenever you want!"
+    animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
+  - dialogueText: If you want to revert to the raw ingredient, you can just get the
+      ingredient back from the shelf
+    animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
+  - dialogueText: "Wait, isn\u2019t that wasteful?"
+    animationName: {fileID: 7400000, guid: 5f94cac549fbe3243bddfc4417328e0c, type: 2}
+  - dialogueText: "Nah, I\u2019ll just eat the stuff for dinner. I\u2019m a very
+      hungry cat."
+    animationName: {fileID: 7400000, guid: ed0c4b9f0a838d147b5e0588473c1d39, type: 2}
+  - dialogueText: Uh?!?
+    animationName: {fileID: 7400000, guid: 4b01d9bb0c075f945a9f4e85962070e9, type: 2}
+  - dialogueText: So as I was saying, put the last ingredient in the cauldron.
+    animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
