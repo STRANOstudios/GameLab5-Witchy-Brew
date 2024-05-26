@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="384d2998-266d-440f-b2f7-1c8470461945" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameLab5-Witchy-Brew/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameLab5-Witchy-Brew/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bugfix Rotation.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bugfix Rotation.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Build.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Build.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
