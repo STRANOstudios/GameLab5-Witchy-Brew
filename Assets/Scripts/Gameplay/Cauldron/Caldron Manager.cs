@@ -37,8 +37,7 @@ public class CaldronManager : MonoBehaviour
     {
         if (TutorialManager.TutorialIsRunning)
         {
-            Debug.Log("Tutorial is running");
-            if (TutorialManager.TaskIsRunning1) return;
+            if (TutorialManager.TaskIsRunning[0]) return;
         }
 
         selectedItem = item;

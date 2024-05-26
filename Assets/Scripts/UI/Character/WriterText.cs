@@ -117,7 +117,7 @@ public class WriterText : MonoBehaviour
 
         if (TutorialManager.TutorialIsRunning)
         {
-            TutorialManager.TaskIsRunning1 = false;
+            TutorialManager.TaskIsRunning[TutorialManager.taskIndex] = false;
         }
     }
 }

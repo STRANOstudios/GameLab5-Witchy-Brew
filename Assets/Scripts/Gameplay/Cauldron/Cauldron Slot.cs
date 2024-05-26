@@ -25,6 +25,11 @@ public class CauldronSlot : MonoBehaviour
 
     public void SetItem()
     {
+        if (TutorialManager.TutorialIsRunning)
+        {
+            if (TutorialManager.TaskIsRunning[1]) return;
+        }
+
         if (isPressed) return;
         StartCoroutine(ButtonPressed());
 

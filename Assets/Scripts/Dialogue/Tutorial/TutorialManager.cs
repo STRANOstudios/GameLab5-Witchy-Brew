@@ -8,11 +8,11 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] List<UIEventDialogue> tutorialEvents = new();
 
     private int index = 0;
-    private int taskIndex = 0;
+    public static int taskIndex = 0;
 
     public static bool TutorialIsRunning = true;
 
-    public static bool TaskIsRunning1 = true;
+    public static bool[] TaskIsRunning = new bool[12] { true, true, true, true, true, true, true, true, true, true, true, true };
 
     private bool isTutorialSkipped = false;
 
@@ -43,8 +43,7 @@ public class TutorialManager : MonoBehaviour
         }
         else if (!isTutorialSkipped)
         {
-            Finished?.Invoke();
-            TutorialIsRunning = false;
+            SkipTutorial();
         }
     }
 
@@ -68,6 +67,9 @@ public class TutorialManager : MonoBehaviour
 
         TutorialIsRunning = false;
 
-        TaskIsRunning1 = true;
+        for (int i = 0; i < TaskIsRunning.Length; i++)
+        {
+            TaskIsRunning[i] = false;
+        }
     }
 }
