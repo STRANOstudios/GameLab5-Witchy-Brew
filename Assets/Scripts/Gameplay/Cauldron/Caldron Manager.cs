@@ -35,6 +35,12 @@ public class CaldronManager : MonoBehaviour
 
     public void ChangeItem(CraftedIngredient item)
     {
+        if (TutorialManager.TutorialIsRunning)
+        {
+            Debug.Log("Tutorial is running");
+            if (TutorialManager.TaskIsRunning1) return;
+        }
+
         selectedItem = item;
         //preparationImage.sprite = _item.preparation.image;
         //itemImage.sprite = _item.itemData.image;

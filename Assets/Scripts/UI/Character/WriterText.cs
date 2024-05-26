@@ -6,16 +6,15 @@ using UnityEngine;
 [DisallowMultipleComponent, RequireComponent(typeof(TMP_Text))]
 public class WriterText : MonoBehaviour
 {
-    [Header("Settings")]
-    [SerializeField, Min(0)] private float timePerCharacter = 0.05f;
-    [SerializeField, Min(0)] private float lineDuration = 1f;
-
     private enum STATE
     {
         Playing,
         Finished,
         None
     }
+
+    private float timePerCharacter = 0.05f;
+    private float lineDuration = 1f;
 
     private TMP_Text _text;
 
@@ -31,6 +30,12 @@ public class WriterText : MonoBehaviour
     private void Awake()
     {
         _text = GetComponent<TMP_Text>();
+    }
+
+    private void Start()
+    {
+        timePerCharacter = DialogueManager.Instance.TimePerCharacter;
+        lineDuration = DialogueManager.Instance.LineDuration;
     }
 
     /// <summary>
@@ -109,5 +114,10 @@ public class WriterText : MonoBehaviour
         currentState = STATE.None;
         index = 0;
         Finished?.Invoke();
+
+        if (TutorialManager.TutorialIsRunning)
+        {
+            TutorialManager.TaskIsRunning1 = false;
+        }
     }
 }

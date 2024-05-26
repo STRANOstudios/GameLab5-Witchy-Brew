@@ -32,8 +32,6 @@ public class CauldronSlot : MonoBehaviour
         CraftedIngredient temp = instance.selectedItem;
         instance.ChangeItem(this.item);
 
-        Debug.Log(item.itemData.id);
-
         if (item.itemData.id == 0) DialogueManager.Instance.ShowEvent(DialogueManager.STATE.IDLE);
         else DialogueManager.Instance.ShowEvent(item);
 

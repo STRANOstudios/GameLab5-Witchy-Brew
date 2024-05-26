@@ -7754,10 +7754,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4253ce8377ce4e46bcc6f8d9ffc028e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerControls: {fileID: -944628639613478452, guid: d7782233dd55ae24b9b9b6230ba4b9d9,
+  systemControls: {fileID: -944628639613478452, guid: d7782233dd55ae24b9b9b6230ba4b9d9,
     type: 3}
-  actionMapName: System
+  actionMapName: Player
+  actionMapName2: System
   pause: escape
+  zoom: Zoom
 --- !u!1 &1447491868
 GameObject:
   m_ObjectHideFlags: 0

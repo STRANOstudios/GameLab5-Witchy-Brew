@@ -10,6 +10,10 @@ public class TutorialManager : MonoBehaviour
     private int index = 0;
     private int taskIndex = 0;
 
+    public static bool TutorialIsRunning = true;
+
+    public static bool TaskIsRunning1 = true;
+
     private bool isTutorialSkipped = false;
 
     public delegate void Event();
@@ -40,6 +44,7 @@ public class TutorialManager : MonoBehaviour
         else if (!isTutorialSkipped)
         {
             Finished?.Invoke();
+            TutorialIsRunning = false;
         }
     }
 
@@ -60,5 +65,9 @@ public class TutorialManager : MonoBehaviour
         isTutorialSkipped = true;
         index = tutorialEvents.Count;
         Finished?.Invoke();
+
+        TutorialIsRunning = false;
+
+        TaskIsRunning1 = true;
     }
 }

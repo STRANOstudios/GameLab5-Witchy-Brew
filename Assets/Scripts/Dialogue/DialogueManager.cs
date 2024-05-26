@@ -29,6 +29,11 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] UIEventDialogue PotionReady;
     [SerializeField] AnimationClip ClientAsk;
 
+    [Header("Settings")]
+    [SerializeField, Min(0)] float timePerCharacter = 0.08f;
+    [SerializeField, Min(0)] float lineDuration = 3f;
+    [SerializeField, Min(0)] float fadeDelay = 0.1f;
+
     public enum STATE
     {
         IDLE,
@@ -130,7 +135,8 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        _item.SetActive(true);
+        //_item.SetActive(true);
+        CrossFade(_item, true);
 
         resultComponent.ingredients[0].sprite = item.itemData.image;
         resultComponent.preparetions[0].sprite = item.preparation.image;
@@ -158,7 +164,8 @@ public class DialogueManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.3f);
 
-        _item.SetActive(true);
+        //_item.SetActive(true);
+        CrossFade(_item, true);
 
         resultComponent.ingredients[0].sprite = item.itemData.image;
         resultComponent.preparetions[0].sprite = item.preparation.image;
@@ -229,10 +236,39 @@ public class DialogueManager : MonoBehaviour
 
     private void ResetShow()
     {
-        _item.SetActive(false);
+        //_item.SetActive(false);
+        CrossFade(_item);
+
         baloon.SetActive(false);
         character.SetActive(true);
 
         skipTutorialBtn.SetActive(false);
     }
+
+    private void CrossFade(GameObject gameObject, bool target = false)
+    {
+        //gameObject.SetActive(!gameObject.activeSelf);
+        StartCoroutine(FadeCoroutine(gameObject.GetComponent<CanvasGroup>(), target));
+    }
+
+    private IEnumerator FadeCoroutine(CanvasGroup canvasGroup, bool target = false)
+    {
+        float startAlpha = canvasGroup.alpha;
+        float targetAlpha = target ? 1f : startAlpha < 0.5f ? 1 : 0;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < fadeDelay)
+        {
+            elapsedTime += Time.deltaTime;
+            canvasGroup.alpha = Mathf.Lerp(startAlpha, targetAlpha, elapsedTime / fadeDelay);
+            yield return null;
+        }
+
+        canvasGroup.alpha = targetAlpha;
+    }
+
+    public float FadeDelay => fadeDelay;
+    public float TimePerCharacter => timePerCharacter;
+    public float LineDuration => lineDuration;
+
 }

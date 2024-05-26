@@ -4,17 +4,21 @@ using UnityEngine;
 [DisallowMultipleComponent, RequireComponent(typeof(Animator))]
 public class AnimManager : MonoBehaviour
 {
-    [Header("Settings")]
-    [SerializeField, Min(0)] float fadeDelay = 0.5f;
-
     private Animator _animator;
 
     private List<string> _animationNames = new(); // The names of AnimationClips
     private int index = 0;
 
+    private float fadeDelay = 0.5f;
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+    }
+
+    private void Start()
+    {
+        fadeDelay = DialogueManager.Instance.FadeDelay;
     }
 
     /// <summary>
