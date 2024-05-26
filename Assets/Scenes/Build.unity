@@ -659,7 +659,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.00030438, y: -56.050064}
+  m_AnchoredPosition: {x: -0.00030438, y: -56.05008}
   m_SizeDelta: {x: 665.78, y: 281.97}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &62777338
@@ -3220,8 +3220,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UIDialogueManager, Assembly-CSharp
+      - m_Target: {fileID: 1094770867}
+        m_TargetAssemblyTypeName: WriterText, Assembly-CSharp
         m_MethodName: ButtonPressed
         m_Mode: 1
         m_Arguments:
@@ -20753,8 +20753,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 361f892a71cc15145a2003136e9d97ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timePerCharacter: 0.05
-  lineDuration: 1
+  timePerCharacter: 0.08
+  lineDuration: 5
 --- !u!1001 &1100225403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22832,7 +22832,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 194.23999, y: -290.97998}
+  m_AnchoredPosition: {x: 194.23999, y: -290.98}
   m_SizeDelta: {x: -388.47, y: -581.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1317260355

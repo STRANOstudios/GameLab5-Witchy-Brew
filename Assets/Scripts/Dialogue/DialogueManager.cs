@@ -69,14 +69,14 @@ public class DialogueManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
+        animManager = character.GetComponent<AnimManager>();
+        writerText = baloon.GetComponentInChildren<WriterText>();
+        resultComponent = _item.GetComponent<ResultComponent>();
     }
 
     private void Start()
     {
-        animManager = character.GetComponent<AnimManager>();
-        writerText = baloon.GetComponent<WriterText>();
-        resultComponent = _item.GetComponent<ResultComponent>();
-
         //ShowEvent(STATE.IDLE);
     }
 
