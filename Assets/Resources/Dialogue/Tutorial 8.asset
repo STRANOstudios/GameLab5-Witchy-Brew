@@ -14,15 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventName: 0
   dialogueList:
-  - dialogueText: Aurora, are you as strong as your abuela? We need to grind this
-      stuff to paste!
-    animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
-  - dialogueText: "I mean, people tell me my biceps look like noodles, but I guess
-      I\u2019ll give it a try..? "
-    animationName: {fileID: 7400000, guid: 5f94cac549fbe3243bddfc4417328e0c, type: 2}
-  - dialogueText: "I mean, people tell me my biceps look like noodles, but I guess
-      I\u2019ll give it a try..? "
-    animationName: {fileID: 7400000, guid: 5f94cac549fbe3243bddfc4417328e0c, type: 2}
-  - dialogueText: "That\u2019s the spirit! Now, click on the mortar and pestle to
-      show me what you\u2019ve got"
+  - dialogueText: look, now your ingredients are magical!
     animationName: {fileID: 7400000, guid: f6e1be7ca7dd9e04e8188c3b260f8a33, type: 2}
+  - dialogueText: " I mean, I wouldn\u2019t call it magical,there's just a little
+      star on top"
+    animationName: {fileID: 7400000, guid: 195252b8e2411b24a808e996de26b814, type: 2}
+  - dialogueText: "You must have fun at parties! Now, let\u2019s put the ingredients
+      inside the cauldron."
+    animationName: {fileID: 7400000, guid: 04c4ffe46d531c5418e6d0632468068e, type: 2}

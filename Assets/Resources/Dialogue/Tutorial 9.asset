@@ -14,6 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventName: 0
   dialogueList:
-  - dialogueText: "That\u2019s the spirit! Now, click on the mortar and pestle to
-      show me what you\u2019ve got"
+  - dialogueText: Now select a different ingredient
     animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
