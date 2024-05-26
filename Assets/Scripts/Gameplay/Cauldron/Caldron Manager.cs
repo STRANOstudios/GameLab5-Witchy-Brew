@@ -11,6 +11,8 @@ public class CaldronManager : MonoBehaviour
     public List<CauldronSlot> slotList;
     public Button button;
 
+    public delegate void Event(int id);
+    public static event Event TutorialTask1 = null;
 
     [SerializeField] Canvas canvas;
     public static CaldronManager instance;
@@ -38,6 +40,7 @@ public class CaldronManager : MonoBehaviour
         //itemImage.sprite = _item.itemData.image;
 
         if (item.itemData.id != 0) DialogueManager.Instance.ShowEvent(item);
+        TutorialTask1?.Invoke(1);
     }
 
     private void Awake()
