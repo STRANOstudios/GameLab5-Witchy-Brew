@@ -1,20 +1,24 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] GameObject _item;
-    [SerializeField] GameObject ballon;
+    [SerializeField] GameObject baloon;
     [SerializeField] GameObject character;
+    [SerializeField] GameObject skipTutorialBtn;
 
     [Header("Events")]
     [SerializeField] UIEventDialogue Idle;
     [SerializeField] UIEventDialogue Holding;
     [SerializeField] UIEventDialogue Success;
     [SerializeField] UIEventDialogue Failure;
+    [SerializeField] UIEventDialogue Enchanting;
+    [SerializeField] UIEventDialogue Grounding;
+    [SerializeField] UIEventDialogue Cooking;
     // Dialogue
     [SerializeField] UIEventDialogue Tutorial;
     [SerializeField] List<UIEventDialogue> ClientArrived = new();
@@ -29,20 +33,29 @@ public class DialogueManager : MonoBehaviour
     {
         IDLE,
         HOLDING,
+        PREPARATION,
         SUCCESS,
         FAILURE,
-        DIALOGUE
+        DIALOGUE,
+        TUTORIAL
     }
 
     public enum DIALOGUETYPE
     {
-        TUTORIAL,
         CLIENTARRIVED,
         CLIENTLEAVING,
         CHOOSINGINGREDIENTS,
         PROCESSINGINGREDIENTS,
         POTIONFILED,
         POTIONREADY
+    }
+
+    public enum PREPARATION
+    {
+        NONE,
+        ENCHANTING,
+        GROUNDING,
+        COOKING
     }
 
     private STATE currentState;
@@ -61,20 +74,22 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         animManager = character.GetComponent<AnimManager>();
-        writerText = ballon.GetComponent<WriterText>();
+        writerText = baloon.GetComponent<WriterText>();
         resultComponent = _item.GetComponent<ResultComponent>();
 
-        ShowEvent(STATE.IDLE);
+        //ShowEvent(STATE.IDLE);
     }
 
     private void OnEnable()
     {
         WriterText.Finished += ResetShow;
+        TutorialManager.Finished += ResetShow;
     }
 
     private void OnDisable()
     {
         WriterText.Finished -= ResetShow;
+        TutorialManager.Finished -= ResetShow;
     }
 
     /// <summary>
@@ -105,11 +120,45 @@ public class DialogueManager : MonoBehaviour
     /// Shows an event in the UI
     /// </summary>
     /// <param name="item"></param>
-    public virtual void ShowEvent(CraftedIngredient item)
+    public virtual void ShowEvent(CraftedIngredient item, PREPARATION preparation = PREPARATION.NONE)
     {
         if (!item) return;
 
-        _item.gameObject.SetActive(true);
+        if (preparation != PREPARATION.NONE)
+        {
+            StartCoroutine(Preparation(item, preparation));
+            return;
+        }
+
+        _item.SetActive(true);
+
+        resultComponent.ingredients[0].sprite = item.itemData.image;
+        resultComponent.preparetions[0].sprite = item.preparation.image;
+
+        animManager.Play(ExtractElements(Holding, true));
+
+        currentState = STATE.HOLDING;
+    }
+
+    private IEnumerator Preparation(CraftedIngredient item, PREPARATION preparation)
+    {
+
+        switch (preparation)
+        {
+            case PREPARATION.ENCHANTING:
+                animManager.Play(ExtractElements(Enchanting, true));
+                break;
+            case PREPARATION.GROUNDING:
+                animManager.Play(ExtractElements(Grounding, true));
+                break;
+            case PREPARATION.COOKING:
+                animManager.Play(ExtractElements(Cooking, true));
+                break;
+        }
+
+        yield return new WaitForSeconds(0.3f);
+
+        _item.SetActive(true);
 
         resultComponent.ingredients[0].sprite = item.itemData.image;
         resultComponent.preparetions[0].sprite = item.preparation.image;
@@ -126,13 +175,10 @@ public class DialogueManager : MonoBehaviour
     /// <param name="type"></param>
     public virtual void ShowEvent(STATE state, DIALOGUETYPE type)
     {
-        ballon.SetActive(true);
+        baloon.SetActive(true);
 
         switch (type)
         {
-            case DIALOGUETYPE.TUTORIAL:
-                animManager.Play(ExtractElements(Tutorial, true));
-                break;
             case DIALOGUETYPE.CLIENTARRIVED:
                 animManager.Play(ExtractElements(ClientArrived[Random.Range(0, ClientArrived.Count)], true));
                 break;
@@ -149,7 +195,23 @@ public class DialogueManager : MonoBehaviour
                 animManager.Play(ExtractElements(PotionFiled, true));
                 break;
         }
-        animManager.Play(ExtractElements(Holding, true));
+
+        currentState = state;
+    }
+
+    /// <summary>
+    /// Shows an event in the UI
+    /// </summary>
+    /// <param name="state"></param>
+    /// <param name="eventDialogue"></param>
+    public virtual void ShowEvent(STATE state, UIEventDialogue eventDialogue)
+    {
+        if (state == STATE.TUTORIAL) skipTutorialBtn.SetActive(true);
+
+        baloon.SetActive(true);
+
+        writerText.Write(ExtractElements(eventDialogue, false));
+        animManager.Play(ExtractElements(eventDialogue, true));
 
         currentState = state;
     }
@@ -168,7 +230,9 @@ public class DialogueManager : MonoBehaviour
     private void ResetShow()
     {
         _item.SetActive(false);
-        ballon.SetActive(false);
+        baloon.SetActive(false);
         character.SetActive(true);
+
+        skipTutorialBtn.SetActive(false);
     }
 }
