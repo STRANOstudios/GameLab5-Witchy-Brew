@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 074eb19b71fe8c8419cce4138ae9dc31, type: 3}
-  m_Name: Success
+  m_Name: Tutorial 2
   m_EditorClassIdentifier: 
   eventName: 0
   dialogueList:
-  - dialogueText: 
-    animationName: {fileID: 7400000, guid: 1a8a4c43d333b2047b41ea4bef58d3bd, type: 2}
+  - dialogueText: 'Select one of the slot of the cauldron to put the ingredient inside
+      the cauldron '
+    animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}

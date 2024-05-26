@@ -26,12 +26,12 @@ public class Ingredient : MonoBehaviour
     public void OnMouseEnter()
     {
         canvas.gameObject.SetActive(true);
-//        text.gameObject.SetActive(true);
+//        _text.gameObject.SetActive(true);
     }
 
     public void OnMouseExit()
     {
         canvas.gameObject.SetActive(false);
-//        text.gameObject.SetActive(false);
+//        _text.gameObject.SetActive(false);
     }
 }

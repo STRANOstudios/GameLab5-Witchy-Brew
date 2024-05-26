@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: UI_TOGGLE_SLIDER_SELEZIONATORE_0
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 537
+        width: 350
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f5365c029b7615459bf43022ecd6831
+      internalID: -938507918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_TOGGLE_SLIDER_SELEZIONATORE_1
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 534
+        width: 350
+        height: 450
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3569561e92035894796cadf7b9908a22
+      internalID: 701530182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_TOGGLE_SLIDER_SELEZIONATORE_2
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 1024
+        width: 1500
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 353fde73982576c4282670f70c5de3e8
+      internalID: 721432724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_TOGGLE_SLIDER_SELEZIONATORE_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 1360
+        width: 400
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b1e74f35d5c13d4e912d3f2a5dfe9ba
+      internalID: 1953242722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_TOGGLE_SLIDER_SELEZIONATORE_4
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 1360
+        width: 400
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 390a863e3739b854683b8bf7a6487c7a
+      internalID: -2094648096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_TOGGLE_SLIDER_SELEZIONATORE_5
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 1363
+        width: 400
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b35a2971d4a625345a0e17f0ff2aae53
+      internalID: -228969188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_TOGGLE_SLIDER_SELEZIONATORE_6
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 1472
+        width: 400
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f75f8f15a077a8b43b1a48f185d508f2
+      internalID: 1559829702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +266,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_TOGGLE_SLIDER_SELEZIONATORE_0: -938507918
+      UI_TOGGLE_SLIDER_SELEZIONATORE_1: -1285961079
+      UI_TOGGLE_SLIDER_SELEZIONATORE_2: 701530182
+      UI_TOGGLE_SLIDER_SELEZIONATORE_3: 721432724
+      UI_TOGGLE_SLIDER_SELEZIONATORE_4: 1953242722
+      UI_TOGGLE_SLIDER_SELEZIONATORE_5: -2094648096
+      UI_TOGGLE_SLIDER_SELEZIONATORE_6: -228969188
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

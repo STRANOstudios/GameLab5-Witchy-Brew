@@ -79,6 +79,6 @@ public class Result
     {
         Items = items ?? new List<CraftedIngredient>(); // Ensure items is not null
         Colors = colors ?? new List<Color>(); // Ensure colors is not null
-        Text = text ?? string.Empty; // Ensure text is not null
+        Text = text ?? string.Empty; // Ensure _text is not null
     }
 }

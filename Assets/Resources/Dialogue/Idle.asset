@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 074eb19b71fe8c8419cce4138ae9dc31, type: 3}
-  m_Name: Success
+  m_Name: Idle
   m_EditorClassIdentifier: 
   eventName: 0
   dialogueList:
   - dialogueText: 
-    animationName: {fileID: 7400000, guid: 1a8a4c43d333b2047b41ea4bef58d3bd, type: 2}
+    animationName: {fileID: 7400000, guid: 195252b8e2411b24a808e996de26b814, type: 2}
