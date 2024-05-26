@@ -659,7 +659,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.00030438, y: -56.05005}
+  m_AnchoredPosition: {x: -0.00030438, y: -56.050064}
   m_SizeDelta: {x: 665.78, y: 281.97}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &62777338
@@ -3531,15 +3531,44 @@ MonoBehaviour:
   color:
   - Black
   - Red
+  - Pink
+  - Blue
+  - Orange
+  - White
+  - Violet
+  - Green
+  - Gray
+  - Yellow
   potionColor:
   - {r: 0, g: 0, b: 0, a: 0}
   - {r: 1, g: 0, b: 0, a: 0}
   type:
   - Potion Of
+  - Brew Of
+  - Elixir Of
+  - Remedy Of
   adjective:
   - Creepy
+  - Awful
+  - Smelly
+  - Fake
+  - Strange
+  - Amazing
+  - Fancy
+  - Lovely
+  - Powerful
+  - Creamy
   goal:
   - Happiness
+  - Death
+  - Luck
+  - Pain
+  - Sadness
+  - Freedom
+  - Love
+  - Younth
+  - Strengh
+  - Despair
 --- !u!1001 &387077093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23056,7 +23085,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 194.23999, y: -290.98}
+  m_AnchoredPosition: {x: 194.23999, y: -290.97998}
   m_SizeDelta: {x: -388.47, y: -581.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1317260355

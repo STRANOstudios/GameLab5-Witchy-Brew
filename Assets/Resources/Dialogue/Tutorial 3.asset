@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventName: 0
   dialogueList:
-  - dialogueText: Good you are not that useless as i thought
-    animationName: {fileID: 7400000, guid: f6e1be7ca7dd9e04e8188c3b260f8a33, type: 2}
-  - dialogueText: ' Now select a different ingredient '
+  - dialogueText: 'Select one of the slot of the cauldron to put the ingredient inside
+      the cauldron '
     animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}

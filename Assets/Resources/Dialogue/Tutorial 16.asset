@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 074eb19b71fe8c8419cce4138ae9dc31, type: 3}
+  m_Name: Tutorial 16
+  m_EditorClassIdentifier: 
+  eventName: 0
+  dialogueList:
+  - dialogueText: "Good, if everything\u2019s clear it's time you take a good clean
+      of this shack, there is so much dust and expired stuff it's a whole ecosystem
+      on itself. Good luck and see ya tomorrow."
+    animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
+  - dialogueText: Hey!?
+    animationName: {fileID: 7400000, guid: 4b01d9bb0c075f945a9f4e85962070e9, type: 2}
+  - dialogueText: Hey!?
+    animationName: {fileID: 7400000, guid: 4b01d9bb0c075f945a9f4e85962070e9, type: 2}
+  - dialogueText: Oh be careful I think I saw some spiked rats in the basement
+    animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
+  - dialogueText: WHAT? Wait
+    animationName: {fileID: 7400000, guid: 4b01d9bb0c075f945a9f4e85962070e9, type: 2}
+  - dialogueText: "Well, I guess he\u2019s out. Uff\u2026 I should probably start
+      practicing, otherwise I\u2019ll never become a master brewer like abuela. Let\u2019s
+      get to work!"
+    animationName: {fileID: 7400000, guid: 6892627d4da157446bbb6aa9c42d1d89, type: 2}

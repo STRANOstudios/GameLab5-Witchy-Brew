@@ -14,28 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventName: 0
   dialogueList:
-  - dialogueText: "UH?WHAT\u2019S GOING ON?"
-    animationName: {fileID: 7400000, guid: 69b16fa60f9b8ff43ada8fd1e7fd4160, type: 2}
-  - dialogueText: Did you really think you were gonna get it right on the first try?
-      It took your abuela thirty years to get it right.
+  - dialogueText: "Well, now that you\u2019ve learned how to use the crafting station,it\u2019s
+      time to show you one last trick of the job."
     animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
-  - dialogueText: "creating a potion is not just a matter of throwing random stuff
-      into a pot. It\u2019s about knowing the order of ingredients, and their preparation"
+  - dialogueText: What trick?
+    animationName: {fileID: 7400000, guid: 14c539e9f1270f24ea481c0980793b1b, type: 2}
+  - dialogueText: "Well, if you select a different crafting station from the one
+      you\u2019re using right now on your ingredient, you can change the preparation
+      whenever you want!"
     animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
-  - dialogueText: Every time you try to make a potion, the cauldron will give you
-      feedback.
+  - dialogueText: If you want to revert to the raw ingredient, you can just get the
+      ingredient back from the shelf
     animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
-  - dialogueText: 'Green: All requirements is right     Red: the ingredient is wrong    
-      Yellow: the ingredient is right,the lavoration is right but in the wrong place    
-      Orange: the ingredient is right,the position is right but the lavoration is
-      wrong     Blu: The ingredient is right but the preparation and place is wrong '
-    animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
-  - dialogueText: you can see the feedback of the caldron on the attempt window in
-      the top left-hand corner. Be aware that you only have 8 attempts to guess the
-      combination
-    animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
-  - dialogueText: "Dios mio, es muy complicado. I guess I\u2019ll have to roll up
-      my sleves and get down to work. I\u2019ll make abuela proud!"
+  - dialogueText: "Wait, isn\u2019t that wasteful?"
+    animationName: {fileID: 7400000, guid: 5f94cac549fbe3243bddfc4417328e0c, type: 2}
+  - dialogueText: "Nah, I\u2019ll just eat the stuff for dinner. I\u2019m a very
+      hungry cat."
+    animationName: {fileID: 7400000, guid: ed0c4b9f0a838d147b5e0588473c1d39, type: 2}
+  - dialogueText: Uh?!?
     animationName: {fileID: 7400000, guid: 4b01d9bb0c075f945a9f4e85962070e9, type: 2}
-  - dialogueText: yeah!! this is the good spirit. now find the right combitation
+  - dialogueText: So as I was saying,select one ingredient and put the last ingredient
+      in the cauldron.
     animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}

@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventName: 0
   dialogueList:
-  - dialogueText: Good, all the ingredients are inside the pot. What now?
-    animationName: {fileID: 7400000, guid: 14c539e9f1270f24ea481c0980793b1b, type: 2}
-  - dialogueText: Now just click the button in the middle and see what happens
-    animationName: {fileID: 7400000, guid: 14c539e9f1270f24ea481c0980793b1b, type: 2}
+  - dialogueText: 'Hey, you actually did it! '
+    animationName: {fileID: 7400000, guid: f6e1be7ca7dd9e04e8188c3b260f8a33, type: 2}
+  - dialogueText: "Guess I\u2019m not a wimp after all uh? "
+    animationName: {fileID: 7400000, guid: 1a8a4c43d333b2047b41ea4bef58d3bd, type: 2}
+  - dialogueText: "Yeah sure, we\u2019ll see about that tiger. put the ingredient
+      inside the cauldron."
+    animationName: {fileID: 7400000, guid: f6e1be7ca7dd9e04e8188c3b260f8a33, type: 2}

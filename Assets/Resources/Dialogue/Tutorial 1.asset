@@ -18,25 +18,25 @@ MonoBehaviour:
     animationName: {fileID: 7400000, guid: 195252b8e2411b24a808e996de26b814, type: 2}
   - dialogueText: "My grandma\u2019s old potion shop the Witchy brew"
     animationName: {fileID: 7400000, guid: 195252b8e2411b24a808e996de26b814, type: 2}
-  - dialogueText: this place has seen better days,
+  - dialogueText: This place has seen better days,
     animationName: {fileID: 7400000, guid: 195252b8e2411b24a808e996de26b814, type: 2}
-  - dialogueText: i still remember like it was yesterday
+  - dialogueText: I still remember like it was yesterday
     animationName: {fileID: 7400000, guid: 195252b8e2411b24a808e996de26b814, type: 2}
-  - dialogueText: 'when i was a kid, i loved spending days with my abuela brewing
+  - dialogueText: 'When i was a kid, i loved spending days with my abuela brewing
       strange potions  '
     animationName: {fileID: 7400000, guid: 195252b8e2411b24a808e996de26b814, type: 2}
-  - dialogueText: this shop is the only thing she has left me before passing.
+  - dialogueText: This shop is the only thing she has left me before passing.
     animationName: {fileID: 7400000, guid: 195252b8e2411b24a808e996de26b814, type: 2}
-  - dialogueText: ' i will fulfill your wish grandma, to be the best potion brewer
-      that ever lived! i''ll make you proud..'
+  - dialogueText: I will fulfill your wish grandma, to be the best potion brewer
+      that ever lived! i'll make you proud..
     animationName: {fileID: 7400000, guid: 195252b8e2411b24a808e996de26b814, type: 2}
   - dialogueText: Hey!
     animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
   - dialogueText: 'Aargh! '
     animationName: {fileID: 7400000, guid: 4b01d9bb0c075f945a9f4e85962070e9, type: 2}
-  - dialogueText: 'chill girl calm down, you must be the new owner am i right? '
+  - dialogueText: 'Chill girl calm down, you must be the new owner am i right? '
     animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
-  - dialogueText: "what, how, wher\u2026 you ehm who are you?"
+  - dialogueText: "What, how, wher\u2026 you ehm who are you?"
     animationName: {fileID: 7400000, guid: 14c539e9f1270f24ea481c0980793b1b, type: 2}
   - dialogueText: "Mi nombre es Churro, i was your grandma\u2019s familiar, and now
       that she\u2019s passed my ownership is yours"
@@ -44,29 +44,28 @@ MonoBehaviour:
   - dialogueText: Mi nombre es Aurora nice to meet you churro, what a cute name you
       have UWU
     animationName: {fileID: 7400000, guid: 195252b8e2411b24a808e996de26b814, type: 2}
-  - dialogueText: "hey, just because im your familiar doesn\u2019t mean you can do
+  - dialogueText: "Hey, just because im your familiar doesn\u2019t mean you can do
       what you want  "
     animationName: {fileID: 7400000, guid: 04c4ffe46d531c5418e6d0632468068e, type: 2}
-  - dialogueText: "sorry, i didn\u2019t meant to sound rude"
+  - dialogueText: "Sorry, i didn\u2019t meant to sound rude"
     animationName: {fileID: 7400000, guid: 4b01d9bb0c075f945a9f4e85962070e9, type: 2}
-  - dialogueText: 'well after you are done standing there doing nothing you can come
+  - dialogueText: 'Well after you are done standing there doing nothing you can come
       here we have work to do '
     animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
-  - dialogueText: work?
+  - dialogueText: Work?
     animationName: {fileID: 7400000, guid: 5f94cac549fbe3243bddfc4417328e0c, type: 2}
   - dialogueText: Duh, you are probably here to make the old lady Eliana happy right?
     animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
-  - dialogueText: thats why im here
+  - dialogueText: Thats why im here
     animationName: {fileID: 7400000, guid: 195252b8e2411b24a808e996de26b814, type: 2}
-  - dialogueText: if so dont stand there like a mimic and go get some ingredients
+  - dialogueText: If so dont stand there like a mimic and go get some ingredients
       we have a calderon to brew
     animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
-  - dialogueText: ok what should i take
+  - dialogueText: Ok what should i take
     animationName: {fileID: 7400000, guid: 5f94cac549fbe3243bddfc4417328e0c, type: 2}
-  - dialogueText: really i have to explain everything to you
+  - dialogueText: Really i have to explain everything to you
     animationName: {fileID: 7400000, guid: 04c4ffe46d531c5418e6d0632468068e, type: 2}
-  - dialogueText: sigh, let's get down to business shall we?
+  - dialogueText: Sigh, let's get down to business shall we?
     animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
-  - dialogueText: Now, start  use left mouse to select one of the ingredient present
-      on shelves
+  - dialogueText: Fist, press the buttons A and D for rotate the room
     animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}

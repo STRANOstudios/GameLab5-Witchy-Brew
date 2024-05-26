@@ -14,5 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventName: 0
   dialogueList:
-  - dialogueText: Now select a different ingredient
-    animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
+  - dialogueText: Fantastico! Your ingredients have been cooked thoroughly. See?
+      The smoke symbol has appeared on the left corner of its icon.
+    animationName: {fileID: 7400000, guid: f6e1be7ca7dd9e04e8188c3b260f8a33, type: 2}
+  - dialogueText: "Mmmh\u2026. I'm very hungry... a comer!!"
+    animationName: {fileID: 7400000, guid: 6faabebe503b4b442a609886ae2613dd, type: 2}
+  - dialogueText: "It\u2019s not to be eaten tonta, put the ingredient inside the
+      cauldron."
+    animationName: {fileID: 7400000, guid: f6e1be7ca7dd9e04e8188c3b260f8a33, type: 2}

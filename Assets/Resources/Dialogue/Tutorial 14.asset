@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventName: 0
   dialogueList:
-  - dialogueText: "Good, if everything\u2019s clear it's time you take a good clean
-      of this shack, there is so much dust and expired stuff it's a whole ecosystem
-      on itself. Good luck and see ya tomorrow!"
-    animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
+  - dialogueText: Good, all the ingredients are inside the pot. What now?
+    animationName: {fileID: 7400000, guid: 14c539e9f1270f24ea481c0980793b1b, type: 2}
+  - dialogueText: Now just click the button in the middle and see what happens
+    animationName: {fileID: 7400000, guid: 14c539e9f1270f24ea481c0980793b1b, type: 2}
