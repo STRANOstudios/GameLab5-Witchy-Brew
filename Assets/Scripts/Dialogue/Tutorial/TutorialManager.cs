@@ -8,8 +8,9 @@ public class TutorialManager : MonoBehaviour
     [SerializeField] List<UIEventDialogue> tutorialEvents = new();
 
     private int index = 0;
-
     private int taskIndex = 0;
+
+    private bool isTutorialSkipped = false;
 
     public delegate void Event();
     public static event Event Finished = null;
@@ -36,7 +37,7 @@ public class TutorialManager : MonoBehaviour
             DialogueManager.Instance.ShowEvent(DialogueManager.STATE.TUTORIAL, tutorialEvents[index]);
             index++;
         }
-        else
+        else if (!isTutorialSkipped)
         {
             Finished?.Invoke();
         }
@@ -56,6 +57,7 @@ public class TutorialManager : MonoBehaviour
     /// </summary>
     public void SkipTutorial()
     {
+        isTutorialSkipped = true;
         index = tutorialEvents.Count;
         Finished?.Invoke();
     }
