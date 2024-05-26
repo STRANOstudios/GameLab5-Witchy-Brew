@@ -31,8 +31,8 @@ MonoBehaviour:
       wrong     Blu: The ingredient is right but the preparation and place is wrong '
     animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
   - dialogueText: You can see the feedback of the caldron on the attempt window in
-      the top left-hand corner. Be aware that you only have 8 attempts to guess the
-      combination
+      the top left-hand corner. Be aware that you only have 10 attempts to guess
+      the combination
     animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
   - dialogueText: "Dios mio, es muy complicado. I guess I\u2019ll have to roll up
       my sleves and get down to work. I\u2019ll make abuela proud!"
