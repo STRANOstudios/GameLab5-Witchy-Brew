@@ -51,19 +51,22 @@ public class WriterText : MonoBehaviour
 
         NextAnim?.Invoke();
 
-        _text.text = "";
         for (int i = index; i < lines.Count; i++)
         {
+            _text.text = "";
+
             foreach (char c in lines[i])
             {
                 _text.text += c;
                 yield return new WaitForSeconds(timePerCharacter);
             }
 
+            currentState = STATE.Finished;
+
+            if (delay && lines.Count > 1) yield return new WaitForSeconds(lineDuration);
+
             index++;
         }
-
-        if (delay && lines.Count > 1) yield return new WaitForSeconds(lineDuration);
 
         End();
     }
@@ -93,7 +96,7 @@ public class WriterText : MonoBehaviour
             if (index < lines.Count - 1)
             {
                 index++;
-                StartCoroutine(WriteText(lines, false));
+                StartCoroutine(WriteText(lines, true));
                 return;
             }
 
