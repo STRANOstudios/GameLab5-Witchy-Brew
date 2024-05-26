@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [DisallowMultipleComponent]
@@ -12,7 +13,7 @@ public class TutorialManager : MonoBehaviour
 
     public static bool TutorialIsRunning = true;
 
-    public static bool[] TaskIsRunning = new bool[12] { true, true, true, true, true, true, true, true, true, true, true, true };
+    public static bool[] TaskIsRunning = Enumerable.Repeat(true, 12).ToArray();
 
     private bool isTutorialSkipped = false;
 
