@@ -7,10 +7,10 @@ public class DialogueManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] GameObject _item;
-    [SerializeField] GameObject ballon;
+    [SerializeField] GameObject baloon;
     [SerializeField] GameObject character;
     [SerializeField] GameObject skipTutorialBtn;
- 
+
     [Header("Events")]
     [SerializeField] UIEventDialogue Idle;
     [SerializeField] UIEventDialogue Holding;
@@ -74,10 +74,10 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         animManager = character.GetComponent<AnimManager>();
-        writerText = ballon.GetComponent<WriterText>();
+        writerText = baloon.GetComponent<WriterText>();
         resultComponent = _item.GetComponent<ResultComponent>();
 
-        ShowEvent(STATE.IDLE);
+        //ShowEvent(STATE.IDLE);
     }
 
     private void OnEnable()
@@ -175,7 +175,7 @@ public class DialogueManager : MonoBehaviour
     /// <param name="type"></param>
     public virtual void ShowEvent(STATE state, DIALOGUETYPE type)
     {
-        ballon.SetActive(true);
+        baloon.SetActive(true);
 
         switch (type)
         {
@@ -206,10 +206,13 @@ public class DialogueManager : MonoBehaviour
     /// <param name="eventDialogue"></param>
     public virtual void ShowEvent(STATE state, UIEventDialogue eventDialogue)
     {
-        if(state == STATE.TUTORIAL) skipTutorialBtn.SetActive(true);
+        if (state == STATE.TUTORIAL) skipTutorialBtn.SetActive(true);
 
-        ballon.SetActive(true);
+        baloon.SetActive(true);
+
+        writerText.Write(ExtractElements(eventDialogue, false));
         animManager.Play(ExtractElements(eventDialogue, true));
+
         currentState = state;
     }
 
@@ -227,7 +230,7 @@ public class DialogueManager : MonoBehaviour
     private void ResetShow()
     {
         _item.SetActive(false);
-        ballon.SetActive(false);
+        baloon.SetActive(false);
         character.SetActive(true);
 
         skipTutorialBtn.SetActive(false);

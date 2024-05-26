@@ -40,6 +40,7 @@ public class CaldronManager : MonoBehaviour
         //itemImage.sprite = _item.itemData.image;
 
         if (item.itemData.id != 0) DialogueManager.Instance.ShowEvent(item);
+
         TutorialTask1?.Invoke(1);
     }
 
