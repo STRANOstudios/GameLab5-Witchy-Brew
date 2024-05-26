@@ -27,8 +27,6 @@ MonoBehaviour:
     animationName: {fileID: 7400000, guid: 195252b8e2411b24a808e996de26b814, type: 2}
   - dialogueText: this shop is the only thing she has left me before passing.
     animationName: {fileID: 7400000, guid: 195252b8e2411b24a808e996de26b814, type: 2}
-  - dialogueText: this shop is the only thing she has left me before passing.
-    animationName: {fileID: 7400000, guid: 195252b8e2411b24a808e996de26b814, type: 2}
   - dialogueText: ' i will fulfill your wish grandma, to be the best potion brewer
       that ever lived! i''ll make you proud..'
     animationName: {fileID: 7400000, guid: 195252b8e2411b24a808e996de26b814, type: 2}
