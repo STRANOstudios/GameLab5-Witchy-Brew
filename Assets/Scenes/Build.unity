@@ -29814,13 +29814,9 @@ MonoBehaviour:
   Enchanting: {fileID: 0}
   Grounding: {fileID: 0}
   Cooking: {fileID: 0}
-  ClientArrived: []
+  ClientArrived:
+  - {fileID: 11400000, guid: de3d810a20141b847b612792134b71f9, type: 2}
   ClientLeaving: []
-  ChoosingIngredients: []
-  ProcessingIngredients: {fileID: 0}
-  PotionFiled: {fileID: 0}
-  PotionReady: {fileID: 0}
-  ClientAsk: {fileID: 0}
   timePerCharacter: 0.08
   lineDuration: 3
   fadeDelay: 1

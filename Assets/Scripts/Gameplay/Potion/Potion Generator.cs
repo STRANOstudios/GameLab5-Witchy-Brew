@@ -88,6 +88,8 @@ public class PotionGenerator : MonoBehaviour
 
         // Win
 
+        UIResult.Instance.RemoveResult(); //clear result list for next use
+
         if (TutorialManager.TutorialIsRunning)
         {
             if (TutorialManager.taskIndex == 14 && !TutorialManager.TaskIsRunning[14]) TutorialTask14?.Invoke(15);
