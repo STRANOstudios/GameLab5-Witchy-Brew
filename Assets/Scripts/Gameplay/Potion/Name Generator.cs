@@ -27,6 +27,9 @@ public class NameGenerator : MonoBehaviour
         int randomAdjective = Random.Range(0, adjective.Count);
         int randomGoal = Random.Range(0, goal.Count);
         potionName = color[randomColor] + " " + type[randomType] + " " + adjective[randomAdjective] + " " + goal[randomGoal];
+
+        if (!TutorialManager.TutorialIsRunning) DialogueManager.Instance.ShowEvent(DialogueManager.STATE.DIALOGUE, DialogueManager.DIALOGUETYPE.CLIENTARRIVED, potionName);
+
         return potionName;
     }
 }

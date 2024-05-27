@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Profiling.RawFrameDataView;
 
 public class PotionGenerator : MonoBehaviour
 {
@@ -18,7 +19,6 @@ public class PotionGenerator : MonoBehaviour
         ingredientList.Clear();
         for (int i = 1; i < 13; i++)
         {
-
             ingredientList.Add(i);
         }
         for (int i = 0; i < ingredients.GetLength(0); i++)

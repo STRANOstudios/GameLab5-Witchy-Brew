@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
@@ -19,14 +20,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] UIEventDialogue Enchanting;
     [SerializeField] UIEventDialogue Grounding;
     [SerializeField] UIEventDialogue Cooking;
+
     // Dialogue
     [SerializeField] List<UIEventDialogue> ClientArrived = new();
     [SerializeField] List<UIEventDialogue> ClientLeaving = new();
-    [SerializeField] List<UIEventDialogue> ChoosingIngredients = new();
-    [SerializeField] UIEventDialogue ProcessingIngredients;
-    [SerializeField] UIEventDialogue PotionFiled;
-    [SerializeField] UIEventDialogue PotionReady;
-    [SerializeField] AnimationClip ClientAsk;
 
     [Header("Settings")]
     [SerializeField, Min(0)] float timePerCharacter = 0.08f;
@@ -47,11 +44,7 @@ public class DialogueManager : MonoBehaviour
     public enum DIALOGUETYPE
     {
         CLIENTARRIVED,
-        CLIENTLEAVING,
-        CHOOSINGINGREDIENTS,
-        PROCESSINGINGREDIENTS,
-        POTIONFILED,
-        POTIONREADY
+        CLIENTLEAVING
     }
 
     public enum PREPARATION
@@ -179,26 +172,19 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     /// <param name="state"></param>
     /// <param name="type"></param>
-    public virtual void ShowEvent(STATE state, DIALOGUETYPE type)
+    public virtual void ShowEvent(STATE state, DIALOGUETYPE type, string text = null)
     {
         baloon.SetActive(true);
 
         switch (type)
         {
             case DIALOGUETYPE.CLIENTARRIVED:
+                writerText.Write(new() { text }, false);
                 animManager.Play(ExtractElements(ClientArrived[Random.Range(0, ClientArrived.Count)], true));
                 break;
             case DIALOGUETYPE.CLIENTLEAVING:
+                writerText.Write(ExtractElements(ClientLeaving[Random.Range(0, ClientLeaving.Count)], false));
                 animManager.Play(ExtractElements(ClientLeaving[Random.Range(0, ClientLeaving.Count)], true));
-                break;
-            case DIALOGUETYPE.CHOOSINGINGREDIENTS:
-                animManager.Play(ExtractElements(ChoosingIngredients[Random.Range(0, ChoosingIngredients.Count)], true));
-                break;
-            case DIALOGUETYPE.PROCESSINGINGREDIENTS:
-                animManager.Play(ExtractElements(ProcessingIngredients, true));
-                break;
-            case DIALOGUETYPE.POTIONFILED:
-                animManager.Play(ExtractElements(PotionFiled, true));
                 break;
         }
 
