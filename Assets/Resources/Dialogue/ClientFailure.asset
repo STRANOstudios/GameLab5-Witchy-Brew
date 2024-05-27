@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: ClientFailure
   m_EditorClassIdentifier: 
   eventName: 0
-  dialogueList: []
+  dialogueList:
+  - dialogueText: 
+    animationName: {fileID: 7400000, guid: ba23642b614bd4f40bdaa16e107e1fbe, type: 2}

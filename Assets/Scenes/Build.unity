@@ -24455,7 +24455,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1451191280}
   - component: {fileID: 1451191281}
-  - component: {fileID: 1451191282}
   m_Layer: 0
   m_Name: Potion Generator
   m_TagString: Untagged
@@ -24495,33 +24494,6 @@ MonoBehaviour:
   wrongPositionColor: {r: 1, g: 0.3718608, b: 0, a: 1}
   wrongPositionAndPreparationColor: {r: 0, g: 0.17954087, b: 1, a: 1}
   ingredientNotPresentColor: {r: 0.9811321, g: 0, b: 0.09572011, a: 1}
---- !u!114 &1451191282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1451191279}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a36e71b8b87620341863408fa39b9868, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  image: {fileID: 77758154}
-  color:
-  - Red
-  - Pink
-  - Blu
-  potionColor:
-  - {r: 1, g: 0.032075405, b: 0.061070424, a: 1}
-  - {r: 1, g: 0.37169808, b: 0.7694347, a: 1}
-  - {r: 0, g: 0.07026148, b: 1, a: 1}
-  type:
-  - potion of
-  adjective:
-  - creepy
-  goal:
-  - happiness
 --- !u!1 &1461083142
 GameObject:
   m_ObjectHideFlags: 0
@@ -29821,7 +29793,9 @@ MonoBehaviour:
   Cooking: {fileID: 0}
   ClientArrived:
   - {fileID: 11400000, guid: de3d810a20141b847b612792134b71f9, type: 2}
-  ClientLeaving: []
+  - {fileID: 11400000, guid: de3d810a20141b847b612792134b71f9, type: 2}
+  ClientLeaving:
+  - {fileID: 0}
   timePerCharacter: 0.08
   lineDuration: 3
   fadeDelay: 1

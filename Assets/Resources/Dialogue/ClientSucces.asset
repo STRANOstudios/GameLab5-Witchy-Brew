@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: ClientSucces
   m_EditorClassIdentifier: 
   eventName: 0
-  dialogueList: []
+  dialogueList:
+  - dialogueText: 
+    animationName: {fileID: 7400000, guid: 8804fb96f0693aa4fb2fa48409b4d927, type: 2}
