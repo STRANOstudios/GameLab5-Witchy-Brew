@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventName: 0
   dialogueList:
-  - dialogueText: 
+  - dialogueText: I've had enough, I'm leaving
     animationName: {fileID: 7400000, guid: ba23642b614bd4f40bdaa16e107e1fbe, type: 2}
+  - dialogueText: Hey senor, please wait
+    animationName: {fileID: 7400000, guid: 4b01d9bb0c075f945a9f4e85962070e9, type: 2}

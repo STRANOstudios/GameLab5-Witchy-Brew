@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventName: 0
   dialogueList:
-  - dialogueText: 
+  - dialogueText: "Here is your potion senor. Have a nice day!\u201D"
+    animationName: {fileID: 7400000, guid: 1a8a4c43d333b2047b41ea4bef58d3bd, type: 2}
+  - dialogueText: Oh thanks. Have a nice day you too
     animationName: {fileID: 7400000, guid: 8804fb96f0693aa4fb2fa48409b4d927, type: 2}
