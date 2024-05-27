@@ -16,7 +16,7 @@ MonoBehaviour:
   dialogueList:
   - dialogueText: Hola senor, how can i help you?
     animationName: {fileID: 7400000, guid: 195252b8e2411b24a808e996de26b814, type: 2}
-  - dialogueText: 'Hi i need a '
+  - dialogueText: Hi, i need a potion please
     animationName: {fileID: 7400000, guid: db5af517f2ea2f24aa2c7ce1b3cb4c9e, type: 2}
   - dialogueText: Si senor, come immedialty
     animationName: {fileID: 7400000, guid: 195252b8e2411b24a808e996de26b814, type: 2}
