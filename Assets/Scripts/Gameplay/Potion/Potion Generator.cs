@@ -9,6 +9,10 @@ public class PotionGenerator : MonoBehaviour
     int attemptIndex;
     List<int> ingredientList = new List<int>();
     List<CauldronSlot> list = new List<CauldronSlot>();
+
+    public delegate void Event(int id);
+    public static event Event TutorialTask14 = null;
+
     private void GeneratePotion()
     {
         ingredientList.Clear();
@@ -32,8 +36,14 @@ public class PotionGenerator : MonoBehaviour
         Debug.Log(NameGenerator.instance.GenerateName());
         list = CaldronManager.instance.slotList;
     }
+
     public void Confirm()
     {
+        if (TutorialManager.TutorialIsRunning)
+        {
+            if (TutorialManager.taskIndex == 13 && !TutorialManager.TaskIsRunning[13]) TutorialTask14?.Invoke(14);
+        }
+
         for (int i = 0; i < ingredients.GetLength(0); i++)
         {
             if (ingredients[i, 0] == list[i].item.itemData.id && ingredients[i, 1] == list[i].item.preparation.id)
@@ -60,16 +70,31 @@ public class PotionGenerator : MonoBehaviour
 
         List<Color> colorList = new List<Color>();
         List<CraftedIngredient> craftedIngredientList = new List<CraftedIngredient>();
+
         for (int i = 0; i < check.Length; i++)
         {
             colorList.Add(check[i]);
             craftedIngredientList.Add(list[i].item);
         }
+
         attemptIndex++;
+
         UIResult.Instance.ShowResult(new Result(craftedIngredientList, colorList, "Attempt " + attemptIndex + " of 5"));
+
+        for (int i = 0; i < check.Length; i++)
+        {
+            if (check[i] != Color.green) return;
+        }
+
+        // Win
+
+        if (TutorialManager.TutorialIsRunning)
+        {
+            if (TutorialManager.taskIndex == 14 && !TutorialManager.TaskIsRunning[14]) TutorialTask14?.Invoke(15);
+        }
     }
 
-    private bool CheckPreparation(int ingredient,int index)
+    private bool CheckPreparation(int ingredient, int index)
     {
         for (int i = 0; i < ingredients.GetLength(0); i++)
         {

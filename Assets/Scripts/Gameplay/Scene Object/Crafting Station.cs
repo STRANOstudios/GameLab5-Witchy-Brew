@@ -14,7 +14,9 @@ public class CraftingStation : MonoBehaviour
     {
         if (TutorialManager.TutorialIsRunning)
         {
-            if (TutorialManager.TaskIsRunning[4]) return;
+            if (TutorialManager.TaskIsRunning[4] && preparation.name == "Cooked") return;
+            if (TutorialManager.TaskIsRunning[7] && preparation.name == "Enchanted") return;
+            if (TutorialManager.TaskIsRunning[10] && preparation.name == "Grounded") return;
         }
 
         CaldronManager instance = CaldronManager.instance;
@@ -24,6 +26,8 @@ public class CraftingStation : MonoBehaviour
         }
 
         if (TutorialManager.taskIndex == 4) TutorialTask5?.Invoke(5);
+        if (TutorialManager.taskIndex == 7) TutorialTask5?.Invoke(8);
+        if (TutorialManager.taskIndex == 10) TutorialTask5?.Invoke(11);
     }
 
 }

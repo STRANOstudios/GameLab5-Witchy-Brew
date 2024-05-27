@@ -40,6 +40,7 @@ public class CaldronManager : MonoBehaviour
             if (TutorialManager.TaskIsRunning[1]) return;
             if (TutorialManager.taskIndex == 3 && !TutorialManager.TaskIsRunning[3]) TutorialTask1?.Invoke(4);
             if (TutorialManager.taskIndex == 6 && !TutorialManager.TaskIsRunning[6]) TutorialTask1?.Invoke(7);
+            if (TutorialManager.taskIndex == 9 && !TutorialManager.TaskIsRunning[9]) TutorialTask1?.Invoke(10);
         }
 
         selectedItem = item;

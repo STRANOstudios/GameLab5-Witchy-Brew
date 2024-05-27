@@ -31,6 +31,7 @@ public class TutorialManager : MonoBehaviour
         CaldronManager.TutorialTask1 += NextTask;
         CauldronSlot.TutorialTask2 += NextTask;
         CraftingStation.TutorialTask5 += NextTask;
+        PotionGenerator.TutorialTask14 += NextTask;
     }
 
     private void OnDisable()
@@ -39,13 +40,13 @@ public class TutorialManager : MonoBehaviour
         CaldronManager.TutorialTask1 -= NextTask;
         CauldronSlot.TutorialTask2 -= NextTask;
         CraftingStation.TutorialTask5 -= NextTask;
+        PotionGenerator.TutorialTask14 += NextTask;
     }
 
     private void NextTutorial()
     {
         if (index < tutorialEvents.Count)
         {
-            Debug.Log("next");
             DialogueManager.Instance.ShowEvent(DialogueManager.STATE.TUTORIAL, tutorialEvents[index]);
             index++;
         }
@@ -57,7 +58,7 @@ public class TutorialManager : MonoBehaviour
 
     private void NextTask(int taskId)
     {
-        Debug.LogWarning(taskId + " " + taskIndex);
+        //Debug.LogWarning(taskId + " " + taskIndex);
 
         if (taskId > taskIndex && taskId < taskIndex + 2)
         {

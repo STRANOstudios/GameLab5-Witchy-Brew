@@ -33,6 +33,9 @@ public class CauldronSlot : MonoBehaviour
             if (TutorialManager.TaskIsRunning[2]) return;
 
             if (TutorialManager.taskIndex == 5 && !TutorialManager.TaskIsRunning[5]) TutorialTask2?.Invoke(6);
+            if (TutorialManager.taskIndex == 8 && !TutorialManager.TaskIsRunning[8]) TutorialTask2?.Invoke(9);
+            if (TutorialManager.taskIndex == 11 && !TutorialManager.TaskIsRunning[11]) TutorialTask2?.Invoke(12);
+            if (TutorialManager.taskIndex == 12 && !TutorialManager.TaskIsRunning[12]) TutorialTask2?.Invoke(13);
         }
 
         if (isPressed) return;
