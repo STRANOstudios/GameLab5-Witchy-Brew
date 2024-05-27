@@ -81,19 +81,34 @@ public class PotionGenerator : MonoBehaviour
 
         UIResult.Instance.ShowResult(new Result(craftedIngredientList, colorList, "Attempt " + attemptIndex + " of 5"));
 
+        // check if all ingredients are correct
+
+        bool allCorrect = true;
+
         for (int i = 0; i < check.Length; i++)
         {
-            if (check[i] != Color.green) return;
+            if (check[i] != Color.green)
+            {
+                allCorrect = false;
+                break;
+            }
         }
-
-        // Win
-
-        UIResult.Instance.RemoveResult(); //clear result list for next use
 
         if (TutorialManager.TutorialIsRunning)
         {
-            if (TutorialManager.taskIndex == 14 && !TutorialManager.TaskIsRunning[14]) TutorialTask14?.Invoke(15);
+            if (TutorialManager.taskIndex == 14 && !TutorialManager.TaskIsRunning[14] && allCorrect) TutorialTask14?.Invoke(15);
+            return;
         }
+
+        if (allCorrect) {
+            DialogueManager.Instance.ShowEvent(DialogueManager.STATE.SUCCESS);
+        }
+        else
+        {
+            DialogueManager.Instance.ShowEvent(DialogueManager.STATE.FAILURE);
+        }
+
+        // use this when you finish attempt =>   UIResult.Instance.RemoveResult(); //clear result list for next use
     }
 
     private bool CheckPreparation(int ingredient, int index)
