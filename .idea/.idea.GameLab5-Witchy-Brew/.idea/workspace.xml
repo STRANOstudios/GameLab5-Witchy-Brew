@@ -5,12 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="384d2998-266d-440f-b2f7-1c8470461945" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameLab5-Witchy-Brew/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameLab5-Witchy-Brew/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LegendPanel.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LegendPanel.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Font/BELL SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Font/BELL SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Font/BELLI SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Font/BELLI SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Font/MagicSchoolOne SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Font/MagicSchoolOne SDF.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Dialogue/Client.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Dialogue/Client.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Tutorial/Task1.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Tutorial/Task1.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Font/BELLB SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Font/BELLB SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Build.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Build.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Tutorial/TutorialManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Tutorial/TutorialManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Cauldron/Caldron Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Cauldron/Caldron Manager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Cauldron/Cauldron Slot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Cauldron/Cauldron Slot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Potion/Name Generator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Potion/Name Generator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Potion/Potion Generator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Potion/Potion Generator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Scene Object/Crafting Station.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Scene Object/Crafting Station.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Character/WriterText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Character/WriterText.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
