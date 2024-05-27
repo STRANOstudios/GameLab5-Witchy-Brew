@@ -68,6 +68,7 @@ public class PotionGenerator : MonoBehaviour
             {
                 check[i] = ingredientNotPresentColor;
             }
+
         }
 
         List<Color> colorList = new List<Color>();
@@ -89,7 +90,7 @@ public class PotionGenerator : MonoBehaviour
 
         for (int i = 0; i < check.Length; i++)
         {
-            if (check[i] != Color.green)
+            if (check[i] != correctColor)
             {
                 allCorrect = false;
                 break;
@@ -104,6 +105,9 @@ public class PotionGenerator : MonoBehaviour
 
         if (allCorrect) {
             DialogueManager.Instance.ShowEvent(DialogueManager.STATE.SUCCESS);
+            DialogueManager.Instance.ShowEvent(DialogueManager.STATE.DIALOGUE, DialogueManager.DIALOGUETYPE.CLIENTLEAVING);
+
+            UIResult.Instance.RemoveResult();
         }
         else
         {

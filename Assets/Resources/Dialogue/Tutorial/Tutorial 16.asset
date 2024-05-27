@@ -20,8 +20,6 @@ MonoBehaviour:
     animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
   - dialogueText: Hey!?
     animationName: {fileID: 7400000, guid: 4b01d9bb0c075f945a9f4e85962070e9, type: 2}
-  - dialogueText: Hey!?
-    animationName: {fileID: 7400000, guid: 4b01d9bb0c075f945a9f4e85962070e9, type: 2}
   - dialogueText: Oh be careful I think I saw some spiked rats in the basement
     animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
   - dialogueText: WHAT? Wait
