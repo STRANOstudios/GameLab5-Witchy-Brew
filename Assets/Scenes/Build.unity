@@ -1217,7 +1217,7 @@ MonoBehaviour:
   m_MinValue: -80
   m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: -35.2
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1571,7 +1571,7 @@ MonoBehaviour:
   m_MinValue: -80
   m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 4.2
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -9783,7 +9783,7 @@ MonoBehaviour:
   m_MinValue: -80
   m_MaxValue: 20
   m_WholeNumbers: 0
-  m_Value: 20
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -22193,6 +22193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1180632171}
   - component: {fileID: 1180632172}
+  - component: {fileID: 1180632173}
   m_Layer: 0
   m_Name: Tutorial Manager
   m_TagString: Untagged
@@ -22229,7 +22230,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialEvents:
   - {fileID: 11400000, guid: f071ab6cb7eade849a386f5919672864, type: 2}
+  - {fileID: 11400000, guid: 933a6b690570e4e4eb9f95d6f445de61, type: 2}
   - {fileID: 11400000, guid: b360802692dde234c8c10254506b5154, type: 2}
+  - {fileID: 11400000, guid: bf22d8726869cb243a249967ad4dca17, type: 2}
+  - {fileID: 11400000, guid: fd0306a400a865442860e4a74cabf05a, type: 2}
+  - {fileID: 11400000, guid: 9b02cb0196bf39d4da364aa059bf8a9e, type: 2}
+  - {fileID: 11400000, guid: 4684d334d7b882a4b8778ec2b3309e44, type: 2}
+  - {fileID: 11400000, guid: a46c701fe4172cb4899699a7570bb9c3, type: 2}
+  - {fileID: 11400000, guid: c8dc3430c00d347468a4f7cff291df8c, type: 2}
+  - {fileID: 11400000, guid: c78dcb1922e1b16429ba7b88b3f3fb2c, type: 2}
+  - {fileID: 11400000, guid: 2527b5501a48ec14d97f55bb4f846acc, type: 2}
+  - {fileID: 11400000, guid: ee6dfa88173da8246851a19e93bfcd11, type: 2}
+  - {fileID: 11400000, guid: 9e6e13ea33cb56949a6099d8f69eaf2a, type: 2}
+  - {fileID: 11400000, guid: 81411a1bf87f6b1409d63b7e8992f700, type: 2}
+  - {fileID: 11400000, guid: a2d8105f4b2a03f439301159fb90a5c7, type: 2}
+  - {fileID: 11400000, guid: 67bc59173ca5932439781f81e5d5d04f, type: 2}
+--- !u!114 &1180632173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180632170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea2c493364d95a341975048ce30c6442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1192265996 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3910211606892627787, guid: a1c21fdc655802e4bb7fdfb17402bac7,
@@ -29786,7 +29813,6 @@ MonoBehaviour:
   Enchanting: {fileID: 0}
   Grounding: {fileID: 0}
   Cooking: {fileID: 0}
-  Tutorial: {fileID: 0}
   ClientArrived: []
   ClientLeaving: []
   ChoosingIngredients: []

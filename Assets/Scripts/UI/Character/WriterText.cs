@@ -21,6 +21,8 @@ public class WriterText : MonoBehaviour
     private List<string> lines = new();
     private int index = 0;
 
+    private bool isPressed = false;
+
     private STATE currentState;
 
     public delegate void Next();
@@ -82,16 +84,27 @@ public class WriterText : MonoBehaviour
     /// </summary>
     public void ButtonPressed()
     {
+        if(isPressed) return;
+
         if (currentState == STATE.Playing)
         {
             StopAllCoroutines();
+            StartCoroutine(Delay());
             _text.text = lines[index];  // Complete the current dialogue instantly
             currentState = STATE.Finished;
         }
         else if (currentState != STATE.None)
         {
+            StopAllCoroutines();
             NextDialogue();
         }
+    }
+
+    private IEnumerator Delay(float sec = 0.3f)
+    {
+        isPressed = true;
+        yield return new WaitForSecondsRealtime(sec);
+        isPressed = false;
     }
 
     private void NextDialogue()

@@ -20,7 +20,6 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] UIEventDialogue Grounding;
     [SerializeField] UIEventDialogue Cooking;
     // Dialogue
-    [SerializeField] UIEventDialogue Tutorial;
     [SerializeField] List<UIEventDialogue> ClientArrived = new();
     [SerializeField] List<UIEventDialogue> ClientLeaving = new();
     [SerializeField] List<UIEventDialogue> ChoosingIngredients = new();
@@ -215,6 +214,8 @@ public class DialogueManager : MonoBehaviour
     {
         if (state == STATE.TUTORIAL) skipTutorialBtn.SetActive(true);
 
+        _item.GetComponent<CanvasGroup>().alpha = 0;
+
         baloon.SetActive(true);
 
         writerText.Write(ExtractElements(eventDialogue, false));
@@ -236,19 +237,23 @@ public class DialogueManager : MonoBehaviour
 
     private void ResetShow()
     {
-        //_item.SetActive(false);
-        CrossFade(_item);
+        CrossFade(_item, 0);
 
         baloon.SetActive(false);
         character.SetActive(true);
+        animManager.Play(ExtractElements(Idle, true));
 
         skipTutorialBtn.SetActive(false);
     }
 
-    private void CrossFade(GameObject gameObject, bool target = false)
+    protected virtual void CrossFade(GameObject gameObject, bool target = false)
     {
-        //gameObject.SetActive(!gameObject.activeSelf);
         StartCoroutine(FadeCoroutine(gameObject.GetComponent<CanvasGroup>(), target));
+    }
+
+    protected virtual void CrossFade(GameObject gameObject, float target)
+    {
+        gameObject.GetComponent<CanvasGroup>().alpha = target;
     }
 
     private IEnumerator FadeCoroutine(CanvasGroup canvasGroup, bool target = false)
