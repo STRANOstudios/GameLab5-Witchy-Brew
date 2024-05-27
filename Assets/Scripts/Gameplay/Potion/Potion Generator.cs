@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PotionGenerator : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class PotionGenerator : MonoBehaviour
     int attemptIndex;
     List<int> ingredientList = new List<int>();
     List<CauldronSlot> list = new List<CauldronSlot>();
+
+    public Color correctColor, wrongPreparationColor, wrongPositionColor,wrongPositionAndPreparationColor, ingredientNotPresentColor;
+
     private void GeneratePotion()
     {
         ingredientList.Clear();
@@ -38,23 +42,23 @@ public class PotionGenerator : MonoBehaviour
         {
             if (ingredients[i, 0] == list[i].item.itemData.id && ingredients[i, 1] == list[i].item.preparation.id)
             {
-                check[i] = Color.green;
+                check[i] = correctColor;
             }
             else if (ingredients[i, 0] == list[i].item.itemData.id && ingredients[i, 1] != list[i].item.preparation.id)
             {
-                check[i] = Color.yellow;
+                check[i] = wrongPreparationColor;
             }
             else if (CheckItem(list[i].item.itemData.id, i))
             {
-                check[i] = Color.blue;
+                check[i] = wrongPositionAndPreparationColor;
             }
             else if (CheckPreparation(list[i].item.itemData.id, i))
             {
-                check[i] = new Color(1f, 127 / 255f, 39 / 255f);
+                check[i] = wrongPositionColor;
             }
             else
             {
-                check[i] = Color.red;
+                check[i] = ingredientNotPresentColor;
             }
         }
 
