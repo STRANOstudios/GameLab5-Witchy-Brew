@@ -126,6 +126,7 @@ public class DialogueManager : MonoBehaviour
 
         if (preparation != PREPARATION.NONE)
         {
+            StopAllCoroutines();
             StartCoroutine(Preparation(item, preparation));
             return;
         }
@@ -178,6 +179,7 @@ public class DialogueManager : MonoBehaviour
     public virtual void ShowEvent(STATE state, DIALOGUETYPE type, string text = null)
     {
         baloon.SetActive(true);
+        _item.GetComponent<CanvasGroup>().alpha = 0;
 
         switch (type)
         {
@@ -237,18 +239,20 @@ public class DialogueManager : MonoBehaviour
 
     protected virtual void CrossFade(GameObject gameObject, bool target = false)
     {
+        StopAllCoroutines();
         StartCoroutine(FadeCoroutine(gameObject.GetComponent<CanvasGroup>(), target));
     }
 
     protected virtual void CrossFade(GameObject gameObject, float target)
     {
+        StopAllCoroutines();
         gameObject.GetComponent<CanvasGroup>().alpha = target;
     }
 
     private IEnumerator FadeCoroutine(CanvasGroup canvasGroup, bool target = false)
     {
         float startAlpha = canvasGroup.alpha;
-        float targetAlpha = target ? 1f : startAlpha < 0.5f ? 1 : 0;
+        float targetAlpha = target ? 1f : startAlpha == 0 ? 1 : 0;
         float elapsedTime = 0f;
 
         while (elapsedTime < fadeDelay)
