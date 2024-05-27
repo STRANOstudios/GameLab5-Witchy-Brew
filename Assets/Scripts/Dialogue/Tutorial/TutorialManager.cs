@@ -45,7 +45,7 @@ public class TutorialManager : MonoBehaviour
 
     private void NextTutorial()
     {
-        if (index < tutorialEvents.Count)
+        if (index < tutorialEvents.Count - 1)
         {
             DialogueManager.Instance.ShowEvent(DialogueManager.STATE.TUTORIAL, tutorialEvents[index]);
             index++;

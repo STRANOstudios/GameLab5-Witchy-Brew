@@ -102,7 +102,7 @@ public class DialogueManager : MonoBehaviour
     /// <param name="state"></param>
     public virtual void ShowEvent(STATE state)
     {
-        ResetShow();
+        if (state == STATE.TUTORIAL) ResetShow();
 
         switch (state)
         {
