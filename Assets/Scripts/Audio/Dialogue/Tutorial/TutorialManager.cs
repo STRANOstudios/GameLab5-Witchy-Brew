@@ -40,7 +40,7 @@ public class TutorialManager : MonoBehaviour
         CaldronManager.TutorialTask1 -= NextTask;
         CauldronSlot.TutorialTask2 -= NextTask;
         CraftingStation.TutorialTask5 -= NextTask;
-        PotionGenerator.TutorialTask14 += NextTask;
+        PotionGenerator.TutorialTask14 -= NextTask;
     }
 
     private void NextTutorial()
@@ -81,7 +81,5 @@ public class TutorialManager : MonoBehaviour
             TaskIsRunning[i] = false;
         }
         TutorialIsRunning = false;
-        DialogueManager.Instance.ShowEvent(DialogueManager.STATE.DIALOGUE, DialogueManager.DIALOGUETYPE.CLIENTARRIVED);
-
     }
 }

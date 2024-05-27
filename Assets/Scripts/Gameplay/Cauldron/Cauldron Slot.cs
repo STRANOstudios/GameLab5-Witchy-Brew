@@ -34,7 +34,6 @@ public class CauldronSlot : MonoBehaviour
 
             if (TutorialManager.taskIndex == 5 && !TutorialManager.TaskIsRunning[5]) TutorialTask2?.Invoke(6);
             if (TutorialManager.taskIndex == 8 && !TutorialManager.TaskIsRunning[8]) TutorialTask2?.Invoke(9);
-            if (TutorialManager.taskIndex == 11 && !TutorialManager.TaskIsRunning[11]) TutorialTask2?.Invoke(12);
             if (TutorialManager.taskIndex == 12 && !TutorialManager.TaskIsRunning[12]) TutorialTask2?.Invoke(13);
         }
 
@@ -54,6 +53,9 @@ public class CauldronSlot : MonoBehaviour
         instance.CheckSlots();
 
         if (TutorialManager.taskIndex == 2) TutorialTask2?.Invoke(3);
+        if (TutorialManager.taskIndex == 6) TutorialTask2?.Invoke(7);
+        if (TutorialManager.taskIndex == 9) TutorialTask2?.Invoke(10);
+        if (TutorialManager.taskIndex == 10) TutorialTask2?.Invoke(11);
     }
 
     private void OnEnable()
