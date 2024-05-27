@@ -94,7 +94,11 @@ public class DialogueManager : MonoBehaviour
     /// <param name="state"></param>
     public virtual void ShowEvent(STATE state)
     {
-        if (state != STATE.TUTORIAL) ResetShow();
+        if (state != STATE.TUTORIAL)
+        {
+            CrossFade(_item, 0);
+            ResetShow();
+        }
 
         switch (state)
         {
