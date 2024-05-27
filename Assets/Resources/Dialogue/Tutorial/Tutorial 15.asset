@@ -26,9 +26,10 @@ MonoBehaviour:
       feedback.
     animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
   - dialogueText: 'Green: All requirements is right     Red: the ingredient is wrong    
-      Yellow: the ingredient is right,the lavoration is right but in the wrong place    
-      Orange: the ingredient is right,the position is right but the lavoration is
-      wrong     Blu: The ingredient is right but the preparation and place is wrong '
+      Yellow: the ingredient is right,the position is right but the lavoration is
+      wrong     Orange: the ingredient is right,the lavoration is right but the position
+      is wrong     Blu: The ingredient is right but the lavoration and position is
+      wrong '
     animationName: {fileID: 7400000, guid: e680d6a9eea89ba4f80427bc97af9acb, type: 2}
   - dialogueText: You can see the feedback of the caldron on the attempt window in
       the top left-hand corner. Be aware that you only have 10 attempts to guess
