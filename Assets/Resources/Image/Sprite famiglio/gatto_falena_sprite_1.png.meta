@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,36 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: gatto_falena_sprite_1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 31
+        width: 1024
+        height: 993
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: -496.5}
+        - {x: 512, y: 0}
+        - {x: 0, y: 496.5}
+        - {x: -512, y: 0}
+      physicsShape:
+      - - {x: 0, y: -496.5}
+        - {x: 512, y: 0}
+        - {x: 0, y: 496.5}
+        - {x: -512, y: 0}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14e9a02cf24cf9e409ccf6393a764652
+      internalID: 616457537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +148,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gatto_falena_sprite_1_0: 616457537
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -5,21 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="384d2998-266d-440f-b2f7-1c8470461945" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Dialogue/Client.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Dialogue/Client.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Tutorial/Task1.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Tutorial/Task1.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Font/BELLB SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Font/BELLB SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animation/Cat_1.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animation/Cat_1.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animation/Cat_2.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animation/Cat_2.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animation/Cat_3.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animation/Cat_3.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animation/Cat_4.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animation/Cat_4.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Animation/Cat_Evil.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Animation/Cat_Evil.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Image/Sprite famiglio/gatto_falena_sprite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Image/Sprite famiglio/gatto_falena_sprite.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Image/Sprite famiglio/gatto_falena_sprite_1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Image/Sprite famiglio/gatto_falena_sprite_1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Image/Sprite famiglio/gatto_falena_sprite_2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Image/Sprite famiglio/gatto_falena_sprite_2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Image/Sprite famiglio/gatto_falena_sprite_3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Image/Sprite famiglio/gatto_falena_sprite_3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Image/Sprite famiglio/gatto_falena_sprite_6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Image/Sprite famiglio/gatto_falena_sprite_6.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Build.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Build.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Tutorial/TutorialManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dialogue/Tutorial/TutorialManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Cauldron/Caldron Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Cauldron/Caldron Manager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Cauldron/Cauldron Slot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Cauldron/Cauldron Slot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Potion/Name Generator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Potion/Name Generator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Potion/Potion Generator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Potion/Potion Generator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Scene Object/Crafting Station.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Scene Object/Crafting Station.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Character/WriterText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Character/WriterText.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
