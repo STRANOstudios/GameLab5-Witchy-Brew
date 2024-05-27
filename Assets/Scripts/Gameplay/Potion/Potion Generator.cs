@@ -1,7 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
-using static UnityEditor.Profiling.RawFrameDataView;
 
 public class PotionGenerator : MonoBehaviour
 {

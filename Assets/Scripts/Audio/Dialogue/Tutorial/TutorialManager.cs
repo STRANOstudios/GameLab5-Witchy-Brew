@@ -81,5 +81,6 @@ public class TutorialManager : MonoBehaviour
             TaskIsRunning[i] = false;
         }
         TutorialIsRunning = false;
+        DialogueManager.Instance.ShowEvent(DialogueManager.STATE.DIALOGUE, DialogueManager.DIALOGUETYPE.CLIENTARRIVED);
     }
 }
