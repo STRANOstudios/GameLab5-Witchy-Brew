@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="384d2998-266d-440f-b2f7-1c8470461945" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameLab5-Witchy-Brew/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameLab5-Witchy-Brew/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bugfix Rotation.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bugfix Rotation.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Build.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Build.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,37 +105,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs</url>
-          <line>124</line>
-          <properties documentPath="C:\Users\RICVA\Desktop\Projects\EventHorizon\GameLab5-Witchy-Brew\Assets\Scripts\Dialogue\DialogueManager.cs" initialLine="124" containingFunctionPresentation="Method 'ShowEvent'">
-            <startOffsets>
-              <option value="3268" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3278" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Dialogue/DialogueManager.cs</url>
-          <line>231</line>
-          <properties documentPath="C:\Users\RICVA\Desktop\Projects\EventHorizon\GameLab5-Witchy-Brew\Assets\Scripts\Dialogue\DialogueManager.cs" initialLine="231" containingFunctionPresentation="Method 'ResetShow'">
-            <startOffsets>
-              <option value="6759" />
-            </startOffsets>
-            <endOffsets>
-              <option value="6782" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
