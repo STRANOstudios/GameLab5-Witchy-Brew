@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
@@ -19,15 +20,10 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] UIEventDialogue Enchanting;
     [SerializeField] UIEventDialogue Grounding;
     [SerializeField] UIEventDialogue Cooking;
+
     // Dialogue
-    [SerializeField] UIEventDialogue Tutorial;
     [SerializeField] List<UIEventDialogue> ClientArrived = new();
     [SerializeField] List<UIEventDialogue> ClientLeaving = new();
-    [SerializeField] List<UIEventDialogue> ChoosingIngredients = new();
-    [SerializeField] UIEventDialogue ProcessingIngredients;
-    [SerializeField] UIEventDialogue PotionFiled;
-    [SerializeField] UIEventDialogue PotionReady;
-    [SerializeField] AnimationClip ClientAsk;
 
     [Header("Settings")]
     [SerializeField, Min(0)] float timePerCharacter = 0.08f;
@@ -48,11 +44,7 @@ public class DialogueManager : MonoBehaviour
     public enum DIALOGUETYPE
     {
         CLIENTARRIVED,
-        CLIENTLEAVING,
-        CHOOSINGINGREDIENTS,
-        PROCESSINGINGREDIENTS,
-        POTIONFILED,
-        POTIONREADY
+        CLIENTLEAVING
     }
 
     public enum PREPARATION
@@ -103,7 +95,7 @@ public class DialogueManager : MonoBehaviour
     /// <param name="state"></param>
     public virtual void ShowEvent(STATE state)
     {
-        ResetShow();
+        if (state != STATE.TUTORIAL) ResetShow();
 
         switch (state)
         {
@@ -180,26 +172,19 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     /// <param name="state"></param>
     /// <param name="type"></param>
-    public virtual void ShowEvent(STATE state, DIALOGUETYPE type)
+    public virtual void ShowEvent(STATE state, DIALOGUETYPE type, string text = null)
     {
         baloon.SetActive(true);
 
         switch (type)
         {
             case DIALOGUETYPE.CLIENTARRIVED:
+                writerText.Write(new() { text }, false);
                 animManager.Play(ExtractElements(ClientArrived[Random.Range(0, ClientArrived.Count)], true));
                 break;
             case DIALOGUETYPE.CLIENTLEAVING:
+                writerText.Write(ExtractElements(ClientLeaving[Random.Range(0, ClientLeaving.Count)], false));
                 animManager.Play(ExtractElements(ClientLeaving[Random.Range(0, ClientLeaving.Count)], true));
-                break;
-            case DIALOGUETYPE.CHOOSINGINGREDIENTS:
-                animManager.Play(ExtractElements(ChoosingIngredients[Random.Range(0, ChoosingIngredients.Count)], true));
-                break;
-            case DIALOGUETYPE.PROCESSINGINGREDIENTS:
-                animManager.Play(ExtractElements(ProcessingIngredients, true));
-                break;
-            case DIALOGUETYPE.POTIONFILED:
-                animManager.Play(ExtractElements(PotionFiled, true));
                 break;
         }
 
@@ -214,6 +199,8 @@ public class DialogueManager : MonoBehaviour
     public virtual void ShowEvent(STATE state, UIEventDialogue eventDialogue)
     {
         if (state == STATE.TUTORIAL) skipTutorialBtn.SetActive(true);
+
+        _item.GetComponent<CanvasGroup>().alpha = 0;
 
         baloon.SetActive(true);
 
@@ -236,19 +223,23 @@ public class DialogueManager : MonoBehaviour
 
     private void ResetShow()
     {
-        //_item.SetActive(false);
-        CrossFade(_item);
+        CrossFade(_item, 0);
 
         baloon.SetActive(false);
         character.SetActive(true);
+        animManager.Play(ExtractElements(Idle, true));
 
         skipTutorialBtn.SetActive(false);
     }
 
-    private void CrossFade(GameObject gameObject, bool target = false)
+    protected virtual void CrossFade(GameObject gameObject, bool target = false)
     {
-        //gameObject.SetActive(!gameObject.activeSelf);
         StartCoroutine(FadeCoroutine(gameObject.GetComponent<CanvasGroup>(), target));
+    }
+
+    protected virtual void CrossFade(GameObject gameObject, float target)
+    {
+        gameObject.GetComponent<CanvasGroup>().alpha = target;
     }
 
     private IEnumerator FadeCoroutine(CanvasGroup canvasGroup, bool target = false)

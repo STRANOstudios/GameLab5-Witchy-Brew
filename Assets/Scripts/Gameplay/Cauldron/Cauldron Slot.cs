@@ -13,6 +13,9 @@ public class CauldronSlot : MonoBehaviour
 
     private bool isPressed = false;
 
+    public delegate void Event(int id);
+    public static event Event TutorialTask2 = null;
+
     private void Start()
     {
         item = NullItem;
@@ -27,7 +30,12 @@ public class CauldronSlot : MonoBehaviour
     {
         if (TutorialManager.TutorialIsRunning)
         {
-            if (TutorialManager.TaskIsRunning[1]) return;
+            if (TutorialManager.TaskIsRunning[2]) return;
+
+            if (TutorialManager.taskIndex == 5 && !TutorialManager.TaskIsRunning[5]) TutorialTask2?.Invoke(6);
+            if (TutorialManager.taskIndex == 8 && !TutorialManager.TaskIsRunning[8]) TutorialTask2?.Invoke(9);
+            if (TutorialManager.taskIndex == 11 && !TutorialManager.TaskIsRunning[11]) TutorialTask2?.Invoke(12);
+            if (TutorialManager.taskIndex == 12 && !TutorialManager.TaskIsRunning[12]) TutorialTask2?.Invoke(13);
         }
 
         if (isPressed) return;
@@ -45,6 +53,7 @@ public class CauldronSlot : MonoBehaviour
         preparationImage.sprite = temp.preparation.image;
         instance.CheckSlots();
 
+        if (TutorialManager.taskIndex == 2) TutorialTask2?.Invoke(3);
     }
 
     private void OnEnable()

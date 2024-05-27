@@ -13,7 +13,7 @@ public class TutorialManager : MonoBehaviour
 
     public static bool TutorialIsRunning = true;
 
-    public static bool[] TaskIsRunning = Enumerable.Repeat(true, 12).ToArray();
+    public static bool[] TaskIsRunning = Enumerable.Repeat(true, 16).ToArray();
 
     private bool isTutorialSkipped = false;
 
@@ -27,17 +27,25 @@ public class TutorialManager : MonoBehaviour
 
     private void OnEnable()
     {
+        Task1.TutorialTask0 += NextTask;
         CaldronManager.TutorialTask1 += NextTask;
+        CauldronSlot.TutorialTask2 += NextTask;
+        CraftingStation.TutorialTask5 += NextTask;
+        PotionGenerator.TutorialTask14 += NextTask;
     }
 
     private void OnDisable()
     {
+        Task1.TutorialTask0 -= NextTask;
         CaldronManager.TutorialTask1 -= NextTask;
+        CauldronSlot.TutorialTask2 -= NextTask;
+        CraftingStation.TutorialTask5 -= NextTask;
+        PotionGenerator.TutorialTask14 += NextTask;
     }
 
     private void NextTutorial()
     {
-        if (index < tutorialEvents.Count)
+        if (index < tutorialEvents.Count - 1)
         {
             DialogueManager.Instance.ShowEvent(DialogueManager.STATE.TUTORIAL, tutorialEvents[index]);
             index++;
@@ -50,6 +58,8 @@ public class TutorialManager : MonoBehaviour
 
     private void NextTask(int taskId)
     {
+        //Debug.LogWarning(taskId + " " + taskIndex);
+
         if (taskId > taskIndex && taskId < taskIndex + 2)
         {
             NextTutorial();

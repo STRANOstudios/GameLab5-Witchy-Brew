@@ -37,7 +37,10 @@ public class CaldronManager : MonoBehaviour
     {
         if (TutorialManager.TutorialIsRunning)
         {
-            if (TutorialManager.TaskIsRunning[0]) return;
+            if (TutorialManager.TaskIsRunning[1]) return;
+            if (TutorialManager.taskIndex == 3 && !TutorialManager.TaskIsRunning[3]) TutorialTask1?.Invoke(4);
+            if (TutorialManager.taskIndex == 6 && !TutorialManager.TaskIsRunning[6]) TutorialTask1?.Invoke(7);
+            if (TutorialManager.taskIndex == 9 && !TutorialManager.TaskIsRunning[9]) TutorialTask1?.Invoke(10);
         }
 
         selectedItem = item;
@@ -46,7 +49,7 @@ public class CaldronManager : MonoBehaviour
 
         if (item.itemData.id != 0) DialogueManager.Instance.ShowEvent(item);
 
-        TutorialTask1?.Invoke(1);
+        if (TutorialManager.taskIndex == 1) TutorialTask1?.Invoke(2);
     }
 
     private void Awake()
