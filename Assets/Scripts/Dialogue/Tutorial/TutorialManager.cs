@@ -45,6 +45,7 @@ public class TutorialManager : MonoBehaviour
     {
         if (index < tutorialEvents.Count)
         {
+            Debug.Log("next");
             DialogueManager.Instance.ShowEvent(DialogueManager.STATE.TUTORIAL, tutorialEvents[index]);
             index++;
         }
@@ -56,7 +57,7 @@ public class TutorialManager : MonoBehaviour
 
     private void NextTask(int taskId)
     {
-        Debug.LogWarning(taskId);
+        Debug.LogWarning(taskId + " " + taskIndex);
 
         if (taskId > taskIndex && taskId < taskIndex + 2)
         {
