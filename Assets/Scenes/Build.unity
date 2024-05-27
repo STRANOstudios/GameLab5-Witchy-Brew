@@ -3541,15 +3541,15 @@ MonoBehaviour:
   - Yellow
   potionColor:
   - {r: 0, g: 0, b: 0, a: 1}
-  - {r: 1, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0.14819956, b: 1, a: 0}
-  - {r: 1, g: 0, b: 0.77220345, a: 0}
-  - {r: 1, g: 1, b: 1, a: 0}
-  - {r: 0.9716981, g: 0.39270815, b: 0.022917405, a: 0}
-  - {r: 0.02352939, g: 0.972549, b: 0.111660995, a: 0}
-  - {r: 0.972549, g: 0.89921653, b: 0.02352939, a: 0}
-  - {r: 0.5, g: 0.5, b: 0.5, a: 0}
-  - {r: 0.4528302, g: 0, b: 0.35703668, a: 0}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0.14819956, b: 1, a: 1}
+  - {r: 1, g: 0, b: 0.77220345, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
+  - {r: 0.9716981, g: 0.39270815, b: 0.022917405, a: 1}
+  - {r: 0.02352939, g: 0.972549, b: 0.111660995, a: 1}
+  - {r: 0.972549, g: 0.89921653, b: 0.02352939, a: 1}
+  - {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  - {r: 0.4528302, g: 0, b: 0.35703668, a: 1}
   type:
   - Potion Of
   - Brew Of
@@ -24489,6 +24489,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 674943dd4283c204ca4df77d552ab8d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nullIngredient: {fileID: 7572013446331082151, guid: d2b8b9f4daa3e2c4db5cb67cd643e8e2,
+    type: 3}
+  cauldronSlots:
+  - {fileID: 122651583}
+  - {fileID: 1870323034}
+  - {fileID: 1654265496}
+  - {fileID: 1015668185}
+  - {fileID: 894635305}
   correctColor: {r: 0, g: 1, b: 0.0071246624, a: 1}
   wrongPreparationColor: {r: 1, g: 0.95696926, b: 0, a: 1}
   wrongPositionColor: {r: 1, g: 0.3718608, b: 0, a: 1}
@@ -29792,10 +29800,11 @@ MonoBehaviour:
   Grounding: {fileID: 0}
   Cooking: {fileID: 0}
   ClientArrived:
-  - {fileID: 11400000, guid: de3d810a20141b847b612792134b71f9, type: 2}
-  - {fileID: 11400000, guid: de3d810a20141b847b612792134b71f9, type: 2}
+  - {fileID: 11400000, guid: 1b7aba3183b169f41a01b7a0d2e4c528, type: 2}
   ClientLeaving:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 1d69e34705a3f7c45886080bc5db3652, type: 2}
+  ClientSuccess:
+  - {fileID: 11400000, guid: ab0c865c8445b9c4da0d57531f68d481, type: 2}
   timePerCharacter: 0.08
   lineDuration: 3
   fadeDelay: 1
@@ -40552,6 +40561,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4426535710757381851, guid: 3819d1a71a030a142b5a79e556c9c18a,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426535710757381851, guid: 3819d1a71a030a142b5a79e556c9c18a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426535710757381851, guid: 3819d1a71a030a142b5a79e556c9c18a,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1451191281}
@@ -40560,6 +40579,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1461083144}
+    - target: {fileID: 4426535710757381851, guid: 3819d1a71a030a142b5a79e556c9c18a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426535710757381851, guid: 3819d1a71a030a142b5a79e556c9c18a,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.UI.ScrollRect, UnityEngine.UI
+      objectReference: {fileID: 0}
     - target: {fileID: 8339238620369999651, guid: 3819d1a71a030a142b5a79e556c9c18a,
         type: 3}
       propertyPath: m_Name

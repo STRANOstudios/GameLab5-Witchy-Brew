@@ -23,6 +23,7 @@ public class DialogueManager : MonoBehaviour
     // Dialogue
     [SerializeField] List<UIEventDialogue> ClientArrived = new();
     [SerializeField] List<UIEventDialogue> ClientLeaving = new();
+    [SerializeField] List<UIEventDialogue> ClientSuccess = new();
 
     [Header("Settings")]
     [SerializeField, Min(0)] float timePerCharacter = 0.08f;
@@ -43,7 +44,8 @@ public class DialogueManager : MonoBehaviour
     public enum DIALOGUETYPE
     {
         CLIENTARRIVED,
-        CLIENTLEAVING
+        CLIENTLEAVING,
+        CLIENTSUCCESS
     }
 
     public enum PREPARATION
@@ -184,8 +186,12 @@ public class DialogueManager : MonoBehaviour
         switch (type)
         {
             case DIALOGUETYPE.CLIENTARRIVED:
-                writerText.Write(new() { text }, false);
+                writerText.Write(ExtractElements(ClientArrived[Random.Range(0, ClientArrived.Count)], false));
                 animManager.Play(ExtractElements(ClientArrived[Random.Range(0, ClientArrived.Count)], true));
+                break;
+            case DIALOGUETYPE.CLIENTSUCCESS:
+                writerText.Write(ExtractElements(ClientSuccess[Random.Range(0, ClientSuccess.Count)], false));
+                animManager.Play(ExtractElements(ClientSuccess[Random.Range(0, ClientSuccess.Count)], true));
                 break;
             case DIALOGUETYPE.CLIENTLEAVING:
                 writerText.Write(ExtractElements(ClientLeaving[Random.Range(0, ClientLeaving.Count)], false));

@@ -76,11 +76,12 @@ public class TutorialManager : MonoBehaviour
         index = tutorialEvents.Count;
         Finished?.Invoke();
 
-        TutorialIsRunning = false;
-
         for (int i = 0; i < TaskIsRunning.Length; i++)
         {
             TaskIsRunning[i] = false;
         }
+        TutorialIsRunning = false;
+        DialogueManager.Instance.ShowEvent(DialogueManager.STATE.DIALOGUE, DialogueManager.DIALOGUETYPE.CLIENTARRIVED);
+
     }
 }

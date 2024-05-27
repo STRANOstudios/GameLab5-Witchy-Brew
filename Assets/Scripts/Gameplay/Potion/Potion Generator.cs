@@ -7,7 +7,6 @@ public class PotionGenerator : MonoBehaviour
 {
     int[,] ingredients = new int[5, 2];
     Color[] check = new Color[5];
-
     int attemptIndex;
     List<int> ingredientList = new List<int>();
     List<CauldronSlot> list = new List<CauldronSlot>();
@@ -82,7 +81,7 @@ public class PotionGenerator : MonoBehaviour
 
         attemptIndex++;
 
-        UIResult.Instance.ShowResult(new Result(craftedIngredientList, colorList, "Attempt " + attemptIndex + " of 5"));
+        UIResult.Instance.ShowResult(new Result(craftedIngredientList, colorList, "Attempt " + attemptIndex + " of 7"));
 
         // check if all ingredients are correct
 
@@ -105,13 +104,23 @@ public class PotionGenerator : MonoBehaviour
 
         if (allCorrect) {
             DialogueManager.Instance.ShowEvent(DialogueManager.STATE.SUCCESS);
-            DialogueManager.Instance.ShowEvent(DialogueManager.STATE.DIALOGUE, DialogueManager.DIALOGUETYPE.CLIENTLEAVING);
-
+            DialogueManager.Instance.ShowEvent(DialogueManager.STATE.DIALOGUE, DialogueManager.DIALOGUETYPE.CLIENTSUCCESS);
             UIResult.Instance.RemoveResult();
+            attemptIndex = 0;
+            GeneratePotion();
+            DialogueManager.Instance.ShowEvent(DialogueManager.STATE.DIALOGUE, DialogueManager.DIALOGUETYPE.CLIENTARRIVED);
         }
-        else
+        else if (attemptIndex<=7)
         {
             DialogueManager.Instance.ShowEvent(DialogueManager.STATE.FAILURE);
+        }
+        else 
+        {
+            DialogueManager.Instance.ShowEvent(DialogueManager.STATE.DIALOGUE, DialogueManager.DIALOGUETYPE.CLIENTLEAVING);
+            UIResult.Instance.RemoveResult();
+            attemptIndex = 0;
+            GeneratePotion();
+            DialogueManager.Instance.ShowEvent(DialogueManager.STATE.DIALOGUE, DialogueManager.DIALOGUETYPE.CLIENTARRIVED);
         }
 
         // use this when you finish attempt =>   UIResult.Instance.RemoveResult(); //clear result list for next use
